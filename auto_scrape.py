@@ -49,11 +49,15 @@ USERNAME = "fretin98"  # Replace with your username if different
 PASSWORD = "Lcy199818su!"  # Replace with your password if different
 
 # Settings for safe scraping
-MIN_INTERVAL_MINUTES = 45  # Minimum time between sessions
-MAX_INTERVAL_MINUTES = 90  # Maximum time between sessions
-MAX_SESSIONS_PER_DAY = 12  # Maximum number of sessions per day
+MIN_INTERVAL_MINUTES = 20  # Minimum time between sessions (was 45)
+MAX_INTERVAL_MINUTES = 40  # Maximum time between sessions (was 90)
+MAX_SESSIONS_PER_DAY = 18  # Maximum number of sessions per day (was 12)
 HEADLESS_MODE = True  # Run without visible browser window
-FOLLOWINGS_BATCH_SIZE = 3  # How many following accounts to process in each batch
+FOLLOWINGS_BATCH_SIZE = None  # Will be randomized each session
+NATURAL_BREAK_LENGTH_MINUTES = 120  # 2-hour natural break once per day
+NATURAL_BREAK_HOUR_MIN = 13  # Natural break starts between 1 PM
+NATURAL_BREAK_HOUR_MAX = 15  # and 3 PM
+RANDOM_SKIP_CHANCE = 0.1  # 10% chance to randomly skip a session for more human-like behavior
 
 # Safety settings
 PAUSE_HOURS = [2, 3, 4, 5]  # Hours to pause scraping (2am-5am) to seem human
@@ -138,16 +142,56 @@ def update_status(session_completed=True, total_following=None):
 def safe_to_run():
     """Check if it's safe to run a scraping session"""
     current_hour = datetime.datetime.now().hour
+    current_minute = datetime.datetime.now().minute
+    
+    # Randomly skip a session (10% chance) to create more human-like patterns
+    if random.random() < RANDOM_SKIP_CHANCE:
+        skip_minutes = random.randint(30, 60)
+        logging.info(f"Randomly skipping this session to create a more human-like pattern")
+        logging.info(f"Will check again in {skip_minutes} minutes")
+        time.sleep(skip_minutes * 60)
+        return False
     
     # Don't scrape during pause hours
     if current_hour in PAUSE_HOURS:
-        logging.info(f"It's {current_hour}:00, during pause hours. Waiting until morning.")
+        logging.info(f"It's {current_hour}:{current_minute:02d}, during pause hours. Waiting until morning.")
         return False
     
-    # Check if we've reached the maximum sessions per day
-    status_data = load_json_data(STATUS_FILE, {"sessions": 0, "last_run": None})
+    # Check if it's time for a natural break - use a random hour in the specified range
+    # But only take the break once per day by setting a flag in the status file
+    status_data = load_json_data(STATUS_FILE, {"sessions": 0, "last_run": None, "natural_break_taken": False})
     
-    if status_data["last_run"]:
+    # Reset natural break flag for a new day
+    if status_data.get("last_run"):
+        last_run = datetime.datetime.strptime(status_data["last_run"], '%Y-%m-%d %H:%M:%S')
+        now = datetime.datetime.now()
+        if last_run.date() != now.date():
+            status_data["natural_break_taken"] = False
+            save_json_data(status_data, STATUS_FILE)
+    
+    # Take a natural break if within the time range and we haven't taken one today
+    if (NATURAL_BREAK_HOUR_MIN <= current_hour <= NATURAL_BREAK_HOUR_MAX and 
+            not status_data.get("natural_break_taken", False)):
+        # Add some randomness to the break length
+        break_length = random.randint(
+            NATURAL_BREAK_LENGTH_MINUTES - 30, 
+            NATURAL_BREAK_LENGTH_MINUTES + 30
+        )
+        logging.info(f"It's {current_hour}:{current_minute:02d}, taking a natural break to appear more human-like.")
+        next_check_time = datetime.datetime.now() + datetime.timedelta(minutes=break_length)
+        logging.info(f"Will take a {break_length} minute break and resume at approximately {next_check_time.strftime('%H:%M')}")
+        
+        # Mark that we've taken our natural break for today
+        status_data["natural_break_taken"] = True
+        save_json_data(status_data, STATUS_FILE)
+        
+        # Actually wait here for the break time
+        time.sleep(break_length * 60)
+        logging.info("Natural break complete, resuming operations")
+        return True  # Return true to indicate we can proceed after waiting
+        
+    # Check if we've reached the maximum sessions per day
+    if status_data.get("last_run"):
         last_run = datetime.datetime.strptime(status_data["last_run"], '%Y-%m-%d %H:%M:%S')
         now = datetime.datetime.now()
         
@@ -155,7 +199,7 @@ def safe_to_run():
         if last_run.date() != now.date():
             status_data["sessions"] = 0
             save_json_data(status_data, STATUS_FILE)
-        elif status_data["sessions"] >= MAX_SESSIONS_PER_DAY:
+        elif status_data.get("sessions", 0) >= MAX_SESSIONS_PER_DAY:
             logging.info(f"Reached maximum {MAX_SESSIONS_PER_DAY} sessions today. Waiting until tomorrow.")
             return False
         
@@ -173,6 +217,10 @@ def run_scraping_session():
     logging.info("Starting new scraping session")
     
     try:
+        # Randomize max_pages each session for more human-like behavior
+        max_pages = random.randint(3, 7)  # Vary between 3-7 pages per session
+        logging.info(f"Using {max_pages} max pages for this session")
+        
         # Run the scraping script with command line arguments instead of input files
         command = [
             "python3", "scrapeMyAccount.py",
@@ -180,7 +228,7 @@ def run_scraping_session():
             "--password", PASSWORD,
             "--resume",
             "--headless",
-            "--max-pages", "5"  # Limit pages per session for safety
+            "--max-pages", str(max_pages)  # Use randomized value
         ]
         
         # Execute the command and capture output
@@ -228,13 +276,17 @@ def run_following_scraping_session():
     """Run a session to scrape data from following accounts"""
     logging.info("Starting following accounts scraping session")
     
+    # Randomize batch size for each session for more human-like behavior
+    batch_size = random.randint(2, 5)
+    logging.info(f"Using random batch size of {batch_size} accounts for this session")
+    
     try:
         # Run the scrapingFollowing script with command line arguments
         command = [
             "python3", "scrapingFollowing.py",
             "--username", USERNAME,
             "--password", PASSWORD,
-            "--batch-size", str(FOLLOWINGS_BATCH_SIZE),
+            "--batch-size", str(batch_size),
             "--headless"
         ]
         
@@ -272,18 +324,32 @@ def run_following_scraping_session():
 def wait_for_next_session():
     """Wait a random amount of time before the next session"""
     # Choose a random interval between min and max
-    wait_minutes = random.randint(MIN_INTERVAL_MINUTES, MAX_INTERVAL_MINUTES)
+    # Add a bit more randomness by sometimes having slightly longer intervals
+    if random.random() < 0.2:  # 20% chance for a longer break
+        wait_minutes = random.randint(MAX_INTERVAL_MINUTES, MAX_INTERVAL_MINUTES + 20)
+        logging.info(f"Taking a slightly longer break this time ({wait_minutes} minutes)")
+    else:
+        wait_minutes = random.randint(MIN_INTERVAL_MINUTES, MAX_INTERVAL_MINUTES)
+    
     wait_seconds = wait_minutes * 60
     
     next_run_time = datetime.datetime.now() + datetime.timedelta(minutes=wait_minutes)
     logging.info(f"Waiting {wait_minutes} minutes until next session at {next_run_time.strftime('%H:%M:%S')}")
     
-    # Wait with periodic status updates
-    for i in range(wait_seconds):
-        if i > 0 and i % 600 == 0:  # Log every 10 minutes
-            minutes_left = (wait_seconds - i) // 60
+    # Wait with periodic status updates - less predictable intervals
+    update_intervals = [600, 900, 1200]  # 10, 15, or 20 minutes
+    next_update = random.choice(update_intervals)
+    elapsed = 0
+    
+    while elapsed < wait_seconds:
+        sleep_time = min(60, wait_seconds - elapsed)  # Sleep in 1-minute chunks
+        time.sleep(sleep_time)
+        elapsed += sleep_time
+        
+        if elapsed >= next_update:
+            minutes_left = (wait_seconds - elapsed) // 60
             logging.info(f"{minutes_left} minutes remaining until next session")
-        time.sleep(1)
+            next_update = elapsed + random.choice(update_intervals)
 
 def check_completion():
     """Check if we've collected all the following accounts"""
