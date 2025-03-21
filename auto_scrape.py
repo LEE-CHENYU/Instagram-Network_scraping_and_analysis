@@ -55,8 +55,6 @@ MAX_SESSIONS_PER_DAY = 18  # Maximum number of sessions per day (was 12)
 HEADLESS_MODE = True  # Run without visible browser window
 FOLLOWINGS_BATCH_SIZE = None  # Will be randomized each session
 NATURAL_BREAK_LENGTH_MINUTES = 120  # 2-hour natural break once per day
-NATURAL_BREAK_HOUR_MIN = 13  # Natural break starts between 1 PM
-NATURAL_BREAK_HOUR_MAX = 15  # and 3 PM
 RANDOM_SKIP_CHANCE = 0.1  # 10% chance to randomly skip a session for more human-like behavior
 
 # Safety settings
@@ -161,16 +159,33 @@ def safe_to_run():
     # But only take the break once per day by setting a flag in the status file
     status_data = load_json_data(STATUS_FILE, {"sessions": 0, "last_run": None, "natural_break_taken": False})
     
-    # Reset natural break flag for a new day
+    # Reset natural break flag and set random break hours for a new day
     if status_data.get("last_run"):
         last_run = datetime.datetime.strptime(status_data["last_run"], '%Y-%m-%d %H:%M:%S')
         now = datetime.datetime.now()
         if last_run.date() != now.date():
             status_data["natural_break_taken"] = False
+            # Set random break hours for today
+            # Choose a random 2-hour window between 11 AM and 6 PM
+            break_start = random.randint(11, 16)  # 11 AM to 4 PM start time (to end by 6 PM)
+            status_data["break_hour_min"] = break_start
+            status_data["break_hour_max"] = break_start + 2
+            logging.info(f"Set today's natural break window to {break_start}:00-{break_start+2}:00")
             save_json_data(status_data, STATUS_FILE)
     
+    # If break hours aren't set yet (first run of the day), set them now
+    if "break_hour_min" not in status_data or "break_hour_max" not in status_data:
+        break_start = random.randint(11, 16)  # 11 AM to 4 PM start time
+        status_data["break_hour_min"] = break_start
+        status_data["break_hour_max"] = break_start + 2
+        logging.info(f"Set today's natural break window to {break_start}:00-{break_start+2}:00")
+        save_json_data(status_data, STATUS_FILE)
+    
     # Take a natural break if within the time range and we haven't taken one today
-    if (NATURAL_BREAK_HOUR_MIN <= current_hour <= NATURAL_BREAK_HOUR_MAX and 
+    break_hour_min = status_data.get("break_hour_min")
+    break_hour_max = status_data.get("break_hour_max")
+    
+    if (break_hour_min <= current_hour <= break_hour_max and 
             not status_data.get("natural_break_taken", False)):
         # Add some randomness to the break length
         break_length = random.randint(
@@ -189,7 +204,7 @@ def safe_to_run():
         time.sleep(break_length * 60)
         logging.info("Natural break complete, resuming operations")
         return True  # Return true to indicate we can proceed after waiting
-        
+    
     # Check if we've reached the maximum sessions per day
     if status_data.get("last_run"):
         last_run = datetime.datetime.strptime(status_data["last_run"], '%Y-%m-%d %H:%M:%S')
