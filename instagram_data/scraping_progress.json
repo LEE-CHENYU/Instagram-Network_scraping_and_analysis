@@ -1,0 +1,63 @@
+{
+  "nancyaichuan": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 230,
+    "following_count": 513,
+    "followers_retrieved": 2,
+    "following_retrieved": 2,
+    "timestamp": 1742538030.200854
+  },
+  "zeitgeistfilms": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 5070,
+    "following_count": 777,
+    "timestamp": 1742538042.720354
+  },
+  "vicf0428": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 176,
+    "following_count": 171,
+    "followers_retrieved": 2,
+    "following_retrieved": 0,
+    "timestamp": 1742538365.439394
+  },
+  "shuheisakaue": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1742567956.571959
+  },
+  "catsoupai": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1742568047.7218728
+  },
+  "soloslop.memes": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1742568056.488842
+  },
+  "phillipsauction": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1742568065.101321
+  }
+}

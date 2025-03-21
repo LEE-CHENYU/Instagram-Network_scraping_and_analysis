@@ -3,3 +3,15 @@
 2025-03-21 00:54:55,511 - INFO - ============================================================
 2025-03-21 00:54:55,512 - INFO - Running main account scraping to get more following accounts
 2025-03-21 00:54:55,512 - INFO - Starting new scraping session
+2025-03-21 00:55:28,649 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-21 00:55:28,649 - INFO - SCRAPER: Logged in successfully!
+2025-03-21 00:55:28,649 - INFO - SCRAPER: Logged in as fretin98
+2025-03-21 00:55:28,649 - INFO - SCRAPER: Resuming previous session...
+2025-03-21 00:55:28,650 - INFO - SCRAPER: Loaded 63 followers and 596 following from previous session
+2025-03-21 00:55:28,650 - INFO - SCRAPER: Error occurred: module 'essentialRoutines' has no attribute 'get_profile_stats'
+2025-03-21 00:55:28,650 - INFO - SCRAPER: Browser closed.
+2025-03-21 00:55:28,730 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 00:55:28,730 - INFO - Main scraping completed. Progress: 596/1861 following accounts (32.0%)
+2025-03-21 00:55:28,730 - INFO - Waiting 12 minutes before processing following accounts
+2025-03-21 00:56:08,496 - INFO - Auto scraper stopped by user
+2025-03-21 00:56:08,496 - INFO - Auto scraper shutting down

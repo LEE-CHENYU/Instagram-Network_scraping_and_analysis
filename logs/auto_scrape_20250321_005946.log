@@ -1,0 +1,77 @@
+2025-03-21 00:59:46,960 - INFO - ============================================================
+2025-03-21 00:59:46,960 - INFO - Instagram Auto Scraper Starting
+2025-03-21 00:59:46,960 - INFO - ============================================================
+2025-03-21 00:59:46,962 - INFO - Only 4.3 minutes since last run. Waiting at least 45 minutes between runs.
+2025-03-21 00:59:46,962 - INFO - Waiting 60 minutes before checking again
+2025-03-21 01:59:47,088 - INFO - Only 0.4 minutes since last run. Waiting at least 45 minutes between runs.
+2025-03-21 01:59:47,089 - INFO - Waiting 60 minutes before checking again
+2025-03-21 02:59:47,065 - INFO - It's 2:00, during pause hours. Waiting until morning.
+2025-03-21 02:59:47,065 - INFO - Waiting 60 minutes before checking again
+2025-03-21 03:59:47,008 - INFO - It's 3:00, during pause hours. Waiting until morning.
+2025-03-21 03:59:47,008 - INFO - Waiting 60 minutes before checking again
+2025-03-21 04:59:47,104 - INFO - It's 4:00, during pause hours. Waiting until morning.
+2025-03-21 04:59:47,104 - INFO - Waiting 60 minutes before checking again
+2025-03-21 05:59:47,086 - INFO - It's 5:00, during pause hours. Waiting until morning.
+2025-03-21 05:59:47,086 - INFO - Waiting 60 minutes before checking again
+2025-03-21 06:59:47,032 - INFO - Only 43.8 minutes since last run. Waiting at least 45 minutes between runs.
+2025-03-21 06:59:47,033 - INFO - Waiting 60 minutes before checking again
+2025-03-21 07:59:47,119 - INFO - Only 11.1 minutes since last run. Waiting at least 45 minutes between runs.
+2025-03-21 07:59:47,119 - INFO - Waiting 60 minutes before checking again
+2025-03-21 08:59:47,127 - INFO - Running main account scraping to get more following accounts
+2025-03-21 08:59:47,128 - INFO - Starting new scraping session
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Logged in successfully!
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Logged in as fretin98
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Resuming previous session...
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Loaded 63 followers and 596 following from previous session
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Profile Stats: {'followers': 878, 'following': 1862, 'posts': 243}
+2025-03-21 09:00:20,524 - INFO - SCRAPER: Followers: 878, Following: 1862
+2025-03-21 09:00:20,525 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Scraping followers...
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Error scraping followers: scrape_whole_list() got an unexpected keyword argument 'max_pages'
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Scraping following...
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Error scraping following: scrape_whole_list() got an unexpected keyword argument 'max_pages'
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Created 596 following links from usernames
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Retrieved 596 following links
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Session completed successfully!
+2025-03-21 09:00:20,525 - INFO - SCRAPER: Browser closed.
+2025-03-21 09:00:20,566 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 09:00:20,566 - INFO - Main scraping completed. Progress: 596/1862 following accounts (32.0%)
+2025-03-21 09:00:20,566 - INFO - Waiting 10 minutes before processing following accounts
+2025-03-21 09:10:20,568 - INFO - Starting following accounts scraping session
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 3 accounts processed
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Will process 3 accounts in this session
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Logged in successfully!
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Loaded 596 links from instagram_data/followingLinks.txt
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Starting batch processing of 3 accounts
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/nancyaichuan/
+2025-03-21 09:11:04,683 - INFO - FOLLOWING SCRAPER: Account nancyaichuan already processed. Skipping.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Completed 1/3 accounts. 595 remaining in queue.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/zeitgeistfilms/
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Account zeitgeistfilms already processed. Skipping.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Completed 2/3 accounts. 594 remaining in queue.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/vicf0428/
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Account vicf0428 already processed. Skipping.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Completed 3/3 accounts. 593 remaining in queue.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Batch complete! Processed 3 accounts.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: 593 links remaining for future sessions.
+2025-03-21 09:11:04,684 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-03-21 09:11:04,735 - INFO - Following scraping completed. 3 accounts processed, 593 remaining.
+2025-03-21 09:11:04,735 - INFO - Waiting 78 minutes until next session at 10:29:04
+2025-03-21 09:21:07,724 - INFO - 68 minutes remaining until next session
+2025-03-21 09:31:09,689 - INFO - 58 minutes remaining until next session
+2025-03-21 09:41:11,806 - INFO - 48 minutes remaining until next session
+2025-03-21 09:51:14,128 - INFO - 38 minutes remaining until next session
+2025-03-21 10:01:16,033 - INFO - 28 minutes remaining until next session
+2025-03-21 10:11:17,907 - INFO - 18 minutes remaining until next session
+2025-03-21 10:21:20,026 - INFO - 8 minutes remaining until next session
+2025-03-21 10:25:35,493 - INFO - Auto scraper stopped by user
+2025-03-21 10:25:35,495 - INFO - Auto scraper shutting down

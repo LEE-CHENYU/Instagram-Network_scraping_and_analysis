@@ -1,0 +1,45 @@
+Logged in using button: //button[contains(.,'Log in')]
+Logged in successfully!
+Logged in as fretin98
+
+Profile Stats: {'followers': 878, 'following': 1862, 'posts': 243}
+Followers: 878, Following: 1862
+
+Scraping followers...
+Resuming with 0 already fetched followers
+Attempting API-based approach for followers...
+Found user_id: 1073026362
+API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+Attempting enhanced API approach...
+Got CSRF token: CA7A9yhWfiD3T1-iIys3yY
+Enhanced API approach succeeded! Found 25 followers
+Has more: True
+Next cursor: QVFDVFkxUGt2UTZSV1VnU1E2YlZfZk9NNVNGMmhyR054bGxiX2lWaEZSY1NSWDFhZDJtZGwtNFlBQUtPcnROc1BoRWYzSzNoZUhFbFdlMUs3MEY4Ym9PZw==
+Added 25 new users (filtered 0 duplicates)
+Total followers retrieved: 25/878
+Saved data to instagram_data/followers.json
+Saved data to instagram_data/next_cursor.json
+
+Scraping following...
+Resuming with 0 already fetched following
+Attempting API-based approach for following...
+Found user_id: 1073026362
+API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+Attempting enhanced API approach...
+Got CSRF token: CA7A9yhWfiD3T1-iIys3yY
+Enhanced API approach succeeded! Found 198 following
+Has more: True
+Next cursor: QVFCNXRHbFF2cGRjVU1TbU1rcWdHcDBfSnhTVjZvaEFBWm1LbjUtTWlqSk51LUpMVG1GVzZFUXV0b2pTMjUtNGVjblhKWjRTT1hxUlZ6Q1NTOGxiM2k2bg==
+Added 198 new users (filtered 0 duplicates)
+Total following retrieved: 198/1862
+Saved data to instagram_data/following.json
+Saved data to instagram_data/next_cursor.json
+
+Getting links to following accounts...
+Created 198 following links from usernames
+Updated following links file: instagram_data/followingLinks.txt
+Updated adjacency list file: instagram_data/adjList.txt
+Retrieved 198 following links
+
+Session completed successfully!
+Browser closed.

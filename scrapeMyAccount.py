@@ -52,12 +52,33 @@ def dict_to_adj_list(following_dict):
 
 def update_adj_list_file(my_username, my_following):
     """Update adjacency list file with user's following"""
-    following_dict = {my_username: my_following}
-    adj_list = dict_to_adj_list(following_dict)
+    # Create list of relationships (one per line)
+    new_adj_list = []
+    for followed in my_following:
+        new_adj_list.append(f"{my_username} {followed}")
     
+    # Load existing relationships to avoid duplicates
+    existing_relations = set()
+    if os.path.exists(ADJ_LIST_FILE):
+        with open(ADJ_LIST_FILE, "r") as file_h:
+            for line in file_h:
+                if line.strip():  # Skip empty lines
+                    existing_relations.add(line.strip())
+    
+    # Add new relationships without duplicates
+    new_count = 0
+    for relation in new_adj_list:
+        if relation not in existing_relations:
+            existing_relations.add(relation)
+            new_count += 1
+    
+    # Write back all relationships
     with open(ADJ_LIST_FILE, "w") as file_h:
-        file_h.writelines(adj_list)
+        for relation in existing_relations:
+            file_h.write(f"{relation}\n")
+    
     print(f"Updated adjacency list file: {ADJ_LIST_FILE}")
+    print(f"Added {new_count} new relationships (total: {len(existing_relations)})")
 
 def update_following_links_file(my_following_links):
     """Update file containing links to following accounts"""
@@ -139,8 +160,9 @@ if __name__ == "__main__":
                     "followers", 
                     driver, 
                     f"https://www.instagram.com/{args.username}/",
-                    max_pages=args.max_pages,
-                    next_cursor=next_cursor.get('followers')
+                    next_cursor=next_cursor.get('followers'),
+                    resume_from_saved=my_followers,
+                    max_pages=args.max_pages
                 )
                 
                 # Merge with existing followers, remove duplicates
@@ -164,8 +186,9 @@ if __name__ == "__main__":
                     "following", 
                     driver, 
                     f"https://www.instagram.com/{args.username}/",
-                    max_pages=args.max_pages,
-                    next_cursor=next_cursor.get('following')
+                    next_cursor=next_cursor.get('following'),
+                    resume_from_saved=my_following,
+                    max_pages=args.max_pages
                 )
                 
                 # Merge with existing following, remove duplicates

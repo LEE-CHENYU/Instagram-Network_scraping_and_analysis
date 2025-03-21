@@ -192,7 +192,7 @@ def get_following_links(driver, following_usernames=None):
                 
                 if links:
                     break
-            except:
+            except Exception:
                 continue
     except Exception as e:
         print(f"Error finding following links: {e}")
@@ -219,7 +219,7 @@ def get_following_links(driver, following_usernames=None):
     return links
 
 
-def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_from_saved=None):
+def scrape_whole_list(list_to_scrape, driver, link, next_cursor=None, resume_from_saved=None, max_pages=10):
     """
     Scrape a list of followers or following users
     
@@ -227,11 +227,12 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
         list_to_scrape: Either "followers" or "following"
         driver: Selenium webdriver instance
         link: Profile URL
-        next_max_id: Pagination cursor to resume from
+        next_cursor: Pagination cursor to resume from
         resume_from_saved: List of already saved usernames to avoid duplicates
+        max_pages: Maximum number of pages to fetch (default: 10)
         
     Returns:
-        List of usernames
+        Tuple of (list of usernames, next_cursor)
     """
     global _last_cursors
     
@@ -239,7 +240,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
     driver.implicitly_wait(5)
     
     # Reset cursor for this list type if not resuming
-    if next_max_id is None:
+    if next_cursor is None:
         _last_cursors[list_to_scrape] = None
     
     # Initialize already fetched usernames
@@ -267,10 +268,10 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
     # Strategy 3: Section approach
     if length_of_list is None:
         try:
-            sections = driver.find_elements(By.XPATH, "//section/ul/li")
-            length_index = 1 if list_to_scrape == "followers" else 2
-            if len(sections) >= max(2, length_index):
-                length_of_list = int("".join(sections[length_index].text.split(" ")[0].replace(",", "")))
+                sections = driver.find_elements(By.XPATH, "//section/ul/li")
+                length_index = 1 if list_to_scrape == "followers" else 2
+                if len(sections) >= max(2, length_index):
+                    length_of_list = int("".join(sections[length_index].text.split(" ")[0].replace(",", "")))
         except:
             pass
     
@@ -425,7 +426,9 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
                     
                     // Only fetch up to 10 pages (500 users) to avoid overloading
                     let page_count = 1;
-                    while (has_more && next_max_id && page_count < 10) {
+                    const max_pages = arguments[1] || 10;
+                    
+                    while (has_more && next_max_id && page_count < max_pages) {
                         let nextUrl = `${endpoint}?count=50&max_id=${next_max_id}`;
                         response = await fetch(nextUrl, { headers });
                         if (!response.ok) break;
@@ -452,7 +455,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
             })();
             """
             
-            result = driver.execute_script(js_script, endpoint)
+            result = driver.execute_script(js_script, endpoint, max_pages)
             
             if result and 'success' in result and result['success']:
                 api_result = result.get('users', [])
@@ -461,7 +464,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
                 
                 # If we got a good result from the API, return it
                 if api_result and len(api_result) > 0:
-                    return api_result
+                    return (api_result, result.get('has_more', False))
             elif result and 'error' in result:
                 print(f"API approach error: {result['error']}")
     except Exception as e:
@@ -562,7 +565,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
         """
         
         endpoint_type = 'followers' if list_to_scrape == 'followers' else 'following'
-        result = driver.execute_script(js_script, username, headers, endpoint_type, next_max_id)
+        result = driver.execute_script(js_script, username, headers, endpoint_type, next_cursor)
         
         if result and 'success' in result and result['success']:
             api_users = result.get('usernames', [])
@@ -582,7 +585,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
             print(f"Added {len(new_users)} new users (filtered {len(api_users) - len(new_users)} duplicates)")
             
             if api_users and len(api_users) > 0:
-                return new_users
+                return (api_users, next_cursor)
         elif result and 'error' in result:
             print(f"Enhanced API approach error: {result['error']}")
     except Exception as e:
@@ -590,7 +593,7 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
     
     # If both API approaches failed, try UI approach
     # But modify the scrolling mechanism
-    
+
     # Try multiple approaches to click on followers/following link
     click_successful = False
     
@@ -741,9 +744,9 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
                 print("Found dialog using JavaScript")
                 FList = dialog
             else:
-                return []
+                return ([], False)
         except:
-            return []
+            return ([], False)
     
     # Get initial count of items
     numberInList = 0
@@ -759,10 +762,9 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
                 try:
                     # Try to find any list items with generic approach
                     numberInList = len(driver.find_elements(By.XPATH, "//div[contains(@role,'dialog') or contains(@role,'presentation')]//li"))
-                except Exception as e:
-                    print(f"Error counting items in list: {e}")
-                    numberInList = 0
-
+                except:
+                    new_numberInList = numberInList  # No change
+            
     # Find the scrollable area
     frame = None
     frame2 = None
@@ -1022,16 +1024,16 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
             except Exception as e:
                 print(f"JS item counting failed: {e}")
                 # Fall back to previous methods
+            try:
+                new_numberInList = len(FList.find_elements(By.CSS_SELECTOR, 'li'))
+            except:
                 try:
-                    new_numberInList = len(FList.find_elements(By.CSS_SELECTOR, 'li'))
+                    new_numberInList = len(FList.find_elements(By.XPATH, './/li'))
                 except:
                     try:
-                        new_numberInList = len(FList.find_elements(By.XPATH, './/li'))
+                        new_numberInList = len(driver.find_elements(By.XPATH, "//div[contains(@role,'dialog') or contains(@role,'presentation')]//li"))
                     except:
-                        try:
-                            new_numberInList = len(driver.find_elements(By.XPATH, "//div[contains(@role,'dialog') or contains(@role,'presentation')]//li"))
-                        except:
-                            new_numberInList = numberInList  # No change
+                        new_numberInList = numberInList  # No change
             
             print(f"Current items loaded: {new_numberInList}/{length_of_list} (attempt {scroll_attempts+1})")
             
@@ -1108,12 +1110,12 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
                         graphql_users = [edge["node"]["username"] for edge in edges if "username" in edge["node"]]
                         if graphql_users:
                             print(f"GraphQL API returned {len(graphql_users)} users")
-                            return graphql_users
+                            return (graphql_users, False)
                 except Exception as e:
                     print(f"GraphQL API approach failed: {e}")
                 
                 break
-                
+            
         except Exception as e:
             print(f"Error during scrolling: {e}")
             scroll_attempts += 1
@@ -1213,4 +1215,118 @@ def scrape_whole_list(list_to_scrape, driver, link, next_max_id=None, resume_fro
     print(f"Added {len(new_users)} new users via UI approach (filtered {len(result) - len(new_users)} duplicates)")
     
     print(f"Scraped {len(new_users)} new {list_to_scrape}")
-    return new_users
+    return (new_users, _last_cursors[list_to_scrape])
+
+def get_profile_stats(driver):
+    """
+    Extract profile statistics (followers, following, posts) from an Instagram profile page.
+    
+    Args:
+        driver: Selenium webdriver instance on a profile page
+        
+    Returns:
+        Dictionary with keys 'followers', 'following', and 'posts'
+    """
+    stats = {
+        'followers': 0,
+        'following': 0,
+        'posts': 0
+    }
+    
+    try:
+        # Strategy 1: Classic selectors (old UI)
+        try:
+            followers_text = driver.find_element(By.XPATH, "//a[contains(@href, '/followers/')]/span").text.replace(',', '')
+            following_text = driver.find_element(By.XPATH, "//a[contains(@href, '/following/')]/span").text.replace(',', '')
+            posts_text = driver.find_element(By.XPATH, "//span[contains(@class, 'g47SY')][1]").text.replace(',', '')
+            
+            stats['followers'] = int(followers_text) if followers_text.isdigit() else 0
+            stats['following'] = int(following_text) if following_text.isdigit() else 0
+            stats['posts'] = int(posts_text) if posts_text.isdigit() else 0
+            
+            if stats['followers'] > 0 or stats['following'] > 0:
+                return stats
+        except:
+            pass
+            
+        # Strategy 2: Section-based approach (newer UI)
+        try:
+            sections = driver.find_elements(By.XPATH, "//section/ul/li")
+            if len(sections) >= 3:
+                posts_text = sections[0].text.split(" ")[0].replace(",", "")
+                followers_text = sections[1].text.split(" ")[0].replace(",", "")
+                following_text = sections[2].text.split(" ")[0].replace(",", "")
+                
+                stats['posts'] = int(posts_text) if posts_text.isdigit() else 0
+                stats['followers'] = int(followers_text) if followers_text.isdigit() else 0
+                stats['following'] = int(following_text) if following_text.isdigit() else 0
+                
+                if stats['followers'] > 0 or stats['following'] > 0:
+                    return stats
+        except:
+            pass
+            
+        # Strategy 3: Header-based approach for newest UI
+        try:
+            header_stats = driver.find_elements(By.XPATH, "//header//ul/li")
+            if len(header_stats) >= 2:
+                for stat in header_stats:
+                    stat_text = stat.text.lower()
+                    if 'post' in stat_text:
+                        posts_text = stat_text.split(" ")[0].replace(",", "")
+                        stats['posts'] = int(posts_text) if posts_text.isdigit() else 0
+                    elif 'follower' in stat_text:
+                        followers_text = stat_text.split(" ")[0].replace(",", "")
+                        stats['followers'] = int(followers_text) if followers_text.isdigit() else 0
+                    elif 'following' in stat_text:
+                        following_text = stat_text.split(" ")[0].replace(",", "")
+                        stats['following'] = int(following_text) if following_text.isdigit() else 0
+                
+                if stats['followers'] > 0 or stats['following'] > 0:
+                    return stats
+        except:
+            pass
+            
+        # Strategy 4: JavaScript approach
+        try:
+            js_script = """
+            return {
+                followers: parseInt((document.querySelector('a[href*="followers"] span')?.textContent || '0').replace(/,/g, '')),
+                following: parseInt((document.querySelector('a[href*="following"] span')?.textContent || '0').replace(/,/g, '')),
+                posts: parseInt((document.querySelector('span[class*="g47SY"]:first-child')?.textContent || '0').replace(/,/g, ''))
+            };
+            """
+            js_stats = driver.execute_script(js_script)
+            if js_stats:
+                stats['followers'] = js_stats.get('followers', 0)
+                stats['following'] = js_stats.get('following', 0)
+                stats['posts'] = js_stats.get('posts', 0)
+                
+                if stats['followers'] > 0 or stats['following'] > 0:
+                    return stats
+        except:
+            pass
+            
+        # Strategy 5: API approach
+        try:
+            js_script = """
+            return window._sharedData && window._sharedData.entry_data && 
+                   window._sharedData.entry_data.ProfilePage && 
+                   window._sharedData.entry_data.ProfilePage[0].graphql.user;
+            """
+            user_data = driver.execute_script(js_script)
+            if user_data:
+                stats['followers'] = user_data.get('edge_followed_by', {}).get('count', 0)
+                stats['following'] = user_data.get('edge_follow', {}).get('count', 0)
+                stats['posts'] = user_data.get('edge_owner_to_timeline_media', {}).get('count', 0)
+                
+                if stats['followers'] > 0 or stats['following'] > 0:
+                    return stats
+        except:
+            pass
+    
+    except Exception as e:
+        print(f"Error getting profile stats: {e}")
+        driver.save_screenshot('profile_stats_error.png')
+    
+    return stats

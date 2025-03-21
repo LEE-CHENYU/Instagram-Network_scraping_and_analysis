@@ -324,10 +324,35 @@ try:
             with open(FOLLOWING_LINKS_FILE, "w") as file_h:
                 file_h.writelines(links)
             
-            adj_list = essentialRoutines.dict_to_adjList(all_nodes)
+            # Create proper formatted adjacency list entries (one relationship per line)
+            new_relations = []
+            
+            # Add relationships from all_nodes dictionary
+            for follower, following_list in all_nodes.items():
+                for followed in following_list:
+                    new_relations.append(f"{follower} {followed}")
+            
+            # Load existing adjacency list to avoid duplicates
+            existing_relations = set()
+            if os.path.exists(ADJ_LIST_FILE):
+                with open(ADJ_LIST_FILE, "r") as adj_file:
+                    for line in adj_file:
+                        if line.strip():  # Skip empty lines
+                            existing_relations.add(line.strip())
+            
+            # Count new relationships
+            new_count = 0
+            for relation in new_relations:
+                if relation not in existing_relations:
+                    existing_relations.add(relation)
+                    new_count += 1
+            
+            # Write all relationships back to the file
             with open(ADJ_LIST_FILE, "w") as adj_file:
-                adj_file.writelines(adj_list)
+                for relation in existing_relations:
+                    adj_file.write(f"{relation}\n")
                 
+            print(f"Added {new_count} new relationships to adjacency list (total: {len(existing_relations)})")
             print(f"Completed {processed_count}/{batch_size} accounts. {len(links)} remaining in queue.")
             print(f"Waiting 5 seconds before next account...")
             time.sleep(5)
