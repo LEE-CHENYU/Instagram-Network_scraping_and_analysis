@@ -1,0 +1,25 @@
+2025-03-21 00:47:21,059 - INFO - ============================================================
+2025-03-21 00:47:21,059 - INFO - Instagram Auto Scraper Starting
+2025-03-21 00:47:21,059 - INFO - ============================================================
+2025-03-21 00:47:21,059 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 00:47:21,060 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 00:47:21,060 - INFO - Starting new scraping session
+2025-03-21 00:47:21,145 - INFO - SCRAPER: Loaded 63 saved followers and 596 saved following
+2025-03-21 00:48:39,348 - INFO - SCRAPER: Resume previous scraping session? (y/n): Logged in using button: //button[contains(.,'Log in')]
+2025-03-21 00:48:39,349 - INFO - SCRAPER: Logged in successfully!
+2025-03-21 00:48:39,349 - INFO - SCRAPER: fretin98
+2025-03-21 00:48:39,349 - INFO - SCRAPER: Followers: 878, Following: 1861
+2025-03-21 00:48:39,350 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-21 00:48:39,350 - INFO - SCRAPER: You have 63/878 followers saved (7.2%)
+2025-03-21 00:48:41,987 - INFO - SCRAPER: Scrape more followers? (y/n): Error during scraping: EOF when reading a line
+2025-03-21 00:48:42,044 - ERROR - Scraping script failed with return code 1
+2025-03-21 00:48:42,044 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapeMyAccount.py", line 244, in <module>
+    scrape_followers = input("Scrape more followers? (y/n): ").lower().startswith('y')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
+
+2025-03-21 00:48:42,045 - INFO - Session completed. Progress: 596/1861 following accounts (32.0%)
+2025-03-21 00:48:42,045 - INFO - Waiting 75 minutes until next session at 02:03:42
+2025-03-21 00:48:58,186 - INFO - Auto scraper stopped by user
+2025-03-21 00:48:58,188 - INFO - Auto scraper shutting down
