@@ -20,20 +20,25 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
-# Configure logging
-log_dir = "logs"
-if not os.path.exists(log_dir):
-    os.makedirs(log_dir)
-
-log_file = os.path.join(log_dir, f"auto_scrape_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(log_file),
-        logging.StreamHandler()
-    ]
-)
+def setup_logging():
+    """Set up logging configuration"""
+    # Configure logging
+    log_dir = "logs"
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    
+    log_file = os.path.join(log_dir, f"auto_scrape_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+    logging.info("=" * 60)
+    logging.info("Instagram Auto Scraper Starting")
+    logging.info("=" * 60)
 
 # Constants
 DATA_DIR = "instagram_data"
@@ -56,6 +61,7 @@ HEADLESS_MODE = True  # Run without visible browser window
 FOLLOWINGS_BATCH_SIZE = None  # Will be randomized each session
 NATURAL_BREAK_LENGTH_MINUTES = 120  # 2-hour natural break once per day
 RANDOM_SKIP_CHANCE = 0.1  # 10% chance to randomly skip a session for more human-like behavior
+WAIT_TIME = 3600  # Base wait time in seconds (1 hour)
 
 # Safety settings
 PAUSE_HOURS = [2, 3, 4, 5]  # Hours to pause scraping (2am-5am) to seem human
@@ -89,16 +95,29 @@ def save_json_data(data, file_path):
 def get_progress():
     """Get current scraping progress"""
     following_data = load_json_data(FOLLOWING_FILE, [])
-    status_data = load_json_data(STATUS_FILE, {"total_following": 0, "sessions": 0, "last_run": None})
+    followers_data = load_json_data(FOLLOWERS_FILE, [])
+    status_data = load_json_data(STATUS_FILE, {"total_following": 0, "total_followers": 0, "sessions": 0, "last_run": None})
+    
+    # Handle case where total_followers might not exist in older status files
+    if "total_followers" not in status_data:
+        status_data["total_followers"] = 0
     
     # If we don't have a total count yet, estimate it
     if status_data["total_following"] == 0 and following_data:
         status_data["total_following"] = 1861  # Use the known total from previous logs
         save_json_data(status_data, STATUS_FILE)
     
+    # If we don't have a total followers count yet or it's incorrect, update it
+    if status_data["total_followers"] == 0 or status_data["total_followers"] == 232:  # 232 is the incorrect value
+        status_data["total_followers"] = 877  # Update to the correct value from the profile
+        save_json_data(status_data, STATUS_FILE)
+        logging.info(f"Updated total followers count to the correct value: 877")
+    
     return {
-        "collected": len(following_data),
-        "total": status_data["total_following"],
+        "following_collected": len(following_data),
+        "following_total": status_data["total_following"],
+        "followers_collected": len(followers_data),
+        "followers_total": status_data["total_followers"],
         "sessions": status_data["sessions"],
         "last_run": status_data["last_run"]
     }
@@ -120,13 +139,24 @@ def get_following_accounts_progress():
         "accounts_remaining": len(links)
     }
 
-def update_status(session_completed=True, total_following=None):
+def update_status(session_completed=True, total_following=None, total_followers=None):
     """Update the status file with latest information"""
     status_data = load_json_data(STATUS_FILE, {
         "total_following": 0,
+        "total_followers": 0,
         "sessions": 0,
         "last_run": None
     })
+    
+    # Ensure required keys exist
+    for key in ["total_following", "total_followers", "sessions", "last_run"]:
+        if key not in status_data:
+            if key == "sessions":
+                status_data[key] = 0
+            elif key == "last_run":
+                status_data[key] = None
+            else:
+                status_data[key] = 0
     
     if session_completed:
         status_data["sessions"] += 1
@@ -134,6 +164,9 @@ def update_status(session_completed=True, total_following=None):
     
     if total_following is not None:
         status_data["total_following"] = total_following
+    
+    if total_followers is not None:
+        status_data["total_followers"] = total_followers
     
     save_json_data(status_data, STATUS_FILE)
 
@@ -231,12 +264,26 @@ def run_scraping_session():
     """Run a single scraping session using the main script"""
     logging.info("Starting new scraping session")
     
+    # Check collection progress
+    progress = get_progress()
+    
+    # Only skip if both are complete
+    if progress["following_collected"] >= progress["following_total"] and progress["followers_collected"] >= progress["followers_total"]:
+        logging.info(f"Already collected all following accounts ({progress['following_collected']}/{progress['following_total']}) and followers ({progress['followers_collected']}/{progress['followers_total']}). Skipping main scraping session.")
+        return True
+    
+    # Log which collection still needs work
+    if progress["following_collected"] < progress["following_total"]:
+        logging.info(f"Need to collect more following accounts: {progress['following_collected']}/{progress['following_total']}")
+    if progress["followers_collected"] < progress["followers_total"]:
+        logging.info(f"Need to collect more followers: {progress['followers_collected']}/{progress['followers_total']}")
+    
     try:
         # Randomize max_pages each session for more human-like behavior
         max_pages = random.randint(3, 7)  # Vary between 3-7 pages per session
         logging.info(f"Using {max_pages} max pages for this session")
         
-        # Run the scraping script with command line arguments instead of input files
+        # Build command line options
         command = [
             "python3", "scrapeMyAccount.py",
             "--username", USERNAME,
@@ -245,6 +292,16 @@ def run_scraping_session():
             "--headless",
             "--max-pages", str(max_pages)  # Use randomized value
         ]
+        
+        # If following is complete, only scrape followers
+        if progress["following_collected"] >= progress["following_total"]:
+            command.append("--no-following")
+            logging.info("Following collection is complete. Only scraping followers in this session.")
+        
+        # If followers is complete, only scrape following
+        if progress["followers_collected"] >= progress["followers_total"]:
+            command.append("--no-followers")
+            logging.info("Followers collection is complete. Only scraping following in this session.")
         
         # Execute the command and capture output
         process = subprocess.Popen(
@@ -255,6 +312,9 @@ def run_scraping_session():
         )
         
         # Read and log output in real-time
+        total_following = None
+        total_followers = None
+        
         for line in iter(process.stdout.readline, ""):
             line = line.strip()
             if line:
@@ -264,7 +324,13 @@ def run_scraping_session():
                 if "Following:" in line and "," in line:
                     try:
                         total_following = int(line.split("Following:")[1].split(",")[0].strip())
-                        update_status(session_completed=False, total_following=total_following)
+                    except:
+                        pass
+                
+                # Extract the followers count if available
+                if "Followers:" in line and "," in line:
+                    try:
+                        total_followers = int(line.split("Followers:")[1].split(",")[0].strip())
                     except:
                         pass
         
@@ -279,7 +345,7 @@ def run_scraping_session():
             return False
         
         # Update status
-        update_status(session_completed=True)
+        update_status(session_completed=True, total_following=total_following, total_followers=total_followers)
         return True
         
     except Exception as e:
@@ -290,6 +356,12 @@ def run_scraping_session():
 def run_following_scraping_session():
     """Run a session to scrape data from following accounts"""
     logging.info("Starting following accounts scraping session")
+    
+    # Check if there are any following accounts left to process
+    following_progress = get_following_accounts_progress()
+    if following_progress["accounts_remaining"] <= 0:
+        logging.info("No following accounts left to process. Skipping following scraping session.")
+        return True
     
     # Randomize batch size for each session for more human-like behavior
     batch_size = random.randint(2, 5)
@@ -367,86 +439,97 @@ def wait_for_next_session():
             next_update = elapsed + random.choice(update_intervals)
 
 def check_completion():
-    """Check if we've collected all the following accounts"""
+    """Check if we've collected all the followers and following accounts"""
     progress = get_progress()
-    if progress["collected"] >= progress["total"]:
-        logging.info(f"All following accounts collected! {progress['collected']}/{progress['total']}")
-        return True
-    return False
+    following_complete = progress["following_collected"] >= progress["following_total"] if progress["following_total"] > 0 else False
+    followers_complete = progress["followers_collected"] >= progress["followers_total"] if progress["followers_total"] > 0 else False
+    
+    # Calculate safe percentages
+    following_percent = (progress["following_collected"] / max(1, progress["following_total"])) * 100
+    followers_percent = (progress["followers_collected"] / max(1, progress["followers_total"])) * 100
+    
+    if following_complete:
+        logging.info(f"All following accounts collected! {progress['following_collected']}/{progress['following_total']}")
+    else:
+        logging.info(f"Following collection progress: {progress['following_collected']}/{progress['following_total']} ({following_percent:.1f}%)")
+    
+    if followers_complete:
+        logging.info(f"All followers collected! {progress['followers_collected']}/{progress['followers_total']}")
+    else:
+        logging.info(f"Followers collection progress: {progress['followers_collected']}/{progress['followers_total']} ({followers_percent:.1f}%)")
+    
+    # Return True only if both are complete
+    return following_complete and followers_complete
+
+def check_status():
+    """Get the current status percentages"""
+    progress = get_progress()
+    following_percent = (progress["following_collected"] / max(1, progress["following_total"])) * 100
+    followers_percent = (progress["followers_collected"] / max(1, progress["followers_total"])) * 100
+    return {
+        "following_percent": following_percent,
+        "follower_percent": followers_percent
+    }
 
 def main():
-    """Main function to run the auto-scraper"""
-    logging.info("=" * 60)
-    logging.info("Instagram Auto Scraper Starting")
-    logging.info("=" * 60)
-    
-    # Create necessary directories
-    ensure_dir_exists(DATA_DIR)
-    
-    # Initialize status if needed
-    if not os.path.exists(STATUS_FILE):
-        update_status(session_completed=False)
+    # Set up logging
+    setup_logging()
+    logging.info("Auto-scraper script started")
     
     try:
+        # Initial check - will update status file if it doesn't exist
+        check_completion()
+        
         while True:
-            # Check if we've collected everything
-            main_collection_complete = check_completion()
-            following_progress = get_following_accounts_progress()
-            
-            if main_collection_complete and following_progress["accounts_remaining"] == 0:
-                logging.info("Data collection complete! All following accounts and their data collected.")
-                break
-            
-            # Check if it's safe to run now
-            if not safe_to_run():
-                # Wait an hour before checking again
-                logging.info("Waiting 60 minutes before checking again")
-                time.sleep(3600)
+            # Check if collection is complete
+            if check_completion():
+                logging.info("Collection is complete. Waiting for next check...")
+                # Sleep for a longer time since we're done (6 hours)
+                time.sleep(WAIT_TIME * 12)
                 continue
             
-            # Run a main account scraping session if we need more following accounts
-            if not main_collection_complete:
-                logging.info("Running main account scraping to get more following accounts")
-                success = run_scraping_session()
-                
-                progress = get_progress()
-                logging.info(f"Main scraping completed. Progress: {progress['collected']}/{progress['total']} "
-                          f"following accounts ({(progress['collected']/progress['total']*100):.1f}%)")
-                
-                # After each successful main scraping session, also process some following accounts
-                if success and following_progress["accounts_remaining"] > 0:
-                    # Wait a bit before starting the following scraping
-                    intermediate_wait = random.randint(10, 20)
-                    logging.info(f"Waiting {intermediate_wait} minutes before processing following accounts")
-                    time.sleep(intermediate_wait * 60)
-                    
-                    following_success = run_following_scraping_session()
-                    
-                    # Get updated progress
-                    following_progress = get_following_accounts_progress()
-                    logging.info(f"Following scraping completed. {following_progress['accounts_processed']} accounts "
-                              f"processed, {following_progress['accounts_remaining']} remaining.")
+            # Get current progress to check for discrepancies
+            progress = get_progress()
+            status = check_status()
             
-            # If main collection is complete but we still have following accounts to process
-            elif following_progress["accounts_remaining"] > 0:
-                logging.info("Main collection complete. Focusing on processing following accounts.")
-                following_success = run_following_scraping_session()
+            # Determine the session duration based on collection status
+            if progress["followers_total"] > 0 and progress["followers_collected"] < progress["followers_total"]:
+                # Calculate what percentage of followers we've collected
+                followers_percent = (progress["followers_collected"] / progress["followers_total"]) * 100
                 
-                # Get updated progress
-                following_progress = get_following_accounts_progress()
-                logging.info(f"Following scraping completed. {following_progress['accounts_processed']} accounts "
-                          f"processed, {following_progress['accounts_remaining']} remaining.")
+                # If we have a significant discrepancy (collected <70% but status >90%), run longer sessions
+                if followers_percent < 70 and status["follower_percent"] > 90:
+                    logging.info(f"Detected follower collection discrepancy: {followers_percent:.1f}% actual vs {status['follower_percent']:.1f}% reported")
+                    logging.info("Running an extended collection session...")
+                    
+                    # Run session
+                    session_result = run_scraping_session()
+                    
+                    # Wait for a shorter time before continuing (1-2 hours)
+                    random_wait = random.randint(WAIT_TIME//2, WAIT_TIME)
+                    logging.info(f"Session completed with result: {session_result}. Waiting {random_wait//60} minutes before next session...")
+                    time.sleep(random_wait)
+                    continue
             
-            # Wait before next session
-            wait_for_next_session()
+            # Regular collection session
+            session_result = run_scraping_session()
+            
+            # Determine wait time between sessions (3-6 hours normally)
+            random_wait = random.randint(WAIT_TIME, WAIT_TIME * 2)
+            hours = random_wait // 3600
+            minutes = (random_wait % 3600) // 60
+            logging.info(f"Session completed with result: {session_result}. Waiting {hours} hours and {minutes} minutes before next session...")
+            
+            # Sleep for the random time period
+            time.sleep(random_wait)
             
     except KeyboardInterrupt:
-        logging.info("Auto scraper stopped by user")
+        logging.info("Scraper interrupted by user")
     except Exception as e:
         logging.error(f"Unexpected error: {e}")
         logging.error(traceback.format_exc())
     finally:
-        logging.info("Auto scraper shutting down")
+        logging.info("Auto-scraper script ended")
 
 if __name__ == "__main__":
     main() 

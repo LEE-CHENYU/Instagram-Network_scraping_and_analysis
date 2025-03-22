@@ -1,0 +1,17 @@
+2025-03-22 16:03:29,652 - INFO - ============================================================
+2025-03-22 16:03:29,652 - INFO - Instagram Auto Scraper Starting
+2025-03-22 16:03:29,652 - INFO - ============================================================
+2025-03-22 16:03:29,654 - ERROR - Unexpected error: 'total_followers'
+2025-03-22 16:03:29,655 - ERROR - Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/auto_scrape.py", line 437, in main
+    main_collection_complete = check_completion()
+                               ^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/auto_scrape.py", line 404, in check_completion
+    progress = get_progress()
+               ^^^^^^^^^^^^^^
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/auto_scrape.py", line 101, in get_progress
+    if status_data["total_followers"] == 0 and followers_data:
+       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'total_followers'
+
+2025-03-22 16:03:29,655 - INFO - Auto scraper shutting down

@@ -1,0 +1,123 @@
+2025-03-22 16:01:04,821 - INFO - ============================================================
+2025-03-22 16:01:04,821 - INFO - Instagram Auto Scraper Starting
+2025-03-22 16:01:04,821 - INFO - ============================================================
+2025-03-22 16:01:04,821 - INFO - All following accounts collected! 1862/1861
+2025-03-22 16:01:04,823 - INFO - Current progress: 1862/1861 following accounts collected
+2025-03-22 16:01:04,823 - INFO - Following accounts processing progress: 39 processed, 1826 remaining
+2025-03-22 16:01:04,824 - INFO - Main collection complete. Focusing on processing following accounts.
+2025-03-22 16:01:04,824 - INFO - Starting following accounts scraping session
+2025-03-22 16:01:04,824 - INFO - Using random batch size of 3 accounts for this session
+2025-03-22 16:03:23,519 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 39 accounts processed
+2025-03-22 16:03:23,519 - INFO - FOLLOWING SCRAPER: Will process 3 accounts in this session
+2025-03-22 16:03:23,519 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Logged in successfully!
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Loaded 1826 links from instagram_data/followingLinks.txt
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Starting batch processing of 3 accounts
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✓ donsonn: Good candidate with 488 followers, 705 following
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✓ chenggao1999: Good candidate with 335 followers, 316 following
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✗ young.brando: Too many connections (17 followers, 2453 following)
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✗ gentleman.gasmask: Too many connections (364 followers, 1657 following)
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✗ yuukakazami0: Too many connections (1334 followers, 508 following)
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: ✓ whitehouse: Good candidate with 8 followers, 6 following
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Found 3 accounts with reasonable follower/following counts
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/donsonn/
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Scraping donsonn
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: donsonn: Followers: 488, Following: 705
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Scraping 488 followers for donsonn...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched followers
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for followers...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Found user_id: 452033447
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 25 followers
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Has more: True
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Next cursor: 25
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Added 25 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Retrieved 25 followers
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Scraping 705 following for donsonn...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched following
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for following...
+2025-03-22 16:03:23,520 - INFO - FOLLOWING SCRAPER: Found user_id: 452033447
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 200 following
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Has more: True
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Next cursor: QVFDMTExMFJLcG5VdkRXMXZnYzIzWDZXRVRhZkYwYUFqS2x1b1A2cHc4WTFwV3RSMV9BLUNhZlg0NE4yWl9UbFNWV3ZzMHlISVFyeGpVWnE5Yzk4WDhvdA==
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Added 200 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Retrieved 200 following
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Added 224 new relationships to adjacency list (total: 4972)
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Completed 1/3 accounts. 1825 remaining in queue.
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/chenggao1999/
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Scraping chenggao1999
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: chenggao1999: Followers: 335, Following: 316
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Scraping 335 followers for chenggao1999...
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched followers
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for followers...
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Found user_id: 47464055583
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 25 followers
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Has more: True
+2025-03-22 16:03:23,521 - INFO - FOLLOWING SCRAPER: Next cursor: 25
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Added 25 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Retrieved 25 followers
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Scraping 316 following for chenggao1999...
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched following
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for following...
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Found user_id: 47464055583
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 200 following
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Has more: True
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Next cursor: QVFCYzJSSFJwLTExTF9uZVpiaWpKY2JtM3NmVGY3WjBGdG1xRV8tY0M5OHBhRVMzLTJyd3pMX0wxQS1sRTNVTnpzNUdxcFdPSTlkVEN6aEFQaVMyTGZzTg==
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Added 200 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Retrieved 200 following
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Added 224 new relationships to adjacency list (total: 5196)
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Completed 2/3 accounts. 1824 remaining in queue.
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/whitehouse/
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Scraping whitehouse
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: whitehouse: Followers: 8, Following: 6
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Scraping 8 followers for whitehouse...
+2025-03-22 16:03:23,522 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched followers
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for followers...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Found user_id: 72012334051
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 50 followers
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Has more: False
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Added 50 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Retrieved 50 followers
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Scraping 6 following for whitehouse...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Resuming with 0 already fetched following
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Attempting API-based approach for following...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Found user_id: 72012334051
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: API approach error: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Attempting enhanced API approach...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Got CSRF token: oF324AL5bR2zr0hsUAGbwx
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Enhanced API approach succeeded! Found 6 following
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Has more: False
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Added 6 new users (filtered 0 duplicates)
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Retrieved 6 following
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Added 56 new relationships to adjacency list (total: 5252)
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Completed 3/3 accounts. 1823 remaining in queue.
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Batch complete! Processed 3 accounts.
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: 1823 links remaining for future sessions.
+2025-03-22 16:03:23,523 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-03-22 16:03:23,648 - INFO - Following scraping completed. 42 accounts processed, 1823 remaining.
+2025-03-22 16:03:23,648 - INFO - Waiting 35 minutes until next session at 16:38:23
+2025-03-22 16:03:28,515 - INFO - Auto scraper stopped by user
+2025-03-22 16:03:28,515 - INFO - Auto scraper shutting down

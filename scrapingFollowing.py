@@ -142,89 +142,137 @@ def scrape_account(account_link, all_nodes):
     
     print(f"Scraping {curr_username}")
     
-    # Get follower and following counts
+    # Define limits for reasonable scraping
+    follower_limit = 2000
+    following_limit = 2000
+    
+    # Get follower and following counts - use fastest method first
     try:
-        # Get followers and following counts with multiple selector strategies
+        # Try JavaScript approach first (fastest)
+        js_script = """
+        const followerText = document.querySelector('a[href*="followers"] span')?.textContent || 
+                          document.evaluate('//span[contains(text(), "follower")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.textContent;
+        const followingText = document.querySelector('a[href*="following"] span')?.textContent || 
+                           document.evaluate('//span[contains(text(), "following")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.textContent;
+        
+        let followers = 0;
+        let following = 0;
+        
+        if (followerText) {
+            followers = parseInt(followerText.replace(/,/g, '').match(/\\d+/)[0]);
+        }
+        if (followingText) {
+            following = parseInt(followingText.replace(/,/g, '').match(/\\d+/)[0]);
+        }
+        
+        return [followers, following];
+        """
+        counts = driver.execute_script(js_script)
+        
+        if counts and len(counts) == 2:
+            curr_Followers = counts[0]
+            curr_Following = counts[1]
+            
+            # Early check if the account exceeds limits
+            if curr_Followers > follower_limit or curr_Following > following_limit:
+                print(f"Early detection: Account has too many followers ({curr_Followers}) or following ({curr_Following}). Skipping detailed scraping.")
+                # Record that we processed this account
+                progress_data[curr_username] = {
+                    "processed": True,
+                    "skipped": True,
+                    "followers_count": curr_Followers,
+                    "following_count": curr_Following,
+                    "timestamp": time.time()
+                }
+                save_data(progress_data, PROGRESS_FILE)
+                return True, all_nodes
+        else:
+            # If JS approach failed, set to None to try other methods
+            curr_Followers = None
+            curr_Following = None
+    except:
+        # If JS approach failed, set to None to try other methods
         curr_Followers = None
         curr_Following = None
-        
-        # Strategy 1: Classic selectors (old UI)
+    
+    # If JavaScript approach failed, try other methods
+    if curr_Followers is None or curr_Following is None:
         try:
-            curr_Followers = int("".join((driver.find_element(By.XPATH, "//a[text()=' followers']/span[@class='g47SY ']").text).split(",")))
-            curr_Following = int("".join((driver.find_element(By.XPATH, "//a[text()=' following']/span[@class='g47SY ']").text).split(",")))
-        except:
-            pass
+            # Strategy 1: Classic selectors (old UI)
+            try:
+                curr_Followers = int("".join((driver.find_element(By.XPATH, "//a[text()=' followers']/span[@class='g47SY ']").text).split(",")))
+                curr_Following = int("".join((driver.find_element(By.XPATH, "//a[text()=' following']/span[@class='g47SY ']").text).split(",")))
+            except:
+                pass
+                
+            # Strategy 2: New UI with href attribute
+            if curr_Followers is None or curr_Following is None:
+                try:
+                    follower_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/followers/')]/span")
+                    following_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/following/')]/span")
+                    
+                    if follower_elements and following_elements:
+                        curr_Followers = int("".join(follower_elements[0].text.split(",")))
+                        curr_Following = int("".join(following_elements[0].text.split(",")))
+                except:
+                    pass
+                    
+            # Strategy 3: Section-based approach (newer UI)
+            if curr_Followers is None or curr_Following is None:
+                try:
+                    sections = driver.find_elements(By.XPATH, "//section/ul/li")
+                    if len(sections) >= 3:
+                        curr_Followers = int("".join(sections[1].text.split(" ")[0].replace(",", "")))
+                        curr_Following = int("".join(sections[2].text.split(" ")[0].replace(",", "")))
+                except:
+                    pass
+                    
+            # Strategy 4: Header-based approach for newest UI
+            if curr_Followers is None or curr_Following is None:
+                try:
+                    header_stats = driver.find_elements(By.XPATH, "//header//ul/li")
+                    if len(header_stats) >= 2:
+                        for stat in header_stats:
+                            stat_text = stat.text.lower()
+                            if 'follower' in stat_text:
+                                curr_Followers = int("".join(stat_text.split(" ")[0].replace(",", "")))
+                            elif 'following' in stat_text:
+                                curr_Following = int("".join(stat_text.split(" ")[0].replace(",", "")))
+                except:
+                    pass
+                    
+            # Strategy 5: API approach
+            if curr_Followers is None or curr_Following is None:
+                try:
+                    # Execute JavaScript to get the data from window._sharedData
+                    js_script = """
+                    return window._sharedData && window._sharedData.entry_data && 
+                           window._sharedData.entry_data.ProfilePage && 
+                           window._sharedData.entry_data.ProfilePage[0].graphql.user;
+                    """
+                    user_data = driver.execute_script(js_script)
+                    if user_data:
+                        curr_Followers = user_data.get('edge_followed_by', {}).get('count', 0)
+                        curr_Following = user_data.get('edge_follow', {}).get('count', 0)
+                except:
+                    pass
             
-        # Strategy 2: New UI with href attribute
-        if curr_Followers is None or curr_Following is None:
-            try:
-                follower_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/followers/')]/span")
-                following_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/following/')]/span")
+            # If we still couldn't get the counts, set default values
+            if curr_Followers is None:
+                print("WARNING: Could not determine follower count. Skipping.")
+                curr_Followers = 0
+            if curr_Following is None:
+                print("WARNING: Could not determine following count. Skipping.")
+                curr_Following = 0
                 
-                if follower_elements and following_elements:
-                    curr_Followers = int("".join(follower_elements[0].text.split(",")))
-                    curr_Following = int("".join(following_elements[0].text.split(",")))
-            except:
-                pass
-                
-        # Strategy 3: Section-based approach (newer UI)
-        if curr_Followers is None or curr_Following is None:
-            try:
-                sections = driver.find_elements(By.XPATH, "//section/ul/li")
-                if len(sections) >= 3:
-                    curr_Followers = int("".join(sections[1].text.split(" ")[0].replace(",", "")))
-                    curr_Following = int("".join(sections[2].text.split(" ")[0].replace(",", "")))
-            except:
-                pass
-                
-        # Strategy 4: Header-based approach for newest UI
-        if curr_Followers is None or curr_Following is None:
-            try:
-                header_stats = driver.find_elements(By.XPATH, "//header//ul/li")
-                if len(header_stats) >= 2:
-                    for stat in header_stats:
-                        stat_text = stat.text.lower()
-                        if 'follower' in stat_text:
-                            curr_Followers = int("".join(stat_text.split(" ")[0].replace(",", "")))
-                        elif 'following' in stat_text:
-                            curr_Following = int("".join(stat_text.split(" ")[0].replace(",", "")))
-            except:
-                pass
-                
-        # Strategy 5: API approach
-        if curr_Followers is None or curr_Following is None:
-            try:
-                # Execute JavaScript to get the data from window._sharedData
-                js_script = """
-                return window._sharedData && window._sharedData.entry_data && 
-                       window._sharedData.entry_data.ProfilePage && 
-                       window._sharedData.entry_data.ProfilePage[0].graphql.user;
-                """
-                user_data = driver.execute_script(js_script)
-                if user_data:
-                    curr_Followers = user_data.get('edge_followed_by', {}).get('count', 0)
-                    curr_Following = user_data.get('edge_follow', {}).get('count', 0)
-            except:
-                pass
-        
-        # If we still couldn't get the counts, set default values
-        if curr_Followers is None:
-            print("WARNING: Could not determine follower count. Skipping.")
+        except Exception as e:
+            print(f"Error getting follower/following counts: {e}")
             curr_Followers = 0
-        if curr_Following is None:
-            print("WARNING: Could not determine following count. Skipping.")
             curr_Following = 0
-            
-    except Exception as e:
-        print(f"Error getting follower/following counts: {e}")
-        curr_Followers = 0
-        curr_Following = 0
     
     print(f"{curr_username}: Followers: {curr_Followers}, Following: {curr_Following}")
     
     # Only scrape if counts are reasonable (below limit)
-    follower_limit = 2000
-    following_limit = 2000
     success = False
     
     if curr_Followers > follower_limit or curr_Following > following_limit:
@@ -247,15 +295,26 @@ def scrape_account(account_link, all_nodes):
             try:
                 # Try to get followers using the API approach
                 print(f"Scraping {curr_Followers} followers for {curr_username}...")
-                followers = essentialRoutines.scrape_whole_list("followers", driver, account_link)
+                followers_data = essentialRoutines.scrape_whole_list("followers", driver, account_link)
+                
+                # Handle the case where scrape_whole_list returns a tuple (followers, cursor)
+                if isinstance(followers_data, tuple) and len(followers_data) >= 1:
+                    followers = followers_data[0]  # Extract just the followers list
+                else:
+                    followers = followers_data  # Use as is if not a tuple
+                    
                 print(f"Retrieved {len(followers)} followers")
                 
                 # Add to adjacency list
                 for follower in followers:
                     try:
-                        if follower not in all_nodes:
-                            all_nodes[follower] = []
-                        all_nodes[follower].append(curr_username)
+                        # Ensure follower is a string, not a list
+                        if isinstance(follower, str):
+                            if follower not in all_nodes:
+                                all_nodes[follower] = []
+                            all_nodes[follower].append(curr_username)
+                        else:
+                            print(f"Skipping non-string follower: {follower}")
                     except Exception as e:
                         print(f"Error adding follower {follower} to adjacency list: {e}")
             except Exception as e:
@@ -266,7 +325,14 @@ def scrape_account(account_link, all_nodes):
             try:
                 # Try to get following using the API approach
                 print(f"Scraping {curr_Following} following for {curr_username}...")
-                following = essentialRoutines.scrape_whole_list("following", driver, account_link)
+                following_data = essentialRoutines.scrape_whole_list("following", driver, account_link)
+                
+                # Handle the case where scrape_whole_list returns a tuple (following, cursor)
+                if isinstance(following_data, tuple) and len(following_data) >= 1:
+                    following = following_data[0]  # Extract just the following list
+                else:
+                    following = following_data  # Use as is if not a tuple
+                    
                 print(f"Retrieved {len(following)} following")
                 
                 # Add to adjacency list
@@ -302,6 +368,104 @@ try:
         print(f"Starting batch processing of {min(batch_size, len(links))} accounts")
         processed_count = 0
         
+        # First, prioritize accounts by checking if they are suitable for processing
+        if batch_size > 1 and len(links) > batch_size:
+            print("Pre-checking accounts to prioritize ones with reasonable follower/following counts...")
+            
+            # Track accounts that are good candidates (have reasonable counts)
+            good_candidates = []
+            bad_candidates = []
+            
+            # Use lower limits for prioritization
+            pre_check_follower_limit = 1000  # Lower than the main limit for prioritization
+            pre_check_following_limit = 1000
+            
+            # Check the first N+3 accounts (where N is batch size) to find good candidates
+            max_check = min(len(links), batch_size + 3)
+            for i in range(max_check):
+                try:
+                    current_link = links[i].strip()
+                    account_username = current_link.rstrip('/').split('/')[-1].strip()
+                    
+                    # Skip if already processed
+                    if account_username in progress_data:
+                        continue
+                    
+                    # Do a quick check of follower/following counts
+                    driver.get(current_link)
+                    time.sleep(2)
+                    
+                    # Try to get follower/following counts quickly
+                    try:
+                        # Javascript approach for faster extraction
+                        js_script = """
+                        const followerText = document.querySelector('a[href*="followers"] span')?.textContent || 
+                                          document.evaluate('//span[contains(text(), "follower")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.textContent;
+                        const followingText = document.querySelector('a[href*="following"] span')?.textContent || 
+                                           document.evaluate('//span[contains(text(), "following")]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue?.textContent;
+                        
+                        let followers = 0;
+                        let following = 0;
+                        
+                        if (followerText) {
+                            followers = parseInt(followerText.replace(/,/g, '').match(/\\d+/)[0]);
+                        }
+                        if (followingText) {
+                            following = parseInt(followingText.replace(/,/g, '').match(/\\d+/)[0]);
+                        }
+                        
+                        return [followers, following];
+                        """
+                        counts = driver.execute_script(js_script)
+                        
+                        if counts and len(counts) == 2:
+                            follower_count = counts[0]
+                            following_count = counts[1]
+                            
+                            if follower_count <= pre_check_follower_limit and following_count <= pre_check_following_limit:
+                                good_candidates.append(i)
+                                print(f"✓ {account_username}: Good candidate with {follower_count} followers, {following_count} following")
+                            else:
+                                bad_candidates.append(i)
+                                print(f"✗ {account_username}: Too many connections ({follower_count} followers, {following_count} following)")
+                    except Exception as e:
+                        print(f"Could not pre-check {account_username}: {e}")
+                        # If we can't check, assume it's a good candidate
+                        good_candidates.append(i)
+                except Exception as e:
+                    print(f"Error pre-checking account {i}: {e}")
+        
+        # Reorder links to prioritize good candidates
+        if good_candidates:
+            print(f"Found {len(good_candidates)} accounts with reasonable follower/following counts")
+            
+            # Create a new ordered list
+            new_links = []
+            
+            # First add good candidates
+            for i in good_candidates:
+                if i < len(links):
+                    new_links.append(links[i])
+            
+            # Then add all other links that weren't checked
+            for i in range(len(links)):
+                if i not in good_candidates and i not in bad_candidates:
+                    new_links.append(links[i])
+            
+            # Finally add bad candidates at the end
+            for i in bad_candidates:
+                if i < len(links):
+                    new_links.append(links[i])
+            
+            # Replace the original links list
+            links = new_links
+            
+            # Save the reordered list
+            with open(FOLLOWING_LINKS_FILE, "w") as file_h:
+                file_h.writelines(links)
+            
+            print("Links reordered to prioritize accounts with reasonable follower/following counts")
+
         for i in range(min(batch_size, len(links))):
             if i >= len(links):
                 break

@@ -156,24 +156,28 @@ if __name__ == "__main__":
         if not args.no_followers:
             print("\nScraping followers...")
             try:
-                new_followers, next_cursor['followers'] = essentialRoutines.scrape_whole_list(
-                    "followers", 
-                    driver, 
-                    f"https://www.instagram.com/{args.username}/",
-                    next_cursor=next_cursor.get('followers'),
-                    resume_from_saved=my_followers,
-                    max_pages=args.max_pages
-                )
-                
-                # Merge with existing followers, remove duplicates
-                my_followers.extend(new_followers)
-                my_followers = list(dict.fromkeys(my_followers))  # Remove duplicates
-                
-                print(f"Total followers retrieved: {len(my_followers)}/{follower_count}")
-                
-                # Save followers data
-                save_data(my_followers, FOLLOWERS_FILE)
-                save_data(next_cursor, CURSOR_FILE)
+                # Check if we've already collected all or nearly all followers
+                if len(my_followers) >= follower_count or (len(my_followers) >= 0.95 * follower_count and len(my_followers) > 0):
+                    print(f"Already collected {len(my_followers)}/{follower_count} followers (≥95%). Skipping followers scraping.")
+                else:
+                    new_followers, next_cursor['followers'] = essentialRoutines.scrape_whole_list(
+                        "followers", 
+                        driver, 
+                        f"https://www.instagram.com/{args.username}/",
+                        next_cursor=next_cursor.get('followers'),
+                        resume_from_saved=my_followers,
+                        max_pages=args.max_pages
+                    )
+                    
+                    # Merge with existing followers, remove duplicates
+                    my_followers.extend(new_followers)
+                    my_followers = list(dict.fromkeys(my_followers))  # Remove duplicates
+                    
+                    print(f"Total followers retrieved: {len(my_followers)}/{follower_count}")
+                    
+                    # Save followers data
+                    save_data(my_followers, FOLLOWERS_FILE)
+                    save_data(next_cursor, CURSOR_FILE)
             except Exception as e:
                 print(f"Error scraping followers: {e}")
                 traceback.print_exc()
@@ -182,24 +186,28 @@ if __name__ == "__main__":
         if not args.no_following:
             print("\nScraping following...")
             try:
-                new_following, next_cursor['following'] = essentialRoutines.scrape_whole_list(
-                    "following", 
-                    driver, 
-                    f"https://www.instagram.com/{args.username}/",
-                    next_cursor=next_cursor.get('following'),
-                    resume_from_saved=my_following,
-                    max_pages=args.max_pages
-                )
-                
-                # Merge with existing following, remove duplicates
-                my_following.extend(new_following)
-                my_following = list(dict.fromkeys(my_following))  # Remove duplicates
-                
-                print(f"Total following retrieved: {len(my_following)}/{following_count}")
-                
-                # Save following data
-                save_data(my_following, FOLLOWING_FILE)
-                save_data(next_cursor, CURSOR_FILE)
+                # Check if we've already collected all or nearly all following accounts
+                if len(my_following) >= following_count or (len(my_following) >= 0.95 * following_count and len(my_following) > 0):
+                    print(f"Already collected {len(my_following)}/{following_count} following accounts (≥95%). Skipping following scraping.")
+                else:
+                    new_following, next_cursor['following'] = essentialRoutines.scrape_whole_list(
+                        "following", 
+                        driver, 
+                        f"https://www.instagram.com/{args.username}/",
+                        next_cursor=next_cursor.get('following'),
+                        resume_from_saved=my_following,
+                        max_pages=args.max_pages
+                    )
+                    
+                    # Merge with existing following, remove duplicates
+                    my_following.extend(new_following)
+                    my_following = list(dict.fromkeys(my_following))  # Remove duplicates
+                    
+                    print(f"Total following retrieved: {len(my_following)}/{following_count}")
+                    
+                    # Save following data
+                    save_data(my_following, FOLLOWING_FILE)
+                    save_data(next_cursor, CURSOR_FILE)
             except Exception as e:
                 print(f"Error scraping following: {e}")
                 traceback.print_exc()

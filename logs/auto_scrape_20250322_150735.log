@@ -1,0 +1,43 @@
+2025-03-22 15:07:35,762 - INFO - ============================================================
+2025-03-22 15:07:35,762 - INFO - Instagram Auto Scraper Starting
+2025-03-22 15:07:35,762 - INFO - ============================================================
+2025-03-22 15:07:35,763 - INFO - All following accounts collected! 1862/1861
+2025-03-22 15:07:35,766 - INFO - Main collection complete. Focusing on processing following accounts.
+2025-03-22 15:07:35,766 - INFO - Starting following accounts scraping session
+2025-03-22 15:07:35,766 - INFO - Using random batch size of 2 accounts for this session
+2025-03-22 15:08:21,797 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 37 accounts processed
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Will process 2 accounts in this session
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Logged in successfully!
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Loaded 1828 links from instagram_data/followingLinks.txt
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Starting batch processing of 2 accounts
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/xidan_zhang/
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Scraping xidan_zhang
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: xidan_zhang: Followers: 2736, Following: 899
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Account has too many followers (2736) or following (899). Skipping detailed scraping.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Added 744 new relationships to adjacency list (total: 4748)
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Completed 1/2 accounts. 1827 remaining in queue.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/zihaosong/
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Scraping zihaosong
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: WARNING: Could not determine follower count. Skipping.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: WARNING: Could not determine following count. Skipping.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: zihaosong: Followers: 0, Following: 0
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 4748)
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Completed 2/2 accounts. 1826 remaining in queue.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Batch complete! Processed 2 accounts.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: 1826 links remaining for future sessions.
+2025-03-22 15:08:21,798 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-03-22 15:08:21,849 - INFO - Following scraping completed. 39 accounts processed, 1826 remaining.
+2025-03-22 15:08:21,849 - INFO - Waiting 33 minutes until next session at 15:41:21
+2025-03-22 15:18:21,895 - INFO - 23 minutes remaining until next session
+2025-03-22 15:38:21,960 - INFO - 3 minutes remaining until next session
+2025-03-22 15:41:21,983 - INFO - All following accounts collected! 1862/1861
+2025-03-22 15:41:21,987 - INFO - Randomly skipping this session to create a more human-like pattern
+2025-03-22 15:41:21,987 - INFO - Will check again in 35 minutes
+2025-03-22 16:00:51,572 - INFO - Auto scraper stopped by user
+2025-03-22 16:00:51,574 - INFO - Auto scraper shutting down
