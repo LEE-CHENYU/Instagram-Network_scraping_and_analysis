@@ -285,9 +285,24 @@ def run_scraping_session():
         logging.info(f"Need to collect more followers: {progress['followers_collected']}/{progress['followers_total']}")
     
     try:
-        # Randomize max_pages each session for more human-like behavior
-        max_pages = random.randint(3, 7)  # Vary between 3-7 pages per session
-        logging.info(f"Using {max_pages} max pages for this session")
+        # Calculate how many followers we still need to collect
+        followers_remaining = max(0, progress["followers_total"] - progress["followers_collected"])
+        following_remaining = max(0, progress["following_total"] - progress["following_collected"])
+        
+        # Adjust max_pages based on how many items we still need to collect
+        # Use higher value for followers since that's what we're concerned about
+        if followers_remaining > 500:
+            max_pages = random.randint(15, 20)  # Much more aggressive for large gaps
+            logging.info(f"Large follower gap detected ({followers_remaining} remaining). Using higher max_pages: {max_pages}")
+        elif followers_remaining > 200:
+            max_pages = random.randint(10, 15)  # More aggressive for medium gaps
+            logging.info(f"Medium follower gap detected ({followers_remaining} remaining). Using higher max_pages: {max_pages}")
+        elif followers_remaining > 50:
+            max_pages = random.randint(8, 12)  # Slightly more aggressive for smaller gaps
+            logging.info(f"Small follower gap detected ({followers_remaining} remaining). Using higher max_pages: {max_pages}")
+        else:
+            max_pages = random.randint(5, 8)  # Standard range for minimal remaining
+            logging.info(f"Using {max_pages} max pages for this session")
         
         # Build command line options
         command = [
@@ -296,8 +311,14 @@ def run_scraping_session():
             "--password", PASSWORD,
             "--resume",
             "--headless",
-            "--max-pages", str(max_pages)  # Use randomized value
+            "--max-pages", str(max_pages)
         ]
+        
+        # If we have a lot of existing followers that we need to scroll past,
+        # add a special flag to use a more aggressive scrolling approach
+        if progress["followers_collected"] > 100 and followers_remaining > 100:
+            command.append("--aggressive-resume")
+            logging.info(f"Using aggressive resume mode to get past {progress['followers_collected']} existing followers")
         
         # If following is complete, only scrape followers
         if progress["following_collected"] >= progress["following_total"]:

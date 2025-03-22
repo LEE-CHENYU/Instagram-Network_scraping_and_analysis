@@ -96,6 +96,7 @@ def parse_arguments():
     parser.add_argument('--resume', action='store_true', help='Resume previous scraping session')
     parser.add_argument('--headless', action='store_true', help='Run in headless mode')
     parser.add_argument('--max-pages', type=int, default=10, help='Maximum number of pages to scrape (default: 10)')
+    parser.add_argument('--aggressive-resume', action='store_true', help='Use more aggressive scrolling when resuming with many existing users')
     return parser.parse_args()
 
 #%% Main execution
@@ -166,7 +167,8 @@ if __name__ == "__main__":
                         f"https://www.instagram.com/{args.username}/",
                         next_cursor=next_cursor.get('followers'),
                         resume_from_saved=my_followers,
-                        max_pages=args.max_pages
+                        max_pages=args.max_pages,
+                        aggressive_resume=args.aggressive_resume
                     )
                     
                     # Merge with existing followers, remove duplicates
@@ -196,7 +198,8 @@ if __name__ == "__main__":
                         f"https://www.instagram.com/{args.username}/",
                         next_cursor=next_cursor.get('following'),
                         resume_from_saved=my_following,
-                        max_pages=args.max_pages
+                        max_pages=args.max_pages,
+                        aggressive_resume=args.aggressive_resume
                     )
                     
                     # Merge with existing following, remove duplicates

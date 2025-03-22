@@ -1,0 +1,62 @@
+2025-03-22 17:53:17,894 - INFO - ============================================================
+2025-03-22 17:53:17,894 - INFO - Instagram Auto Scraper Starting
+2025-03-22 17:53:17,894 - INFO - ============================================================
+2025-03-22 17:53:17,894 - INFO - Auto-scraper script started
+2025-03-22 17:53:17,894 - INFO - Fetching current follower and following counts from profile...
+2025-03-22 17:53:50,288 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Profile Stats: {'followers': 877, 'following': 1861, 'posts': 243}
+2025-03-22 17:53:50,289 - INFO - Found profile stats
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Followers: 877, Following: 1861
+2025-03-22 17:53:50,289 - INFO - Extracted total followers: 877
+2025-03-22 17:53:50,289 - INFO - Extracted total following: 1861
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-22 17:53:50,289 - INFO - PROFILE CHECK: Browser closed.
+2025-03-22 17:53:50,349 - INFO - Updating status with initial profile counts - Followers: 877, Following: 1861
+2025-03-22 17:53:50,350 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 17:53:50,350 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 17:53:50,350 - INFO - All following accounts collected! 1862/1861
+2025-03-22 17:53:50,350 - INFO - Followers collection progress: 279/877 (31.8%)
+2025-03-22 17:53:50,350 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 17:53:50,350 - INFO - All following accounts collected! 1862/1861
+2025-03-22 17:53:50,350 - INFO - Followers collection progress: 279/877 (31.8%)
+2025-03-22 17:53:50,351 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 17:53:50,351 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 17:53:50,354 - INFO - Starting new scraping session
+2025-03-22 17:53:50,354 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 17:53:50,354 - INFO - Need to collect more followers: 279/877
+2025-03-22 17:53:50,354 - INFO - Large follower gap detected (598 remaining). Using higher max_pages: 19
+2025-03-22 17:53:50,354 - INFO - Following collection is complete. Only scraping followers in this session.
+2025-03-22 17:54:35,520 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Logged in successfully!
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Logged in as fretin98
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Resuming previous session...
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Loaded 279 followers and 1862 following from previous session
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Profile Stats: {'followers': 877, 'following': 1861, 'posts': 243}
+2025-03-22 17:54:35,521 - INFO - Found profile stats line
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Followers: 877, Following: 1861
+2025-03-22 17:54:35,521 - INFO - Extracted total followers: 877
+2025-03-22 17:54:35,521 - INFO - Extracted total following: 1861
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Scraping followers...
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Resuming with 279 existing followers
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Scrolling page 1/19 for followers
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Scrolling page 2/19 for followers
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 17:54:35,521 - INFO - SCRAPER: No new users found after 3 consecutive scrolls. Ending pagination.
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Total followers retrieved: 279
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Total followers retrieved: 279/877
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Saved data to instagram_data/followers.json
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Saved data to instagram_data/next_cursor.json
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Created 1862 following links from usernames
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Added 0 new relationships (total: 6345)
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Retrieved 1862 following links
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Session completed successfully!
+2025-03-22 17:54:35,521 - INFO - SCRAPER: Browser closed.
+2025-03-22 17:54:35,578 - INFO - Updating status with dynamic counts - Followers: 877, Following: 1861
+2025-03-22 17:54:35,579 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 17:54:35,579 - INFO - Session completed with result: True. Waiting 1 hours and 1 minutes before next session...
