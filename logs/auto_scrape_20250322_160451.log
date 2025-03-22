@@ -187,3 +187,5 @@
 2025-03-22 16:08:20,222 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
 2025-03-22 16:08:20,750 - INFO - Following scraping completed. 47 accounts processed, 1818 remaining.
 2025-03-22 16:08:20,750 - INFO - Waiting 29 minutes until next session at 16:37:20
+2025-03-22 16:14:52,880 - INFO - Auto scraper stopped by user
+2025-03-22 16:14:52,881 - INFO - Auto scraper shutting down

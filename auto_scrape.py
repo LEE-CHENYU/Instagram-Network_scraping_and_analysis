@@ -102,16 +102,22 @@ def get_progress():
     if "total_followers" not in status_data:
         status_data["total_followers"] = 0
     
-    # If we don't have a total count yet, estimate it
+    # If we don't have total counts and we have some data, set counts based on collected data
+    # until we can get the actual counts from the profile
     if status_data["total_following"] == 0 and following_data:
-        status_data["total_following"] = 1861  # Use the known total from previous logs
+        # Use collected count as a temporary baseline
+        status_data["total_following"] = len(following_data)
+        logging.info(f"Setting temporary total following count to {len(following_data)} until profile is loaded")
         save_json_data(status_data, STATUS_FILE)
     
-    # If we don't have a total followers count yet or it's incorrect, update it
-    if status_data["total_followers"] == 0 or status_data["total_followers"] == 232:  # 232 is the incorrect value
-        status_data["total_followers"] = 877  # Update to the correct value from the profile
+    if status_data["total_followers"] == 0 and followers_data:
+        # Use collected count as a temporary baseline
+        status_data["total_followers"] = len(followers_data)
+        logging.info(f"Setting temporary total followers count to {len(followers_data)} until profile is loaded")
         save_json_data(status_data, STATUS_FILE)
-        logging.info(f"Updated total followers count to the correct value: 877")
+    
+    # Log current counts from status file
+    logging.info(f"Current counts in status file - Followers: {status_data['total_followers']}, Following: {status_data['total_following']}")
     
     return {
         "following_collected": len(following_data),
@@ -320,19 +326,44 @@ def run_scraping_session():
             if line:
                 logging.info(f"SCRAPER: {line}")
                 
-                # Extract the following count if available
-                if "Following:" in line and "," in line:
+                # Check for the profile stats line
+                if "Profile Stats:" in line:
+                    logging.info("Found profile stats line")
+                
+                # Check for the specific followers/following count line
+                if "Followers:" in line and "Following:" in line:
+                    try:
+                        # Parse the line: "Followers: X, Following: Y"
+                        parts = line.split(",")
+                        if len(parts) >= 2:
+                            followers_part = parts[0].strip()
+                            following_part = parts[1].strip()
+                            
+                            # Extract numbers
+                            if "Followers:" in followers_part:
+                                total_followers = int(followers_part.split("Followers:")[1].strip())
+                                logging.info(f"Extracted total followers: {total_followers}")
+                            
+                            if "Following:" in following_part:
+                                total_following = int(following_part.split("Following:")[1].strip())
+                                logging.info(f"Extracted total following: {total_following}")
+                    except Exception as e:
+                        logging.error(f"Error parsing followers/following counts: {e}")
+                
+                # Alternative method to extract counts from individual lines
+                elif "Following:" in line and "," in line:
                     try:
                         total_following = int(line.split("Following:")[1].split(",")[0].strip())
-                    except:
-                        pass
+                        logging.info(f"Extracted total following: {total_following}")
+                    except Exception as e:
+                        logging.error(f"Error parsing following count: {e}")
                 
-                # Extract the followers count if available
-                if "Followers:" in line and "," in line:
+                elif "Followers:" in line and "," in line:
                     try:
                         total_followers = int(line.split("Followers:")[1].split(",")[0].strip())
-                    except:
-                        pass
+                        logging.info(f"Extracted total followers: {total_followers}")
+                    except Exception as e:
+                        logging.error(f"Error parsing followers count: {e}")
         
         # Wait for process to complete
         process.wait()
@@ -344,8 +375,15 @@ def run_scraping_session():
             logging.error(f"Error output: {error_output}")
             return False
         
-        # Update status
-        update_status(session_completed=True, total_following=total_following, total_followers=total_followers)
+        # Update status with the actual counts from the profile
+        if total_following is not None or total_followers is not None:
+            logging.info(f"Updating status with dynamic counts - Followers: {total_followers}, Following: {total_following}")
+            update_status(session_completed=True, total_following=total_following, total_followers=total_followers)
+        else:
+            # If we couldn't extract the counts, just update session completed
+            logging.warning("Could not extract follower/following counts from output")
+            update_status(session_completed=True)
+        
         return True
         
     except Exception as e:
@@ -471,12 +509,117 @@ def check_status():
         "follower_percent": followers_percent
     }
 
+def fetch_profile_counts():
+    """Fetch current follower and following counts directly from the profile"""
+    logging.info("Fetching current follower and following counts from profile...")
+    
+    try:
+        # Run scrapeMyAccount.py with minimal options just to get the counts
+        command = [
+            "python3", "scrapeMyAccount.py",
+            "--username", USERNAME,
+            "--password", PASSWORD,
+            "--headless",
+            "--no-followers",  # Don't scrape followers
+            "--no-following",  # Don't scrape following
+            "--max-pages", "1"  # Minimal scraping
+        ]
+        
+        # Execute the command and capture output
+        process = subprocess.Popen(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=True
+        )
+        
+        total_following = None
+        total_followers = None
+        
+        # Process the output to extract counts
+        for line in iter(process.stdout.readline, ""):
+            line = line.strip()
+            if line:
+                logging.info(f"PROFILE CHECK: {line}")
+                
+                # Check for the profile stats line
+                if "Profile Stats:" in line:
+                    logging.info("Found profile stats")
+                
+                # Check for the specific followers/following count line
+                if "Followers:" in line and "Following:" in line:
+                    try:
+                        # Parse the line: "Followers: X, Following: Y"
+                        parts = line.split(",")
+                        if len(parts) >= 2:
+                            followers_part = parts[0].strip()
+                            following_part = parts[1].strip()
+                            
+                            # Extract numbers
+                            if "Followers:" in followers_part:
+                                total_followers = int(followers_part.split("Followers:")[1].strip())
+                                logging.info(f"Extracted total followers: {total_followers}")
+                            
+                            if "Following:" in following_part:
+                                total_following = int(following_part.split("Following:")[1].strip())
+                                logging.info(f"Extracted total following: {total_following}")
+                    except Exception as e:
+                        logging.error(f"Error parsing followers/following counts: {e}")
+                
+                # Alternative method to extract counts from individual lines
+                elif "Following:" in line and "," in line:
+                    try:
+                        total_following = int(line.split("Following:")[1].split(",")[0].strip())
+                        logging.info(f"Extracted total following: {total_following}")
+                    except Exception as e:
+                        logging.error(f"Error parsing following count: {e}")
+                
+                elif "Followers:" in line and "," in line:
+                    try:
+                        total_followers = int(line.split("Followers:")[1].split(",")[0].strip())
+                        logging.info(f"Extracted total followers: {total_followers}")
+                    except Exception as e:
+                        logging.error(f"Error parsing followers count: {e}")
+        
+        # Wait for process to complete
+        process.wait()
+        
+        # Check for errors
+        if process.returncode != 0:
+            error_output = process.stderr.read()
+            logging.error(f"Profile check failed with return code {process.returncode}")
+            logging.error(f"Error output: {error_output}")
+            return None, None
+        
+        # Return the counts if found
+        if total_following is not None or total_followers is not None:
+            return total_followers, total_following
+        else:
+            logging.warning("Could not extract follower/following counts from profile check")
+            return None, None
+        
+    except Exception as e:
+        logging.error(f"Error checking profile counts: {e}")
+        logging.error(traceback.format_exc())
+        return None, None
+
 def main():
     # Set up logging
     setup_logging()
     logging.info("Auto-scraper script started")
     
     try:
+        # Ensure data directory exists
+        ensure_dir_exists(DATA_DIR)
+        
+        # Get current profile counts to ensure we have accurate totals
+        total_followers, total_following = fetch_profile_counts()
+        
+        # If we got valid counts, update the status file
+        if total_followers is not None or total_following is not None:
+            logging.info(f"Updating status with initial profile counts - Followers: {total_followers}, Following: {total_following}")
+            update_status(session_completed=False, total_followers=total_followers, total_following=total_following)
+        
         # Initial check - will update status file if it doesn't exist
         check_completion()
         
@@ -511,6 +654,13 @@ def main():
                     time.sleep(random_wait)
                     continue
             
+            # Check if it's safe to run now
+            if not safe_to_run():
+                # Wait an hour before checking again
+                logging.info("Not safe to run right now. Waiting 60 minutes before checking again")
+                time.sleep(3600)
+                continue
+                
             # Regular collection session
             session_result = run_scraping_session()
             

@@ -1,0 +1,27 @@
+2025-03-22 16:14:54,068 - INFO - ============================================================
+2025-03-22 16:14:54,068 - INFO - Instagram Auto Scraper Starting
+2025-03-22 16:14:54,068 - INFO - ============================================================
+2025-03-22 16:14:54,068 - INFO - Auto-scraper script started
+2025-03-22 16:14:54,068 - INFO - Fetching current follower and following counts from profile...
+2025-03-22 16:15:28,317 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 16:15:28,317 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-22 16:15:28,317 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-22 16:15:28,318 - INFO - PROFILE CHECK: Profile Stats: {'followers': 877, 'following': 1861, 'posts': 243}
+2025-03-22 16:15:28,318 - INFO - Found profile stats
+2025-03-22 16:15:28,318 - INFO - PROFILE CHECK: Followers: 877, Following: 1861
+2025-03-22 16:15:28,318 - INFO - Extracted total followers: 877
+2025-03-22 16:15:28,318 - INFO - Extracted total following: 1861
+2025-03-22 16:15:28,318 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-22 16:15:28,318 - INFO - PROFILE CHECK: Browser closed.
+2025-03-22 16:15:28,444 - INFO - Updating status with initial profile counts - Followers: 877, Following: 1861
+2025-03-22 16:15:28,445 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 16:15:28,446 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 16:15:28,446 - INFO - All following accounts collected! 1862/1861
+2025-03-22 16:15:28,446 - INFO - Followers collection progress: 255/877 (29.1%)
+2025-03-22 16:15:28,446 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 16:15:28,446 - INFO - All following accounts collected! 1862/1861
+2025-03-22 16:15:28,446 - INFO - Followers collection progress: 255/877 (29.1%)
+2025-03-22 16:15:28,446 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 16:15:28,447 - INFO - Current counts in status file - Followers: 877, Following: 1861
+2025-03-22 16:15:28,449 - INFO - Only 1.5 minutes since last run. Waiting at least 20 minutes between runs.
+2025-03-22 16:15:28,449 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
