@@ -249,3 +249,5 @@
 2025-03-22 20:30:13,358 - INFO - Updating status with dynamic counts - Followers: 878, Following: 1863
 2025-03-22 20:30:13,361 - INFO - Saved data to instagram_data/auto_scrape_status.json
 2025-03-22 20:30:13,361 - INFO - Session completed with result: True. Waiting 1 hours and 2 minutes before next session...
+2025-03-22 21:30:59,370 - INFO - Scraper interrupted by user
+2025-03-22 21:30:59,386 - INFO - Auto-scraper script ended

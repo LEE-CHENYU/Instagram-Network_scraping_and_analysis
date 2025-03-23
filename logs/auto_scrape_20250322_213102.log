@@ -1,0 +1,151 @@
+2025-03-22 21:31:02,707 - INFO - ============================================================
+2025-03-22 21:31:02,707 - INFO - Instagram Auto Scraper Starting
+2025-03-22 21:31:02,707 - INFO - ============================================================
+2025-03-22 21:31:02,707 - INFO - Auto-scraper script started
+2025-03-22 21:31:02,707 - INFO - Fetching current follower and following counts from profile...
+2025-03-22 21:31:42,837 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 21:31:42,842 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-22 21:31:42,842 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-22 21:31:42,842 - INFO - PROFILE CHECK: Profile Stats: {'followers': 878, 'following': 1863, 'posts': 243}
+2025-03-22 21:31:42,842 - INFO - Found profile stats
+2025-03-22 21:31:42,842 - INFO - PROFILE CHECK: Followers: 878, Following: 1863
+2025-03-22 21:31:42,842 - INFO - Extracted total followers: 878
+2025-03-22 21:31:42,842 - INFO - Extracted total following: 1863
+2025-03-22 21:31:42,842 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-22 21:31:42,843 - INFO - PROFILE CHECK: Browser closed.
+2025-03-22 21:31:42,986 - INFO - Updating status with initial profile counts - Followers: 878, Following: 1863
+2025-03-22 21:31:42,989 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 21:31:42,991 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:31:42,991 - INFO - Following collection progress: 1862/1863 (99.9%)
+2025-03-22 21:31:42,991 - INFO - Followers collection progress: 602/878 (68.6%)
+2025-03-22 21:31:42,992 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:31:42,992 - INFO - Following collection progress: 1862/1863 (99.9%)
+2025-03-22 21:31:42,992 - INFO - Followers collection progress: 602/878 (68.6%)
+2025-03-22 21:31:42,992 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:31:42,993 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:31:42,996 - INFO - Starting new scraping session
+2025-03-22 21:31:42,997 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:31:42,997 - INFO - Need to collect more following accounts: 1862/1863
+2025-03-22 21:31:42,997 - INFO - Need to collect more followers: 602/878
+2025-03-22 21:31:42,997 - INFO - Medium follower gap detected (276 remaining). Using higher max_pages: 14
+2025-03-22 21:31:42,997 - INFO - Using aggressive resume mode to get past 602 existing followers
+2025-03-22 21:36:11,317 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 21:36:11,338 - INFO - SCRAPER: Logged in successfully!
+2025-03-22 21:36:11,341 - INFO - SCRAPER: Logged in as fretin98
+2025-03-22 21:36:11,342 - INFO - SCRAPER: Resuming previous session...
+2025-03-22 21:36:11,343 - INFO - SCRAPER: Loaded 602 followers and 1862 following from previous session
+2025-03-22 21:36:11,344 - INFO - SCRAPER: Profile Stats: {'followers': 878, 'following': 1863, 'posts': 243}
+2025-03-22 21:36:11,344 - INFO - Found profile stats line
+2025-03-22 21:36:11,346 - INFO - SCRAPER: Followers: 878, Following: 1863
+2025-03-22 21:36:11,346 - INFO - Extracted total followers: 878
+2025-03-22 21:36:11,346 - INFO - Extracted total following: 1863
+2025-03-22 21:36:11,347 - INFO - SCRAPER: Scraping followers...
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Resuming with 602 existing followers
+2025-03-22 21:36:11,349 - INFO - SCRAPER: AGGRESSIVE RESUME MODE: Performing extra aggressive scrolling to get past 602 existing users
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Performing 75 aggressive initial scrolls
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 1/75
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 6/75
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 11/75
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 16/75
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 21/75
+2025-03-22 21:36:11,349 - INFO - SCRAPER: Aggressive initial scroll 26/75
+2025-03-22 21:36:11,350 - INFO - SCRAPER: Aggressive initial scroll 31/75
+2025-03-22 21:36:11,350 - INFO - SCRAPER: Aggressive initial scroll 36/75
+2025-03-22 21:36:11,350 - INFO - SCRAPER: Aggressive initial scroll 41/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 46/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 51/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 56/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 61/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 66/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Aggressive initial scroll 71/75
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Finished initial scrolling, now looking for new users
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Using highest persistence threshold (10) due to aggressive resume mode
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Scrolling page 1/14 for followers
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,351 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,363 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Trying scroll to position 5000px
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Scrolling page 2/14 for followers
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Trying scroll to position 10000px
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Scrolling page 3/14 for followers
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,365 - INFO - SCRAPER: Trying scroll to position 15000px
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Scrolling page 4/14 for followers
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Trying scroll to position 20000px
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Scrolling page 5/14 for followers
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Trying scroll to position 0px
+2025-03-22 21:36:11,380 - INFO - SCRAPER: Scrolling page 6/14 for followers
+2025-03-22 21:36:11,386 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,386 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,386 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,386 - INFO - SCRAPER: Trying scroll to position 5000px
+2025-03-22 21:36:11,394 - INFO - SCRAPER: Scrolling page 7/14 for followers
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Trying scroll to position 10000px
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Scrolling page 8/14 for followers
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Trying scroll to position 15000px
+2025-03-22 21:36:11,395 - INFO - SCRAPER: Scrolling page 9/14 for followers
+2025-03-22 21:36:11,399 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Trying scroll to position 20000px
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Scrolling page 10/14 for followers
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Trying scroll to position 0px
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Scrolling page 11/14 for followers
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Trying scroll to position 5000px
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Scrolling page 12/14 for followers
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,400 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,406 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,414 - INFO - SCRAPER: Trying scroll to position 10000px
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Scrolling page 13/14 for followers
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Trying scroll to position 15000px
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Scrolling page 14/14 for followers
+2025-03-22 21:36:11,425 - INFO - SCRAPER: Added 0 new users (filtered 22 duplicates)
+2025-03-22 21:36:11,426 - INFO - SCRAPER: Still looking for first new user beyond existing 602 users
+2025-03-22 21:36:11,426 - INFO - SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-22 21:36:11,426 - INFO - SCRAPER: Trying scroll to position 20000px
+2025-03-22 21:36:11,426 - INFO - SCRAPER: Total followers retrieved: 602 (0 new in this session)
+2025-03-22 21:36:11,427 - INFO - SCRAPER: Total followers retrieved: 602/878
+2025-03-22 21:36:11,427 - INFO - SCRAPER: Saved data to instagram_data/followers.json
+2025-03-22 21:36:11,427 - INFO - SCRAPER: Saved data to instagram_data/next_cursor.json
+2025-03-22 21:36:11,427 - INFO - SCRAPER: Scraping following...
+2025-03-22 21:36:11,427 - INFO - SCRAPER: Already collected 1862/1863 following accounts (≥95%). Skipping following scraping.
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Created 1862 following links from usernames
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Added 0 new relationships (total: 6345)
+2025-03-22 21:36:11,428 - INFO - SCRAPER: Retrieved 1862 following links
+2025-03-22 21:36:11,432 - INFO - SCRAPER: Session completed successfully!
+2025-03-22 21:36:11,432 - INFO - SCRAPER: Browser closed.
+2025-03-22 21:36:13,029 - INFO - Updating status with dynamic counts - Followers: 878, Following: 1863
+2025-03-22 21:36:13,032 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 21:36:13,033 - INFO - Session completed with result: True. Waiting 1 hours and 3 minutes before next session...
+2025-03-22 21:43:18,381 - INFO - Scraper interrupted by user
+2025-03-22 21:43:18,382 - INFO - Auto-scraper script ended
