@@ -1,0 +1,32 @@
+2025-03-23 08:42:06,706 - INFO - ============================================================
+2025-03-23 08:42:06,706 - INFO - Instagram Auto Scraper Starting
+2025-03-23 08:42:06,706 - INFO - ============================================================
+2025-03-23 08:42:06,706 - INFO - Auto-scraper script started
+2025-03-23 08:42:06,706 - INFO - Inspecting links file for format issues
+2025-03-23 08:42:06,707 - INFO - Links file contains 1844 lines
+2025-03-23 08:42:06,708 - INFO - First 3 links: ['https://www.instagram.com/aaannie_wang/', 'https://www.instagram.com/ivyyyl_/', 'https://www.instagram.com/yezirong/']
+2025-03-23 08:42:06,708 - INFO - Last 3 links: ['https://www.instagram.com/jintaigeee/', 'https://www.instagram.com/cccathycc/', 'https://www.instagram.com/ttttonyy/']
+2025-03-23 08:42:06,708 - INFO - Performing initial duplicate check on following links
+2025-03-23 08:42:06,708 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-23 08:42:06,708 - INFO - Fetching current follower and following counts from profile...
+2025-03-23 08:42:39,912 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Profile Stats: {'followers': 878, 'following': 1864, 'posts': 243}
+2025-03-23 08:42:39,913 - INFO - Found profile stats
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Followers: 878, Following: 1864
+2025-03-23 08:42:39,913 - INFO - Extracted total followers: 878
+2025-03-23 08:42:39,913 - INFO - Extracted total following: 1864
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-23 08:42:39,913 - INFO - PROFILE CHECK: Browser closed.
+2025-03-23 08:42:39,968 - INFO - Updating status with initial profile counts - Followers: 878, Following: 1864
+2025-03-23 08:42:39,970 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-23 08:42:39,970 - INFO - Current counts in status file - Followers: 878, Following: 1864
+2025-03-23 08:42:39,970 - INFO - Following collection progress: 1862/1864 (99.9%)
+2025-03-23 08:42:39,970 - INFO - All followers collected! 879/878
+2025-03-23 08:42:39,970 - INFO - Current counts in status file - Followers: 878, Following: 1864
+2025-03-23 08:42:39,971 - INFO - Current counts in status file - Followers: 878, Following: 1864
+2025-03-23 08:42:39,971 - INFO - Randomly skipping this session to create a more human-like pattern
+2025-03-23 08:42:39,971 - INFO - Will check again in 37 minutes
+2025-03-23 08:56:56,028 - INFO - Scraper interrupted by user
+2025-03-23 08:56:56,032 - INFO - Auto-scraper script ended

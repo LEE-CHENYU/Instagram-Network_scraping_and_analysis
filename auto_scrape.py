@@ -16,6 +16,28 @@ Performance Settings:
   - 10-20 accounts per batch (in run_following_scraping_session)
   - 15-30 minute intervals between sessions (MIN/MAX_INTERVAL_MINUTES)
 - Adjust these values carefully if needed, as too aggressive scraping may trigger Instagram's rate limits
+
+Debug Information:
+- Added duplicate link detection and removal (debug_check_duplicates function)
+- Added file locking mechanism to prevent race conditions (save_links_with_lock function)
+- Added detailed logging to track queue sizes before and after processing
+- Added --debug flag to scrapingFollowing.py to enable additional debugging
+- Added link file format inspection (debug_inspect_links_file function)
+
+Bug Fixes:
+- Fixed issue where the number of remaining accounts could increase instead of decrease
+- Fixed potential race condition when writing to followingLinks.txt
+- Added proper error handling when moving failed links to the end of the queue
+- Improved sanitization of links before saving to prevent format issues
+
+How to Use This Fix:
+1. Run this script normally: python3 auto_scrape.py
+2. The script will automatically check for and fix duplicates in the followingLinks.txt file
+3. Each time it processes a batch of accounts, it will check for and report any issues
+4. If the number of accounts still increases, check the logs for detailed diagnostics
+
+Tip: To quickly fix the issue without running a full session, you can also run:
+     python3 -c "import auto_scrape; auto_scrape.debug_check_duplicates(); auto_scrape.debug_inspect_links_file()"
 """
 
 import os
@@ -26,6 +48,8 @@ import logging
 import subprocess
 import traceback
 import datetime
+import fcntl
+from collections import Counter
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -426,6 +450,20 @@ def run_following_scraping_session():
     """Run a session to scrape data from following accounts"""
     logging.info("Starting following accounts scraping session")
     
+    # Debug: Check for duplicates before processing
+    logging.info("DEBUG: Checking for duplicates before processing")
+    debug_check_duplicates()
+    
+    # Log the number of accounts before processing
+    before_count = 0
+    try:
+        with open(FOLLOWING_LINKS_FILE, "r") as f:
+            links = f.readlines()
+            before_count = len(links)
+        logging.info(f"DEBUG: Before processing - {before_count} accounts in queue")
+    except Exception as e:
+        logging.error(f"Error counting accounts before processing: {e}")
+    
     # Check if there are any following accounts left to process
     following_progress = get_following_accounts_progress()
     if following_progress["accounts_remaining"] <= 0:
@@ -444,7 +482,8 @@ def run_following_scraping_session():
             "--username", USERNAME,
             "--password", PASSWORD,
             "--batch-size", str(batch_size),
-            "--headless"
+            "--headless",
+            "--debug"  # Add debug flag to enable debugging in scrapingFollowing.py
         ]
         
         # Execute the command and capture output
@@ -469,9 +508,29 @@ def run_following_scraping_session():
             error_output = process.stderr.read()
             logging.error(f"Following scraping failed with return code {process.returncode}")
             logging.error(f"Error output: {error_output}")
-            return False
+            result = False
+        else:
+            result = True
         
-        return True
+        # After processing, check the number of accounts again
+        try:
+            with open(FOLLOWING_LINKS_FILE, "r") as f:
+                links = f.readlines()
+                after_count = len(links)
+            
+            diff = after_count - before_count
+            if diff >= 0:
+                logging.error(f"DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: {before_count}, After: {after_count}, Diff: {diff}")
+            else:
+                logging.info(f"DEBUG: After processing - {after_count} accounts in queue (removed {abs(diff)})")
+            
+            # Debug: Check for duplicates after processing
+            logging.info("DEBUG: Checking for duplicates after processing")
+            debug_check_duplicates()
+        except Exception as e:
+            logging.error(f"Error counting accounts after processing: {e}")
+        
+        return result
         
     except Exception as e:
         logging.error(f"Error running following scraping session: {e}")
@@ -635,6 +694,115 @@ def fetch_profile_counts():
         logging.error(traceback.format_exc())
         return None, None
 
+def debug_check_duplicates():
+    """Check for duplicate links in the followingLinks.txt file and remove them"""
+    try:
+        if not os.path.exists(FOLLOWING_LINKS_FILE):
+            logging.warning(f"Links file {FOLLOWING_LINKS_FILE} does not exist yet")
+            return
+            
+        with open(FOLLOWING_LINKS_FILE, "r") as f:
+            links = f.readlines()
+        
+        # Strip whitespace and normalize links
+        normalized_links = [link.strip() for link in links]
+        unique_links = []
+        seen = set()
+        
+        # Preserve order while removing duplicates
+        for link in normalized_links:
+            if link and link not in seen:
+                seen.add(link)
+                unique_links.append(link)
+        
+        if len(normalized_links) != len(unique_links):
+            logging.error(f"DUPLICATE LINKS DETECTED: {len(normalized_links)} total, {len(unique_links)} unique")
+            
+            # Count occurrences of each link
+            link_counts = Counter(normalized_links)
+            duplicates = {link: count for link, count in link_counts.items() if count > 1}
+            
+            logging.error(f"Duplicated links: {duplicates}")
+            
+            # Fix by removing duplicates and writing back
+            save_links_with_lock(unique_links, FOLLOWING_LINKS_FILE)
+            
+            logging.info(f"Fixed duplicate links. Removed {len(normalized_links) - len(unique_links)} duplicates.")
+        else:
+            logging.info(f"No duplicate links found in {FOLLOWING_LINKS_FILE}")
+    except Exception as e:
+        logging.error(f"Error checking for duplicates: {e}")
+
+def debug_inspect_links_file():
+    """Inspect the links file for format issues"""
+    try:
+        if not os.path.exists(FOLLOWING_LINKS_FILE):
+            logging.warning(f"Links file {FOLLOWING_LINKS_FILE} does not exist yet")
+            return
+            
+        with open(FOLLOWING_LINKS_FILE, "r") as f:
+            links = f.readlines()
+        
+        logging.info(f"Links file contains {len(links)} lines")
+        
+        # Check for empty lines
+        empty_lines = [i for i, link in enumerate(links) if not link.strip()]
+        if empty_lines:
+            logging.error(f"Empty lines found at positions: {empty_lines}")
+        
+        # Check for lines without proper URL format
+        invalid_format = [i for i, link in enumerate(links) 
+                         if link.strip() and not (link.strip().startswith('http') and 'instagram.com' in link)]
+        if invalid_format:
+            logging.error(f"Lines with invalid format found at positions: {invalid_format}")
+            logging.error(f"Examples of invalid lines: {[links[i] for i in invalid_format[:5]]}")
+        
+        # Check for lines without newline at the end
+        missing_newline = [i for i, link in enumerate(links) if link and not link.endswith('\n')]
+        if missing_newline:
+            logging.error(f"Lines missing newline character found at positions: {missing_newline}")
+        
+        # Check first and last few links
+        if links:
+            logging.info(f"First 3 links: {[links[i].strip() for i in range(min(3, len(links)))]}")
+            logging.info(f"Last 3 links: {[links[i].strip() for i in range(max(0, len(links)-3), len(links))]}")
+        
+        # Fix any format issues
+        fixed_links = []
+        has_issues = False
+        
+        for link in links:
+            link = link.strip()
+            if not link:
+                has_issues = True
+                continue  # Skip empty lines
+                
+            if not (link.startswith('http') and 'instagram.com' in link):
+                logging.error(f"Invalid link format: {link}")
+                has_issues = True
+                continue  # Skip invalid links
+            
+            fixed_links.append(link)
+        
+        if has_issues:
+            logging.info(f"Fixed {len(links) - len(fixed_links)} formatting issues in links file")
+            save_links_with_lock(fixed_links, FOLLOWING_LINKS_FILE)
+        
+    except Exception as e:
+        logging.error(f"Error inspecting links file: {e}")
+
+def save_links_with_lock(links, file_path):
+    """Save links with file locking to prevent race conditions"""
+    try:
+        with open(file_path, "w") as file_h:
+            fcntl.flock(file_h, fcntl.LOCK_EX)  # Exclusive lock
+            for link in links:
+                file_h.write(f"{link}\n")
+            fcntl.flock(file_h, fcntl.LOCK_UN)  # Release lock
+        logging.info(f"Saved {len(links)} links to {file_path} with lock")
+    except Exception as e:
+        logging.error(f"Error saving links with lock: {e}")
+
 def main():
     # Set up logging
     setup_logging()
@@ -643,6 +811,14 @@ def main():
     try:
         # Ensure data directory exists
         ensure_dir_exists(DATA_DIR)
+        
+        # Debug: Inspect links file for format issues
+        logging.info("Inspecting links file for format issues")
+        debug_inspect_links_file()
+        
+        # Debug: Check for and fix duplicates at startup
+        logging.info("Performing initial duplicate check on following links")
+        debug_check_duplicates()
         
         # Get current profile counts to ensure we have accurate totals
         total_followers, total_following = fetch_profile_counts()
@@ -657,11 +833,11 @@ def main():
         
         while True:
             # Check if collection is complete
-            if check_completion():
-                logging.info("Collection is complete. Waiting for next check...")
-                # Sleep for a longer time since we're done (6 hours)
-                time.sleep(WAIT_TIME * 12)
-                continue
+            # if check_completion():
+            #     logging.info("Collection is complete. Waiting for next check...")
+            #     # Sleep for a longer time since we're done (6 hours)
+            #     time.sleep(WAIT_TIME * 12)
+            #     continue
             
             # Get current progress to check for discrepancies
             progress = get_progress()

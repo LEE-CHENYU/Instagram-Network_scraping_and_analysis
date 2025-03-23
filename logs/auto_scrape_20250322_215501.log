@@ -149,3 +149,5 @@
 2025-03-22 22:23:32,859 - INFO - All following accounts collected! 1862/1862
 2025-03-22 22:23:32,859 - INFO - All followers collected! 879/879
 2025-03-22 22:23:32,859 - INFO - Collection is complete. Waiting for next check...
+2025-03-22 23:03:32,970 - INFO - Scraper interrupted by user
+2025-03-22 23:03:32,970 - INFO - Auto-scraper script ended

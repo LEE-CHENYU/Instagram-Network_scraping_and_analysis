@@ -42,6 +42,54 @@ def save_data(data, file_path):
         json.dump(data, f, indent=2)
     print(f"Saved data to {file_path}")
 
+def sanitize_and_save_links(links, file_path):
+    """Sanitize, deduplicate and save links to a file"""
+    if DEBUG:
+        print(f"DEBUG: Sanitizing and saving {len(links)} links")
+    
+    # Normalize and sanitize links
+    clean_links = []
+    seen = set()
+    
+    for link in links:
+        # Strip whitespace and ensure it's a string
+        link = str(link).strip()
+        
+        # Skip empty links
+        if not link:
+            if DEBUG:
+                print("DEBUG: Skipping empty link")
+            continue
+        
+        # Ensure proper URL format
+        if not (link.startswith('http') and 'instagram.com' in link):
+            if DEBUG:
+                print(f"DEBUG: Skipping invalid link format: {link}")
+            continue
+        
+        # Skip duplicates
+        if link in seen:
+            if DEBUG:
+                print(f"DEBUG: Skipping duplicate link: {link}")
+            continue
+        
+        seen.add(link)
+        clean_links.append(link + '\n')  # Ensure newline at end
+    
+    if DEBUG:
+        print(f"DEBUG: After sanitization: {len(clean_links)} links (removed {len(links) - len(clean_links)})")
+    
+    # Save to file
+    try:
+        with open(file_path, 'w') as file_h:
+            file_h.writelines(clean_links)
+        if DEBUG:
+            print(f"DEBUG: Successfully saved {len(clean_links)} links to {file_path}")
+    except Exception as e:
+        print(f"ERROR: Failed to save links: {e}")
+    
+    return clean_links
+
 #%% Parse command line arguments
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Instagram Following Accounts Scraper')
@@ -49,10 +97,16 @@ def parse_arguments():
     parser.add_argument('--password', default="Lcy199818su!", help='Instagram password')
     parser.add_argument('--batch-size', type=int, default=3, help='Number of accounts to scrape in this session')
     parser.add_argument('--headless', action='store_true', help='Run in headless mode')
+    parser.add_argument('--debug', action='store_true', help='Enable debug logging')
     return parser.parse_args()
 
 #%% Setup and login
 args = parse_arguments()
+
+# Set debug flag
+DEBUG = args.debug
+if DEBUG:
+    print("DEBUG MODE ENABLED")
 
 ensure_data_directory()
 
@@ -105,6 +159,85 @@ def load_links_and_adj_list():
         all_nodes = {}
     
     return links, all_nodes
+
+def get_processed_accounts():
+    """Extract list of accounts that have already been processed from adjList.txt"""
+    processed_accounts = set()
+    
+    if os.path.exists(ADJ_LIST_FILE):
+        try:
+            with open(ADJ_LIST_FILE, "r") as adj_file:
+                for line in adj_file:
+                    parts = line.strip().split()
+                    if len(parts) >= 2:
+                        # The first part is the account that has been processed
+                        processed_accounts.add(parts[0])
+        except Exception as e:
+            print(f"Error reading adjList.txt: {e}")
+    
+    if DEBUG:
+        print(f"DEBUG: Found {len(processed_accounts)} already processed accounts in adjList.txt")
+    
+    return processed_accounts
+
+def deduplicate_adj_list():
+    """Remove duplicate entries from the adjacency list file"""
+    if not os.path.exists(ADJ_LIST_FILE):
+        print(f"Warning: {ADJ_LIST_FILE} not found. No deduplication needed.")
+        return
+    
+    try:
+        # Read existing relations
+        with open(ADJ_LIST_FILE, "r") as adj_file:
+            relations = adj_file.readlines()
+        
+        # Normalize and deduplicate
+        unique_relations = set()
+        for relation in relations:
+            relation = relation.strip()
+            if relation:  # Skip empty lines
+                unique_relations.add(relation)
+        
+        # Check if any duplicates were found
+        if len(relations) != len(unique_relations):
+            print(f"Found {len(relations) - len(unique_relations)} duplicate relations in adjList.txt")
+            
+            # Write back unique relations
+            with open(ADJ_LIST_FILE, "w") as adj_file:
+                for relation in sorted(unique_relations):
+                    adj_file.write(f"{relation}\n")
+            
+            print(f"Deduplicated adjList.txt now contains {len(unique_relations)} unique relationships")
+        else:
+            print("No duplicates found in adjList.txt")
+    
+    except Exception as e:
+        print(f"Error deduplicating adjList.txt: {e}")
+
+def save_relations_to_adj_list(new_relations):
+    """Save new relations to adjList.txt with deduplication"""
+    # Load existing adjacency list to avoid duplicates
+    existing_relations = set()
+    if os.path.exists(ADJ_LIST_FILE):
+        with open(ADJ_LIST_FILE, "r") as adj_file:
+            for line in adj_file:
+                if line.strip():  # Skip empty lines
+                    existing_relations.add(line.strip())
+    
+    # Count new relationships
+    new_count = 0
+    for relation in new_relations:
+        if relation not in existing_relations:
+            existing_relations.add(relation)
+            new_count += 1
+    
+    # Write all relationships back to the file
+    with open(ADJ_LIST_FILE, "w") as adj_file:
+        for relation in sorted(existing_relations):
+            adj_file.write(f"{relation}\n")
+    
+    print(f"Added {new_count} new relationships to adjacency list (total: {len(existing_relations)})")
+    return new_count
 
 def scrape_account(account_link, all_nodes):
     """Scrape a single Instagram account"""
@@ -362,6 +495,37 @@ def scrape_account(account_link, all_nodes):
 try:
     links, all_nodes = load_links_and_adj_list()
     
+    # Deduplicate adjacency list at startup
+    print("Deduplicating adjacency list...")
+    deduplicate_adj_list()
+    
+    # Get accounts that have already been processed
+    processed_accounts = get_processed_accounts()
+    print(f"Found {len(processed_accounts)} accounts that have already been processed")
+    
+    # Filter out links to accounts that are already processed
+    if processed_accounts:
+        filtered_links = []
+        skipped_count = 0
+        
+        for link in links:
+            # Extract username from link
+            username = link.rstrip('/').split('/')[-1].strip()
+            if username in processed_accounts:
+                if DEBUG:
+                    print(f"DEBUG: Skipping already processed account: {username}")
+                skipped_count += 1
+                continue
+            filtered_links.append(link)
+        
+        if skipped_count > 0:
+            print(f"Skipped {skipped_count} already processed accounts")
+            links = filtered_links
+            
+            # Save the filtered list
+            sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
+            print(f"Saved filtered list with {len(links)} remaining accounts")
+    
     if not links:
         print("No links to process. Run scrapeMyAccount.py first to generate links.")
     else:
@@ -388,7 +552,7 @@ try:
                     account_username = current_link.rstrip('/').split('/')[-1].strip()
                     
                     # Skip if already processed
-                    if account_username in progress_data:
+                    if account_username in processed_accounts:
                         continue
                     
                     # Do a quick check of follower/following counts
@@ -461,8 +625,7 @@ try:
             links = new_links
             
             # Save the reordered list
-            with open(FOLLOWING_LINKS_FILE, "w") as file_h:
-                file_h.writelines(links)
+            sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
             
             print("Links reordered to prioritize accounts with reasonable follower/following counts")
 
@@ -473,20 +636,55 @@ try:
             current_link = links[0].strip()  # Get the first link
             
             try:
+                if DEBUG:
+                    print(f"DEBUG: Processing link #{i+1}/{batch_size}: {current_link}")
+                    print(f"DEBUG: Before processing - {len(links)} links in queue")
+                
+                # Extract username to check if already processed
+                account_username = current_link.rstrip('/').split('/')[-1].strip()
+                if account_username in processed_accounts:
+                    if DEBUG:
+                        print(f"DEBUG: Skipping already processed account: {account_username}")
+                    # Remove from queue since it's already processed
+                    removed_link = links.pop(0)
+                    sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
+                    continue
+                
                 success, all_nodes = scrape_account(current_link, all_nodes)
                 if success:
                     processed_count += 1
+                    # Add to processed accounts set
+                    processed_accounts.add(account_username)
+                    
                 # Remove the processed link
-                del links[0]
+                if DEBUG:
+                    print(f"DEBUG: Removing link from queue: {current_link}")
+                    
+                removed_link = links.pop(0)
+                if DEBUG:
+                    print(f"DEBUG: Link removed. Queue size now: {len(links)}")
+                
             except Exception as e:
                 print(f"Error processing {current_link}: {e}")
                 traceback.print_exc()
+                
+                if DEBUG:
+                    print(f"DEBUG: Moving failed link to end of queue: {current_link}")
+                
                 # Move to the end of the list to try again later
-                links.append(links.pop(0))
+                # Check if the link still exists in list before appending
+                if links and links[0].strip() == current_link:
+                    links.append(links.pop(0))
+                    if DEBUG:
+                        print(f"DEBUG: Link moved to end. Queue size: {len(links)}")
+                else:
+                    print(f"WARNING: Failed link {current_link} not found at position 0, might have been removed already")
             
             # Save updated links and adjacency list after each account
-            with open(FOLLOWING_LINKS_FILE, "w") as file_h:
-                file_h.writelines(links)
+            sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
+            
+            if DEBUG:
+                print(f"DEBUG: Links saved")
             
             # Create proper formatted adjacency list entries (one relationship per line)
             new_relations = []
@@ -496,27 +694,9 @@ try:
                 for followed in following_list:
                     new_relations.append(f"{follower} {followed}")
             
-            # Load existing adjacency list to avoid duplicates
-            existing_relations = set()
-            if os.path.exists(ADJ_LIST_FILE):
-                with open(ADJ_LIST_FILE, "r") as adj_file:
-                    for line in adj_file:
-                        if line.strip():  # Skip empty lines
-                            existing_relations.add(line.strip())
+            # Save relations with deduplication
+            save_relations_to_adj_list(new_relations)
             
-            # Count new relationships
-            new_count = 0
-            for relation in new_relations:
-                if relation not in existing_relations:
-                    existing_relations.add(relation)
-                    new_count += 1
-            
-            # Write all relationships back to the file
-            with open(ADJ_LIST_FILE, "w") as adj_file:
-                for relation in existing_relations:
-                    adj_file.write(f"{relation}\n")
-                
-            print(f"Added {new_count} new relationships to adjacency list (total: {len(existing_relations)})")
             print(f"Completed {processed_count}/{batch_size} accounts. {len(links)} remaining in queue.")
             print(f"Waiting 5 seconds before next account...")
             time.sleep(5)

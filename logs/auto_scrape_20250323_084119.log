@@ -1,0 +1,7 @@
+2025-03-23 08:41:19,463 - INFO - ============================================================
+2025-03-23 08:41:19,463 - INFO - Instagram Auto Scraper Starting
+2025-03-23 08:41:19,463 - INFO - ============================================================
+2025-03-23 08:41:19,464 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-23 08:41:19,464 - INFO - Links file contains 1844 lines
+2025-03-23 08:41:19,465 - INFO - First 3 links: ['https://www.instagram.com/aaannie_wang/', 'https://www.instagram.com/ivyyyl_/', 'https://www.instagram.com/yezirong/']
+2025-03-23 08:41:19,465 - INFO - Last 3 links: ['https://www.instagram.com/jintaigeee/', 'https://www.instagram.com/cccathycc/', 'https://www.instagram.com/ttttonyy/']
