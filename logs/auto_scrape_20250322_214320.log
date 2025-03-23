@@ -25,3 +25,5 @@
 2025-03-22 21:43:53,687 - INFO - Current counts in status file - Followers: 878, Following: 1863
 2025-03-22 21:43:53,690 - INFO - Only 7.7 minutes since last run. Waiting at least 20 minutes between runs.
 2025-03-22 21:43:53,690 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-03-22 21:49:28,942 - INFO - Scraper interrupted by user
+2025-03-22 21:49:28,943 - INFO - Auto-scraper script ended

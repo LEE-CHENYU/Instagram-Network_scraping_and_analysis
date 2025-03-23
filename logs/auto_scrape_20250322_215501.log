@@ -1,0 +1,151 @@
+2025-03-22 21:55:01,927 - INFO - ============================================================
+2025-03-22 21:55:01,927 - INFO - Instagram Auto Scraper Starting
+2025-03-22 21:55:01,927 - INFO - ============================================================
+2025-03-22 21:55:01,927 - INFO - Auto-scraper script started
+2025-03-22 21:55:01,927 - INFO - Fetching current follower and following counts from profile...
+2025-03-22 21:55:35,280 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Profile Stats: {'followers': 878, 'following': 1863, 'posts': 243}
+2025-03-22 21:55:35,282 - INFO - Found profile stats
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Followers: 878, Following: 1863
+2025-03-22 21:55:35,282 - INFO - Extracted total followers: 878
+2025-03-22 21:55:35,282 - INFO - Extracted total following: 1863
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-22 21:55:35,282 - INFO - PROFILE CHECK: Browser closed.
+2025-03-22 21:55:35,372 - INFO - Updating status with initial profile counts - Followers: 878, Following: 1863
+2025-03-22 21:55:35,374 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 21:55:35,375 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:55:35,375 - INFO - Following collection progress: 1862/1863 (99.9%)
+2025-03-22 21:55:35,375 - INFO - All followers collected! 879/878
+2025-03-22 21:55:35,376 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:55:35,376 - INFO - Following collection progress: 1862/1863 (99.9%)
+2025-03-22 21:55:35,376 - INFO - All followers collected! 879/878
+2025-03-22 21:55:35,376 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:55:35,377 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:55:35,379 - INFO - Starting new scraping session
+2025-03-22 21:55:35,380 - INFO - Current counts in status file - Followers: 878, Following: 1863
+2025-03-22 21:55:35,380 - INFO - Need to collect more following accounts: 1862/1863
+2025-03-22 21:55:35,380 - INFO - Using 5 max pages for this session
+2025-03-22 21:55:35,380 - INFO - Followers collection is complete. Only scraping following in this session.
+2025-03-22 21:56:08,674 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Logged in successfully!
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Logged in as fretin98
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Resuming previous session...
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Loaded 879 followers and 1862 following from previous session
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Profile Stats: {'followers': 0, 'following': 0, 'posts': 0}
+2025-03-22 21:56:08,675 - INFO - Found profile stats line
+2025-03-22 21:56:08,675 - INFO - SCRAPER: Followers: 0, Following: 0
+2025-03-22 21:56:08,675 - INFO - Extracted total followers: 0
+2025-03-22 21:56:08,676 - INFO - Extracted total following: 0
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Scraping following...
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Already collected 1862/0 following accounts (≥95%). Skipping following scraping.
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Created 1862 following links from usernames
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Added 0 new relationships (total: 6345)
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Retrieved 1862 following links
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Session completed successfully!
+2025-03-22 21:56:08,676 - INFO - SCRAPER: Browser closed.
+2025-03-22 21:56:08,711 - INFO - Updating status with dynamic counts - Followers: 0, Following: 0
+2025-03-22 21:56:08,712 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 21:56:08,712 - INFO - Now running a session to scrape following accounts network data...
+2025-03-22 21:56:08,712 - INFO - Starting following accounts scraping session
+2025-03-22 21:56:08,713 - INFO - Using random batch size of 15 accounts for this session
+2025-03-22 21:57:54,727 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 47 accounts processed
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Will process 15 accounts in this session
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Logged in successfully!
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Starting batch processing of 15 accounts
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/shuheisakaue/
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Account shuheisakaue already processed. Skipping.
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,728 - INFO - FOLLOWING SCRAPER: Completed 1/15 accounts. 1861 remaining in queue.
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/catsoupai/
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Account catsoupai already processed. Skipping.
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Completed 2/15 accounts. 1860 remaining in queue.
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/soloslop.memes/
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Account soloslop.memes already processed. Skipping.
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Completed 3/15 accounts. 1859 remaining in queue.
+2025-03-22 21:57:54,729 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/phillipsauction/
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Account phillipsauction already processed. Skipping.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Completed 4/15 accounts. 1858 remaining in queue.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/filmmovement/
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Account filmmovement already processed. Skipping.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Completed 5/15 accounts. 1857 remaining in queue.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/rubahitam_/
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Account rubahitam_ already processed. Skipping.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Completed 6/15 accounts. 1856 remaining in queue.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/chinatown_cowboy.mp4/
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Account chinatown_cowboy.mp4 already processed. Skipping.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Completed 7/15 accounts. 1855 remaining in queue.
+2025-03-22 21:57:54,730 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/asian_redbozicowboy/
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Account asian_redbozicowboy already processed. Skipping.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Completed 8/15 accounts. 1854 remaining in queue.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/ccpxi_8964/
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Account ccpxi_8964 already processed. Skipping.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Completed 9/15 accounts. 1853 remaining in queue.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/ngr.ev/
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Account ngr.ev already processed. Skipping.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Completed 10/15 accounts. 1852 remaining in queue.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/cinema_nighttt/
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Account cinema_nighttt already processed. Skipping.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Completed 11/15 accounts. 1851 remaining in queue.
+2025-03-22 21:57:54,731 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,733 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/ccclare_/
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Account ccclare_ already processed. Skipping.
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Completed 12/15 accounts. 1850 remaining in queue.
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/rubyyyyyying/
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Account rubyyyyyying already processed. Skipping.
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,734 - INFO - FOLLOWING SCRAPER: Completed 13/15 accounts. 1849 remaining in queue.
+2025-03-22 21:57:54,735 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,741 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/yitingzhang/
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Account yitingzhang already processed. Skipping.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Completed 14/15 accounts. 1848 remaining in queue.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/claire.qiu_/
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Account claire.qiu_ already processed. Skipping.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 6345)
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Completed 15/15 accounts. 1847 remaining in queue.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Batch complete! Processed 15 accounts.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: 1847 links remaining for future sessions.
+2025-03-22 21:57:54,742 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-03-22 21:57:54,834 - INFO - Following accounts scraping session completed with result: True
+2025-03-22 21:57:54,834 - INFO - Sessions completed. Waiting 0 hours and 25 minutes before next sessions...
+2025-03-22 22:23:32,848 - INFO - Setting temporary total following count to 1862 until profile is loaded
+2025-03-22 22:23:32,858 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 22:23:32,859 - INFO - Setting temporary total followers count to 879 until profile is loaded
+2025-03-22 22:23:32,859 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-22 22:23:32,859 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-22 22:23:32,859 - INFO - All following accounts collected! 1862/1862
+2025-03-22 22:23:32,859 - INFO - All followers collected! 879/879
+2025-03-22 22:23:32,859 - INFO - Collection is complete. Waiting for next check...

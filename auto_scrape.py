@@ -8,6 +8,16 @@ It's designed to run in the background (e.g., overnight) until all
 following accounts are collected.
 """
 
+"""
+Performance Settings:
+- The script is configured to scrape approximately 450 following accounts per day
+- This is achieved through:
+  - 30 scraping sessions per day (MAX_SESSIONS_PER_DAY)
+  - 10-20 accounts per batch (in run_following_scraping_session)
+  - 15-30 minute intervals between sessions (MIN/MAX_INTERVAL_MINUTES)
+- Adjust these values carefully if needed, as too aggressive scraping may trigger Instagram's rate limits
+"""
+
 import os
 import json
 import time
@@ -54,14 +64,14 @@ USERNAME = "fretin98"  # Replace with your username if different
 PASSWORD = "Lcy199818su!"  # Replace with your password if different
 
 # Settings for safe scraping
-MIN_INTERVAL_MINUTES = 20  # Minimum time between sessions (was 45)
-MAX_INTERVAL_MINUTES = 40  # Maximum time between sessions (was 90)
-MAX_SESSIONS_PER_DAY = 18  # Maximum number of sessions per day (was 12)
+MIN_INTERVAL_MINUTES = 15  # Minimum time between sessions (was 20)
+MAX_INTERVAL_MINUTES = 30  # Maximum time between sessions (was 40)
+MAX_SESSIONS_PER_DAY = 30  # Maximum number of sessions per day (was 18)
 HEADLESS_MODE = True  # Run without visible browser window
 FOLLOWINGS_BATCH_SIZE = None  # Will be randomized each session
 NATURAL_BREAK_LENGTH_MINUTES = 120  # 2-hour natural break once per day
 RANDOM_SKIP_CHANCE = 0.1  # 10% chance to randomly skip a session for more human-like behavior
-WAIT_TIME = 3600  # Base wait time in seconds (1 hour)
+WAIT_TIME = 1200  # 20 minutes instead of 1 hour
 
 # Safety settings
 PAUSE_HOURS = [2, 3, 4, 5]  # Hours to pause scraping (2am-5am) to seem human
@@ -423,7 +433,8 @@ def run_following_scraping_session():
         return True
     
     # Randomize batch size for each session for more human-like behavior
-    batch_size = random.randint(2, 5)
+    # Increased batch size to reach approximately 450 accounts per day
+    batch_size = random.randint(10, 20)
     logging.info(f"Using random batch size of {batch_size} accounts for this session")
     
     try:
@@ -679,17 +690,23 @@ def main():
             if not safe_to_run():
                 # Wait an hour before checking again
                 logging.info("Not safe to run right now. Waiting 60 minutes before checking again")
-                time.sleep(3600)
+                time.sleep(WAIT_TIME)
                 continue
                 
             # Regular collection session
             session_result = run_scraping_session()
             
+            # Now run a following accounts scraping session to collect network data
+            # This will scrape data from 10-20 following accounts per session
+            logging.info("Now running a session to scrape following accounts network data...")
+            following_result = run_following_scraping_session()
+            logging.info(f"Following accounts scraping session completed with result: {following_result}")
+            
             # Determine wait time between sessions (3-6 hours normally)
             random_wait = random.randint(WAIT_TIME, WAIT_TIME * 2)
             hours = random_wait // 3600
             minutes = (random_wait % 3600) // 60
-            logging.info(f"Session completed with result: {session_result}. Waiting {hours} hours and {minutes} minutes before next session...")
+            logging.info(f"Sessions completed. Waiting {hours} hours and {minutes} minutes before next sessions...")
             
             # Sleep for the random time period
             time.sleep(random_wait)
