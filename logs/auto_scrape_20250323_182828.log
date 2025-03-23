@@ -1,0 +1,17 @@
+2025-03-23 18:28:28,956 - INFO - ============================================================
+2025-03-23 18:28:28,956 - INFO - Instagram Auto Scraper Starting
+2025-03-23 18:28:28,956 - INFO - ============================================================
+2025-03-23 18:28:28,956 - INFO - Auto-scraper script started
+2025-03-23 18:28:28,956 - INFO - Inspecting links file for format issues
+2025-03-23 18:28:28,957 - INFO - Links file contains 1827 lines
+2025-03-23 18:28:28,957 - INFO - First 3 links: ['https://www.instagram.com/karena88888/', 'https://www.instagram.com/donsonn/', 'https://www.instagram.com/chenggao1999/']
+2025-03-23 18:28:28,957 - INFO - Last 3 links: ['https://www.instagram.com/jintaigeee/', 'https://www.instagram.com/cccathycc/', 'https://www.instagram.com/ttttonyy/']
+2025-03-23 18:28:28,958 - INFO - Performing initial duplicate check on following links
+2025-03-23 18:28:28,958 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-23 18:28:28,958 - INFO - Checking and removing already processed links
+2025-03-23 18:28:28,960 - INFO - Found 264 processed accounts in adjList.txt
+2025-03-23 18:28:28,960 - INFO - Found 1827 links in followingLinks.txt
+2025-03-23 18:28:28,961 - INFO - Saved 1781 links to instagram_data/followingLinks.txt with lock
+2025-03-23 18:28:28,961 - INFO - Removed 46 already processed links from followingLinks.txt
+2025-03-23 18:28:28,961 - INFO - Examples of removed accounts: ['karena88888', 'donsonn', 'chenggao1999', 'whitehouse', 'the_sstan']
+2025-03-23 18:28:28,961 - INFO - Fetching current follower and following counts from profile...

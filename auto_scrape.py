@@ -10,10 +10,10 @@ following accounts are collected.
 
 """
 Performance Settings:
-- The script is configured to scrape approximately 450 following accounts per day
+- The script is configured to scrape approximately 600 accounts per day
 - This is achieved through:
   - 30 scraping sessions per day (MAX_SESSIONS_PER_DAY)
-  - 10-20 accounts per batch (in run_following_scraping_session)
+  - 40-60 accounts per batch (in run_following_scraping_session)
   - 15-30 minute intervals between sessions (MIN/MAX_INTERVAL_MINUTES)
 - Adjust these values carefully if needed, as too aggressive scraping may trigger Instagram's rate limits
 
@@ -471,8 +471,8 @@ def run_following_scraping_session():
         return True
     
     # Randomize batch size for each session for more human-like behavior
-    # Increased batch size to reach approximately 450 accounts per day
-    batch_size = random.randint(10, 20)
+    # Increased batch size to reach approximately 600 accounts per day
+    batch_size = random.randint(40, 60)
     logging.info(f"Using random batch size of {batch_size} accounts for this session")
     
     try:
@@ -791,6 +791,67 @@ def debug_inspect_links_file():
     except Exception as e:
         logging.error(f"Error inspecting links file: {e}")
 
+def remove_processed_links():
+    """
+    Remove links from followingLinks.txt that have already been processed 
+    (first item in adjacency list)
+    """
+    try:
+        if not os.path.exists(FOLLOWING_LINKS_FILE):
+            logging.warning(f"Links file {FOLLOWING_LINKS_FILE} does not exist yet")
+            return
+            
+        if not os.path.exists(os.path.join(DATA_DIR, "adjList.txt")):
+            logging.info("No adjList.txt file found yet. No links to remove.")
+            return
+        
+        # Get processed accounts from adjList.txt (first item in each line)
+        processed_accounts = set()
+        with open(os.path.join(DATA_DIR, "adjList.txt"), "r") as adj_file:
+            for line in adj_file:
+                parts = line.strip().split()
+                if len(parts) >= 1:
+                    processed_accounts.add(parts[0])
+        
+        logging.info(f"Found {len(processed_accounts)} processed accounts in adjList.txt")
+        
+        # Read links from followingLinks.txt
+        with open(FOLLOWING_LINKS_FILE, "r") as f:
+            links = f.readlines()
+        
+        initial_count = len(links)
+        logging.info(f"Found {initial_count} links in followingLinks.txt")
+        
+        # Filter out links for accounts that have already been processed
+        filtered_links = []
+        removed_links = []
+        
+        for link in links:
+            link_stripped = link.strip()
+            if not link_stripped:
+                continue
+                
+            # Extract username from the link
+            username = link_stripped.rstrip('/').split('/')[-1]
+            
+            if username in processed_accounts:
+                removed_links.append(username)
+            else:
+                filtered_links.append(link_stripped)
+        
+        # Save the filtered links back to the file
+        if len(filtered_links) < initial_count:
+            save_links_with_lock(filtered_links, FOLLOWING_LINKS_FILE)
+            logging.info(f"Removed {initial_count - len(filtered_links)} already processed links from followingLinks.txt")
+            if len(removed_links) > 0:
+                logging.info(f"Examples of removed accounts: {removed_links[:5]}")
+        else:
+            logging.info("No processed links found in followingLinks.txt")
+        
+    except Exception as e:
+        logging.error(f"Error removing processed links: {e}")
+        logging.error(traceback.format_exc())
+
 def save_links_with_lock(links, file_path):
     """Save links with file locking to prevent race conditions"""
     try:
@@ -812,13 +873,18 @@ def main():
         # Ensure data directory exists
         ensure_dir_exists(DATA_DIR)
         
-        # Debug: Inspect links file for format issues
+        # First, debug file format issues
         logging.info("Inspecting links file for format issues")
         debug_inspect_links_file()
         
-        # Debug: Check for and fix duplicates at startup
+        # Then, check for and fix duplicates 
         logging.info("Performing initial duplicate check on following links")
         debug_check_duplicates()
+        
+        # Finally, remove links that have already been processed
+        # This should run last to ensure processed links are removed
+        logging.info("Checking and removing already processed links")
+        remove_processed_links()
         
         # Get current profile counts to ensure we have accurate totals
         total_followers, total_following = fetch_profile_counts()
