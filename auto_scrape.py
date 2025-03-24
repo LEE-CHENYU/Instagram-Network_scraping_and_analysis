@@ -450,6 +450,9 @@ def run_following_scraping_session():
     """Run a session to scrape data from following accounts"""
     logging.info("Starting following accounts scraping session")
     
+    # First ensure we remove any links that have already been processed
+    remove_processed_links()
+    
     # Debug: Check for duplicates before processing
     logging.info("DEBUG: Checking for duplicates before processing")
     debug_check_duplicates()
@@ -529,6 +532,9 @@ def run_following_scraping_session():
             debug_check_duplicates()
         except Exception as e:
             logging.error(f"Error counting accounts after processing: {e}")
+        
+        # Finally, remove any links that have been processed
+        remove_processed_links()
         
         return result
         
@@ -962,4 +968,4 @@ def main():
         logging.info("Auto-scraper script ended")
 
 if __name__ == "__main__":
-    main() 
+    main()

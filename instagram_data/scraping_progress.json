@@ -413,5 +413,116 @@
     "followers_retrieved": 25,
     "following_retrieved": 198,
     "timestamp": 1742674095.086727
+  },
+  "accounts": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1742769284.4817579
+  },
+  "nytimestravel": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 1,
+    "following_count": 459,
+    "followers_retrieved": 50,
+    "following_retrieved": 10,
+    "timestamp": 1742833322.257728
+  },
+  "nytimes": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 18,
+    "following_count": 618,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833372.049361
+  },
+  "milanrecords": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 20,
+    "following_count": 2857,
+    "timestamp": 1742833380.668374
+  },
+  "a24": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 2,
+    "following_count": 323,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833429.526865
+  },
+  "classaholic": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 42,
+    "following_count": 71,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833478.663775
+  },
+  "linda_linked": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 169,
+    "following_count": 138,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833527.848362
+  },
+  "ysl": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 13,
+    "following_count": 2,
+    "followers_retrieved": 10,
+    "following_retrieved": 2,
+    "timestamp": 1742833577.04832
+  },
+  "jane_chen1221": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 337,
+    "following_count": 279,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833625.910964
+  },
+  "prophetconsulting": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 5428,
+    "following_count": 300,
+    "timestamp": 1742833634.582216
+  },
+  "nationalgallery": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 2,
+    "following_count": 221,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833683.153731
+  },
+  "chelsea.films_": {
+    "processed": true,
+    "skipped": false,
+    "followers_count": 145,
+    "following_count": 56,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1742833731.6547751
+  },
+  "tinapi.x": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 2562,
+    "following_count": 1501,
+    "timestamp": 1742833740.334044
   }
 }

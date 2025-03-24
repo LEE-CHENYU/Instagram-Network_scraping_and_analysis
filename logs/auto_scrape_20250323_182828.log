@@ -15,3 +15,35 @@
 2025-03-23 18:28:28,961 - INFO - Removed 46 already processed links from followingLinks.txt
 2025-03-23 18:28:28,961 - INFO - Examples of removed accounts: ['karena88888', 'donsonn', 'chenggao1999', 'whitehouse', 'the_sstan']
 2025-03-23 18:28:28,961 - INFO - Fetching current follower and following counts from profile...
+2025-03-23 18:29:01,418 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-23 18:29:01,420 - INFO - PROFILE CHECK: Login might have failed. Current URL still shows login page.
+2025-03-23 18:29:01,421 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-23 18:29:01,421 - INFO - PROFILE CHECK: Profile Stats: {'followers': 0, 'following': 0, 'posts': 0}
+2025-03-23 18:29:01,421 - INFO - Found profile stats
+2025-03-23 18:29:01,421 - INFO - PROFILE CHECK: Followers: 0, Following: 0
+2025-03-23 18:29:01,421 - INFO - Extracted total followers: 0
+2025-03-23 18:29:01,421 - INFO - Extracted total following: 0
+2025-03-23 18:29:01,421 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-23 18:29:01,423 - INFO - PROFILE CHECK: Browser closed.
+2025-03-23 18:29:01,659 - INFO - Updating status with initial profile counts - Followers: 0, Following: 0
+2025-03-23 18:29:01,660 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-23 18:29:01,662 - INFO - Setting temporary total following count to 1862 until profile is loaded
+2025-03-23 18:29:01,663 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-23 18:29:01,663 - INFO - Setting temporary total followers count to 879 until profile is loaded
+2025-03-23 18:29:01,663 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-23 18:29:01,663 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-23 18:29:01,663 - INFO - All following accounts collected! 1862/1862
+2025-03-23 18:29:01,663 - INFO - All followers collected! 879/879
+2025-03-23 18:29:01,664 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-23 18:29:01,665 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-23 18:29:01,669 - INFO - Starting new scraping session
+2025-03-23 18:29:01,669 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-23 18:29:01,669 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-03-23 18:29:01,670 - INFO - Now running a session to scrape following accounts network data...
+2025-03-23 18:29:01,670 - INFO - Starting following accounts scraping session
+2025-03-23 18:29:01,670 - INFO - DEBUG: Checking for duplicates before processing
+2025-03-23 18:29:01,671 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-23 18:29:01,680 - INFO - DEBUG: Before processing - 1781 accounts in queue
+2025-03-23 18:29:01,681 - INFO - Using random batch size of 49 accounts for this session
+2025-03-23 18:34:52,654 - INFO - Scraper interrupted by user
+2025-03-23 18:34:52,656 - INFO - Auto-scraper script ended

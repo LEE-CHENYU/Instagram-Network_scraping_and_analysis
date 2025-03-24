@@ -1,0 +1,32 @@
+2025-03-24 13:22:38,016 - INFO - ============================================================
+2025-03-24 13:22:38,016 - INFO - Instagram Auto Scraper Starting
+2025-03-24 13:22:38,016 - INFO - ============================================================
+2025-03-24 13:22:38,016 - INFO - Auto-scraper script started
+2025-03-24 13:22:38,016 - INFO - Inspecting links file for format issues
+2025-03-24 13:22:38,017 - INFO - Links file contains 1850 lines
+2025-03-24 13:22:38,018 - INFO - First 3 links: ['https://www.instagram.com/manofdutch/', 'https://www.instagram.com/thefineartcollective/', 'https://www.instagram.com/ccclare_/']
+2025-03-24 13:22:38,018 - INFO - Last 3 links: ['https://www.instagram.com/cucny/', 'https://www.instagram.com/thepennclub/', 'https://www.instagram.com/lsmartfund/']
+2025-03-24 13:22:38,018 - INFO - Performing initial duplicate check on following links
+2025-03-24 13:22:38,018 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-24 13:22:38,018 - INFO - Checking and removing already processed links
+2025-03-24 13:22:38,021 - INFO - Found 398 processed accounts in adjList.txt
+2025-03-24 13:22:38,021 - INFO - Found 1850 links in followingLinks.txt
+2025-03-24 13:22:38,022 - INFO - Saved 1764 links to instagram_data/followingLinks.txt with lock
+2025-03-24 13:22:38,022 - INFO - Removed 86 already processed links from followingLinks.txt
+2025-03-24 13:22:38,022 - INFO - Examples of removed accounts: ['ccclare_', 'rubyyyyyying', 'yitingzhang', 'claire.qiu_', 'jialuu__']
+2025-03-24 13:22:38,022 - INFO - Fetching current follower and following counts from profile...
+2025-03-24 13:22:38,062 - ERROR - Profile check failed with return code 1
+2025-03-24 13:22:38,063 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapeMyAccount.py", line 7, in <module>
+    from selenium import webdriver
+ModuleNotFoundError: No module named 'selenium'
+
+2025-03-24 13:22:38,063 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:22:38,064 - INFO - Following collection progress: 1862/1865 (99.8%)
+2025-03-24 13:22:38,064 - INFO - All followers collected! 879/879
+2025-03-24 13:22:38,064 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:22:38,064 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:22:38,066 - INFO - Only 13.6 minutes since last run. Waiting at least 15 minutes between runs.
+2025-03-24 13:22:38,066 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-03-24 13:26:04,468 - INFO - Scraper interrupted by user
+2025-03-24 13:26:04,469 - INFO - Auto-scraper script ended

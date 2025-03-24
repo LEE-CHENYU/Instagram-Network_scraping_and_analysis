@@ -1,0 +1,70 @@
+2025-03-24 13:27:22,188 - INFO - ============================================================
+2025-03-24 13:27:22,188 - INFO - Instagram Auto Scraper Starting
+2025-03-24 13:27:22,188 - INFO - ============================================================
+2025-03-24 13:27:22,188 - INFO - Auto-scraper script started
+2025-03-24 13:27:22,188 - INFO - Inspecting links file for format issues
+2025-03-24 13:27:22,189 - INFO - Links file contains 1764 lines
+2025-03-24 13:27:22,189 - INFO - First 3 links: ['https://www.instagram.com/manofdutch/', 'https://www.instagram.com/thefineartcollective/', 'https://www.instagram.com/perpetual.passion/']
+2025-03-24 13:27:22,189 - INFO - Last 3 links: ['https://www.instagram.com/cucny/', 'https://www.instagram.com/thepennclub/', 'https://www.instagram.com/lsmartfund/']
+2025-03-24 13:27:22,190 - INFO - Performing initial duplicate check on following links
+2025-03-24 13:27:22,190 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-24 13:27:22,190 - INFO - Checking and removing already processed links
+2025-03-24 13:27:22,192 - INFO - Found 398 processed accounts in adjList.txt
+2025-03-24 13:27:22,192 - INFO - Found 1764 links in followingLinks.txt
+2025-03-24 13:27:22,192 - INFO - No processed links found in followingLinks.txt
+2025-03-24 13:27:22,192 - INFO - Fetching current follower and following counts from profile...
+2025-03-24 13:27:55,276 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Profile Stats: {'followers': 879, 'following': 1865, 'posts': 243}
+2025-03-24 13:27:55,277 - INFO - Found profile stats
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Followers: 879, Following: 1865
+2025-03-24 13:27:55,277 - INFO - Extracted total followers: 879
+2025-03-24 13:27:55,277 - INFO - Extracted total following: 1865
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-24 13:27:55,277 - INFO - PROFILE CHECK: Browser closed.
+2025-03-24 13:27:55,323 - INFO - Updating status with initial profile counts - Followers: 879, Following: 1865
+2025-03-24 13:27:55,325 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-24 13:27:55,325 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:27:55,325 - INFO - Following collection progress: 1862/1865 (99.8%)
+2025-03-24 13:27:55,325 - INFO - All followers collected! 879/879
+2025-03-24 13:27:55,325 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:27:55,325 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:27:55,327 - INFO - Starting new scraping session
+2025-03-24 13:27:55,327 - INFO - Current counts in status file - Followers: 879, Following: 1865
+2025-03-24 13:27:55,327 - INFO - Need to collect more following accounts: 1862/1865
+2025-03-24 13:27:55,327 - INFO - Using 8 max pages for this session
+2025-03-24 13:27:55,327 - INFO - Followers collection is complete. Only scraping following in this session.
+2025-03-24 13:28:27,943 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Logged in successfully!
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Logged in as fretin98
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Resuming previous session...
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Loaded 879 followers and 1862 following from previous session
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Profile Stats: {'followers': 879, 'following': 1865, 'posts': 243}
+2025-03-24 13:28:27,944 - INFO - Found profile stats line
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Followers: 879, Following: 1865
+2025-03-24 13:28:27,944 - INFO - Extracted total followers: 879
+2025-03-24 13:28:27,944 - INFO - Extracted total following: 1865
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Scraping following...
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Already collected 1862/1865 following accounts (≥95%). Skipping following scraping.
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Created 1862 following links from usernames
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Added 0 new relationships (total: 6554)
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Retrieved 1862 following links
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Session completed successfully!
+2025-03-24 13:28:27,944 - INFO - SCRAPER: Browser closed.
+2025-03-24 13:28:28,025 - INFO - Updating status with dynamic counts - Followers: 879, Following: 1865
+2025-03-24 13:28:28,026 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-24 13:28:28,026 - INFO - Now running a session to scrape following accounts network data...
+2025-03-24 13:28:28,026 - INFO - Starting following accounts scraping session
+2025-03-24 13:28:28,028 - INFO - Found 398 processed accounts in adjList.txt
+2025-03-24 13:28:28,029 - INFO - Found 1862 links in followingLinks.txt
+2025-03-24 13:28:28,030 - INFO - Saved 1776 links to instagram_data/followingLinks.txt with lock
+2025-03-24 13:28:28,030 - INFO - Removed 86 already processed links from followingLinks.txt
+2025-03-24 13:28:28,030 - INFO - Examples of removed accounts: ['ccclare_', 'rubyyyyyying', 'yitingzhang', 'claire.qiu_', 'jialuu__']
+2025-03-24 13:28:28,030 - INFO - DEBUG: Checking for duplicates before processing
+2025-03-24 13:28:28,031 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-24 13:28:28,031 - INFO - DEBUG: Before processing - 1776 accounts in queue
+2025-03-24 13:28:28,031 - INFO - Using random batch size of 56 accounts for this session
