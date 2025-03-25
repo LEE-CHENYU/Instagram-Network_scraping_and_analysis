@@ -4,6 +4,6 @@
   "last_run": "2025-03-25 06:19:09",
   "break_hour_min": 16,
   "break_hour_max": 18,
-  "natural_break_taken": false,
+  "natural_break_taken": true,
   "total_followers": 879
 }
