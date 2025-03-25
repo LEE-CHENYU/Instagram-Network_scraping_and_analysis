@@ -6428,3 +6428,18 @@
 2025-03-24 19:41:45,238 - INFO - Current counts in status file - Followers: 879, Following: 1862
 2025-03-24 19:41:45,239 - INFO - Randomly skipping this session to create a more human-like pattern
 2025-03-24 19:41:45,239 - INFO - Will check again in 42 minutes
+2025-03-24 20:23:45,245 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-03-24 20:43:45,287 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-24 20:43:45,290 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-24 20:43:45,292 - INFO - Starting new scraping session
+2025-03-24 20:43:45,293 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-03-24 20:43:45,293 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-03-24 20:43:45,294 - INFO - Now running a session to scrape following accounts network data...
+2025-03-24 20:43:45,294 - INFO - Starting following accounts scraping session
+2025-03-24 20:43:45,299 - INFO - Found 1380 processed accounts in adjList.txt
+2025-03-24 20:43:45,299 - INFO - Found 1505 links in followingLinks.txt
+2025-03-24 20:43:45,300 - INFO - No processed links found in followingLinks.txt
+2025-03-24 20:43:45,300 - INFO - DEBUG: Checking for duplicates before processing
+2025-03-24 20:43:45,301 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-24 20:43:45,301 - INFO - DEBUG: Before processing - 1505 accounts in queue
+2025-03-24 20:43:45,303 - INFO - Using random batch size of 42 accounts for this session
