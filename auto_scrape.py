@@ -799,9 +799,17 @@ def debug_inspect_links_file():
 
 def remove_processed_links():
     """
-    Remove links from followingLinks.txt that have already been processed 
+    REMOVED: Previously removed links from followingLinks.txt that have already been processed 
     (first item in adjacency list)
+    
+    NOW: This function is disabled as we need to re-scrape accounts that might have been
+    rate-limited to only 10 users previously
     """
+    # This function is now disabled to allow re-scraping of accounts
+    logging.info("remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts")
+    return
+    
+    # The code below is kept but won't be executed
     try:
         if not os.path.exists(FOLLOWING_LINKS_FILE):
             logging.warning(f"Links file {FOLLOWING_LINKS_FILE} does not exist yet")

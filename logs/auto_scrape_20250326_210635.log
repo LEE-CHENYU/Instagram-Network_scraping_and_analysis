@@ -1,0 +1,15 @@
+2025-03-26 21:06:35,524 - INFO - ============================================================
+2025-03-26 21:06:35,524 - INFO - Instagram Auto Scraper Starting
+2025-03-26 21:06:35,524 - INFO - ============================================================
+2025-03-26 21:06:35,524 - INFO - Auto-scraper script started
+2025-03-26 21:06:35,524 - INFO - Inspecting links file for format issues
+2025-03-26 21:06:35,525 - INFO - Links file contains 48 lines
+2025-03-26 21:06:35,525 - INFO - First 3 links: ['https://www.instagram.com/deadline_help/', 'https://www.instagram.com/itsnotchloez_/', 'https://www.instagram.com/cindyfive_/']
+2025-03-26 21:06:35,525 - INFO - Last 3 links: ['https://www.instagram.com/alphacentauriomega/', 'https://www.instagram.com/bigmacocacola/', 'https://www.instagram.com/super_upa_rupa/']
+2025-03-26 21:06:35,525 - INFO - Performing initial duplicate check on following links
+2025-03-26 21:06:35,525 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-26 21:06:35,525 - INFO - Checking and removing already processed links
+2025-03-26 21:06:35,525 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-03-26 21:06:35,525 - INFO - Fetching current follower and following counts from profile...
+2025-03-26 21:06:44,165 - INFO - Scraper interrupted by user
+2025-03-26 21:06:44,172 - INFO - Auto-scraper script ended

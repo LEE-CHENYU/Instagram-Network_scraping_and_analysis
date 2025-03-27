@@ -10,12 +10,30 @@ import random
 import json
 from selenium.webdriver import ActionChains
 import os
+import datetime
 
 # Add global variables to track cursors
 _last_cursors = {
     'followers': None,
     'following': None
 }
+
+# Add rate limit tracking
+_rate_limit_info = {
+    'followers': {
+        'last_hit': None,
+        'retry_count': 0
+    },
+    'following': {
+        'last_hit': None,
+        'retry_count': 0
+    }
+}
+
+# Rate limit constants
+RATE_LIMIT_THRESHOLD = 10  # Instagram typically limits to 10 users per request
+RATE_LIMIT_WAIT_TIME = 600  # 10 minutes in seconds - base wait time
+MAX_RATE_LIMIT_RETRIES = 5  # Maximum number of retries before giving up
 
 def get_last_cursor(list_type):
     """Get the last cursor for the specified list type"""
@@ -410,6 +428,11 @@ def scrape_whole_list(list_type, driver, profile_link, next_cursor=None, resume_
     ]
     current_strategy = 0
     
+    # Rate limit variables
+    rate_limit_hit = False
+    rate_limit_retry_count = 0
+    consecutive_rate_limits = 0
+    
     while current_page <= max_pages:
         print(f"Scrolling page {current_page}/{max_pages} for {list_type}")
         
@@ -471,6 +494,99 @@ def scrape_whole_list(list_type, driver, profile_link, next_cursor=None, resume_
         filtered_count = len(elements) - new_users if 'elements' in locals() else "unknown"
         print(f"Added {new_users} new users (filtered {filtered_count} duplicates)")
         
+        # Check if we've hit Instagram's rate limit (exactly 10 new users)
+        if new_users == RATE_LIMIT_THRESHOLD:
+            consecutive_rate_limits += 1
+            
+            if consecutive_rate_limits >= 2:
+                print(f"RATE LIMIT DETECTED: Exactly {RATE_LIMIT_THRESHOLD} users retrieved for {consecutive_rate_limits} consecutive pages")
+                rate_limit_hit = True
+                
+                # Update rate limit information
+                _rate_limit_info[list_type]['last_hit'] = datetime.datetime.now()
+                _rate_limit_info[list_type]['retry_count'] += 1
+                
+                # Calculate wait time with exponential backoff
+                backoff_factor = min(4, _rate_limit_info[list_type]['retry_count'])
+                wait_time = RATE_LIMIT_WAIT_TIME * (1.5 ** backoff_factor)
+                
+                print(f"Rate limit hit {_rate_limit_info[list_type]['retry_count']} times. Waiting {wait_time/60:.1f} minutes before retrying...")
+                
+                # Close the modal to prevent session timeout
+                try:
+                    actions = ActionChains(driver)
+                    actions.send_keys(Keys.ESCAPE).perform()
+                    time.sleep(1)
+                except:
+                    pass
+                
+                # Wait for the rate limit to refresh
+                wait_start = datetime.datetime.now()
+                wait_end = wait_start + datetime.timedelta(seconds=wait_time)
+                
+                print(f"Rate limit wait started at {wait_start.strftime('%H:%M:%S')}, will continue at {wait_end.strftime('%H:%M:%S')}")
+                
+                # Wait with periodic updates
+                elapsed = 0
+                update_interval = min(300, wait_time / 5)  # Update every 5 minutes or 1/5 of wait time, whichever is smaller
+                
+                while elapsed < wait_time:
+                    sleep_chunk = min(60, wait_time - elapsed)  # Sleep in 1-minute chunks
+                    time.sleep(sleep_chunk)
+                    elapsed += sleep_chunk
+                    
+                    if elapsed % update_interval < 60:  # Show update near the interval points
+                        remaining = wait_time - elapsed
+                        print(f"Rate limit wait: {elapsed/60:.1f} minutes elapsed, {remaining/60:.1f} minutes remaining")
+                
+                print("Rate limit wait completed. Resuming scraping...")
+                
+                # Re-navigate to profile and re-open the dialog
+                driver.get(profile_link)
+                time.sleep(3)
+                
+                # Re-click the appropriate button
+                try:
+                    if list_type == "followers":
+                        followers_button = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/followers/')]"))
+                        )
+                        followers_button.click()
+                    else:  # following
+                        following_button = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.XPATH, "//a[contains(@href, '/following/')]"))
+                        )
+                        following_button.click()
+                    
+                    time.sleep(3)
+                    
+                    # Re-find the scrollable div
+                    try:
+                        scroll_div = WebDriverWait(driver, 5).until(
+                            EC.presence_of_element_located((By.XPATH, "//div[@role='dialog']//div[contains(@style, 'overflow')]"))
+                        )
+                    except:
+                        try:
+                            scroll_div = WebDriverWait(driver, 5).until(
+                                EC.presence_of_element_located((By.XPATH, "//div[@role='dialog']//div[contains(@class, 'scroll')]"))
+                            )
+                        except:
+                            scroll_div = WebDriverWait(driver, 5).until(
+                                EC.presence_of_element_located((By.XPATH, "//div[@role='dialog']"))
+                            )
+                    
+                    # Reset the rate limit flag and continue scraping
+                    rate_limit_hit = False
+                    consecutive_rate_limits = 0
+                    continue
+                    
+                except Exception as e:
+                    print(f"Error re-opening dialog after rate limit wait: {e}")
+                    return usernames, None
+            
+        else:
+            consecutive_rate_limits = 0  # Reset counter if we didn't get exactly 10 users
+            
         # Handle consecutive no-new counter with special logic when resuming
         if new_users == 0:
             consecutive_no_new += 1
@@ -508,6 +624,10 @@ def scrape_whole_list(list_type, driver, profile_link, next_cursor=None, resume_
                 print(f"SUCCESS! Found first {new_users} new users beyond previously collected ones.")
                 found_new_since_resuming = True
         
+        # Skip further scrolling if we hit the rate limit
+        if rate_limit_hit:
+            continue
+            
         # Scroll down within the div for the next page
         # Use more aggressive scrolling - scroll multiple times before checking results
         num_scrolls = 4

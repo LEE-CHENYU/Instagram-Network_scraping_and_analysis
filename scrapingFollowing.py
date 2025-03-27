@@ -22,6 +22,7 @@ CURSOR_FILE = os.path.join(DATA_DIR, "next_cursor.json")
 ADJ_LIST_FILE = os.path.join(DATA_DIR, "adjList.txt")
 FOLLOWING_LINKS_FILE = os.path.join(DATA_DIR, "followingLinks.txt")
 PROGRESS_FILE = os.path.join(DATA_DIR, "scraping_progress.json")
+RATE_LIMIT_THRESHOLD = 10  # Instagram typically limits to 10 users per request
 
 def ensure_data_directory():
     """Ensure the data directory exists"""
@@ -246,8 +247,12 @@ def scrape_account(account_link, all_nodes):
     
     # Check if we've already processed this account
     if account_username in progress_data:
-        print(f"Account {account_username} already processed. Skipping.")
-        return True, all_nodes
+        # If it was previously rate-limited, don't skip but re-scrape
+        if progress_data[account_username].get("rate_limited", False):
+            print(f"Account {account_username} was previously rate-limited. Re-attempting scrape.")
+        else:
+            print(f"Account {account_username} already processed. Skipping.")
+            return True, all_nodes
     
     # Navigate to the account
     driver.get(account_link)
@@ -473,9 +478,20 @@ def scrape_account(account_link, all_nodes):
             except Exception as e:
                 print(f"Error scraping following: {e}")
         
+        # Check if we've hit Instagram's rate limit (exactly RATE_LIMIT_THRESHOLD followers or following)
+        rate_limited = False
+        if len(followers) == RATE_LIMIT_THRESHOLD and curr_Followers > RATE_LIMIT_THRESHOLD:
+            print(f"RATE LIMIT DETECTED: Retrieved exactly {RATE_LIMIT_THRESHOLD} followers when account has {curr_Followers}")
+            rate_limited = True
+        
+        if len(following) == RATE_LIMIT_THRESHOLD and curr_Following > RATE_LIMIT_THRESHOLD:
+            print(f"RATE LIMIT DETECTED: Retrieved exactly {RATE_LIMIT_THRESHOLD} following when account has {curr_Following}")
+            rate_limited = True
+            
         # Record progress
         progress_data[curr_username] = {
-            "processed": True,
+            "processed": not rate_limited,  # Mark as not processed if rate-limited
+            "rate_limited": rate_limited,   # Flag to indicate rate limit was hit
             "skipped": False,
             "followers_count": curr_Followers,
             "following_count": curr_Following,
@@ -531,6 +547,7 @@ try:
     else:
         print(f"Starting batch processing of {min(batch_size, len(links))} accounts")
         processed_count = 0
+        rate_limited_count = 0
         
         # First, prioritize accounts by checking if they are suitable for processing
         if batch_size > 1 and len(links) > batch_size:
@@ -653,8 +670,14 @@ try:
                 success, all_nodes = scrape_account(current_link, all_nodes)
                 if success:
                     processed_count += 1
-                    # Add to processed accounts set
-                    processed_accounts.add(account_username)
+                    # Check if the account was rate-limited
+                    if account_username in progress_data and progress_data[account_username].get("rate_limited", False):
+                        rate_limited_count += 1
+                        # Don't add to processed_accounts set if rate-limited, so we can retry later
+                        print(f"Account {account_username} was rate-limited. Will retry in a future session.")
+                    else:
+                        # Add to processed accounts set only if not rate-limited
+                        processed_accounts.add(account_username)
                     
                 # Remove the processed link
                 if DEBUG:
@@ -701,7 +724,7 @@ try:
             print(f"Waiting 5 seconds before next account...")
             time.sleep(5)
         
-        print(f"\nBatch complete! Processed {processed_count} accounts.")
+        print(f"\nBatch complete! Processed {processed_count} accounts ({rate_limited_count} were rate-limited and will be retried later).")
         print(f"{len(links)} links remaining for future sessions.")
 
 except Exception as e:

@@ -1,0 +1,578 @@
+2025-03-26 21:07:29,152 - INFO - ============================================================
+2025-03-26 21:07:29,152 - INFO - Instagram Auto Scraper Starting
+2025-03-26 21:07:29,152 - INFO - ============================================================
+2025-03-26 21:07:29,152 - INFO - Auto-scraper script started
+2025-03-26 21:07:29,152 - INFO - Inspecting links file for format issues
+2025-03-26 21:07:29,153 - INFO - Links file contains 48 lines
+2025-03-26 21:07:29,153 - INFO - First 3 links: ['https://www.instagram.com/deadline_help/', 'https://www.instagram.com/itsnotchloez_/', 'https://www.instagram.com/cindyfive_/']
+2025-03-26 21:07:29,153 - INFO - Last 3 links: ['https://www.instagram.com/alphacentauriomega/', 'https://www.instagram.com/bigmacocacola/', 'https://www.instagram.com/super_upa_rupa/']
+2025-03-26 21:07:29,153 - INFO - Performing initial duplicate check on following links
+2025-03-26 21:07:29,153 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-26 21:07:29,153 - INFO - Checking and removing already processed links
+2025-03-26 21:07:29,153 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-03-26 21:07:29,153 - INFO - Fetching current follower and following counts from profile...
+2025-03-26 21:08:02,822 - INFO - PROFILE CHECK: Logged in using button: //button[contains(.,'Log in')]
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Logged in successfully!
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Profile Stats: {'followers': 881, 'following': 1868, 'posts': 241}
+2025-03-26 21:08:02,823 - INFO - Found profile stats
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Followers: 881, Following: 1868
+2025-03-26 21:08:02,823 - INFO - Extracted total followers: 881
+2025-03-26 21:08:02,823 - INFO - Extracted total following: 1868
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Session completed successfully!
+2025-03-26 21:08:02,823 - INFO - PROFILE CHECK: Browser closed.
+2025-03-26 21:08:02,891 - INFO - Updating status with initial profile counts - Followers: 881, Following: 1868
+2025-03-26 21:08:02,892 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-26 21:08:02,893 - INFO - Current counts in status file - Followers: 881, Following: 1868
+2025-03-26 21:08:02,893 - INFO - Following collection progress: 1862/1868 (99.7%)
+2025-03-26 21:08:02,893 - INFO - Followers collection progress: 879/881 (99.8%)
+2025-03-26 21:08:02,893 - INFO - Current counts in status file - Followers: 881, Following: 1868
+2025-03-26 21:08:02,893 - INFO - Current counts in status file - Followers: 881, Following: 1868
+2025-03-26 21:08:02,896 - INFO - Set today's natural break window to 11:00-13:00
+2025-03-26 21:08:02,896 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-26 21:08:02,897 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-26 21:08:02,897 - INFO - Starting new scraping session
+2025-03-26 21:08:02,897 - INFO - Current counts in status file - Followers: 881, Following: 1868
+2025-03-26 21:08:02,897 - INFO - Need to collect more following accounts: 1862/1868
+2025-03-26 21:08:02,897 - INFO - Need to collect more followers: 879/881
+2025-03-26 21:08:02,897 - INFO - Using 7 max pages for this session
+2025-03-26 21:09:09,229 - INFO - SCRAPER: Login might have failed. Current URL still shows login page.
+2025-03-26 21:09:09,229 - INFO - SCRAPER: Logged in as fretin98
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Resuming previous session...
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Loaded 879 followers and 1862 following from previous session
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Profile Stats: {'followers': 881, 'following': 1868, 'posts': 241}
+2025-03-26 21:09:09,230 - INFO - Found profile stats line
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Followers: 881, Following: 1868
+2025-03-26 21:09:09,230 - INFO - Extracted total followers: 881
+2025-03-26 21:09:09,230 - INFO - Extracted total following: 1868
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Scraping followers...
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Already collected 879/881 followers (≥95%). Skipping followers scraping.
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Scraping following...
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Already collected 1862/1868 following accounts (≥95%). Skipping following scraping.
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Getting links to following accounts...
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Created 1862 following links from usernames
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Updated following links file: instagram_data/followingLinks.txt
+2025-03-26 21:09:09,230 - INFO - SCRAPER: Updated adjacency list file: instagram_data/adjList.txt
+2025-03-26 21:09:09,231 - INFO - SCRAPER: Added 0 new relationships (total: 24995)
+2025-03-26 21:09:09,231 - INFO - SCRAPER: Retrieved 1862 following links
+2025-03-26 21:09:09,231 - INFO - SCRAPER: Session completed successfully!
+2025-03-26 21:09:09,231 - INFO - SCRAPER: Browser closed.
+2025-03-26 21:09:09,380 - INFO - Updating status with dynamic counts - Followers: 881, Following: 1868
+2025-03-26 21:09:09,381 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-03-26 21:09:09,382 - INFO - Now running a session to scrape following accounts network data...
+2025-03-26 21:09:09,382 - INFO - Starting following accounts scraping session
+2025-03-26 21:09:09,382 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-03-26 21:09:09,382 - INFO - DEBUG: Checking for duplicates before processing
+2025-03-26 21:09:09,383 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-26 21:09:09,383 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-03-26 21:09:09,388 - INFO - Using random batch size of 52 accounts for this session
+2025-03-26 21:12:05,551 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1467 accounts processed
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Will process 52 accounts in this session
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Logged in successfully!
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6148 already processed accounts in adjList.txt
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Found 6148 accounts that have already been processed
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Starting batch processing of 52 accounts
+2025-03-26 21:12:05,552 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 18 followers, 895 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 189 followers, 188 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 70 followers, 67 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 428 followers, 434 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 12 followers, 708 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ rubahitam_: Too many connections (48 followers, 1153 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ chinatown_cowboy.mp4: Too many connections (2381 followers, 0 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 29 followers, 250 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 10 followers, 97 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 113 followers, 187 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 401 followers, 15 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 179 followers, 901 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ arabbitsfoot: Too many connections (62 followers, 1567 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 23 followers, 503 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 83 followers, 609 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 29 followers, 55 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ fernandosev7n: Too many connections (235 followers, 1534 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 673 followers, 917 following
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ xidan_zhang: Too many connections (2743 followers, 901 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ zihaosong: Too many connections (10 followers, 2448 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ young.brando: Too many connections (17 followers, 2455 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ gentleman.gasmask: Too many connections (364 followers, 1660 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ yuukakazami0: Too many connections (1343 followers, 518 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ cucny: Too many connections (2783 followers, 38 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ thepennclub: Too many connections (4055 followers, 632 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ lsmartfund: Too many connections (4169 followers, 586 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ perpetual.passion: Too many connections (38 followers, 2352 following)
+2025-03-26 21:12:05,553 - INFO - FOLLOWING SCRAPER: ✗ milanrecords: Too many connections (20 followers, 2860 following)
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #1/52: https://www.instagram.com/shuheisakaue/
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/shuheisakaue/
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: Account shuheisakaue already processed. Skipping.
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/shuheisakaue/
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1861
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1861 links
+2025-03-26 21:12:05,554 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1861 links (removed 0)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1861 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Added 1 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Completed 1/52 accounts. 1861 remaining in queue.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #2/52: https://www.instagram.com/catsoupai/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1861 links in queue
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/catsoupai/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Account catsoupai already processed. Skipping.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/catsoupai/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1860
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1860 links
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1860 links (removed 0)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1860 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Completed 2/52 accounts. 1860 remaining in queue.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #3/52: https://www.instagram.com/soloslop.memes/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1860 links in queue
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/soloslop.memes/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Account soloslop.memes already processed. Skipping.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/soloslop.memes/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1859
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1859 links
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1859 links (removed 0)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1859 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Completed 3/52 accounts. 1859 remaining in queue.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #4/52: https://www.instagram.com/phillipsauction/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1859 links in queue
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/phillipsauction/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Account phillipsauction already processed. Skipping.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/phillipsauction/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1858
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1858 links
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1858 links (removed 0)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1858 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Completed 4/52 accounts. 1858 remaining in queue.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #5/52: https://www.instagram.com/filmmovement/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1858 links in queue
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/filmmovement/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: Account filmmovement already processed. Skipping.
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/filmmovement/
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1857
+2025-03-26 21:12:05,555 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1857 links
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1857 links (removed 0)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1857 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Completed 5/52 accounts. 1857 remaining in queue.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #6/52: https://www.instagram.com/asian_redbozicowboy/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1857 links in queue
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/asian_redbozicowboy/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Account asian_redbozicowboy already processed. Skipping.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/asian_redbozicowboy/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1856
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1856 links
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1856 links (removed 0)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1856 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Completed 6/52 accounts. 1856 remaining in queue.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #7/52: https://www.instagram.com/ccpxi_8964/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1856 links in queue
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/ccpxi_8964/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Account ccpxi_8964 already processed. Skipping.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/ccpxi_8964/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1855
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1855 links
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1855 links (removed 0)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1855 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Completed 7/52 accounts. 1855 remaining in queue.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #8/52: https://www.instagram.com/ngr.ev/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1855 links in queue
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/ngr.ev/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Account ngr.ev already processed. Skipping.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/ngr.ev/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1854
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1854 links
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1854 links (removed 0)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1854 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Completed 8/52 accounts. 1854 remaining in queue.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #9/52: https://www.instagram.com/cinema_nighttt/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1854 links in queue
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/cinema_nighttt/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: Account cinema_nighttt already processed. Skipping.
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/cinema_nighttt/
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1853
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1853 links
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1853 links (removed 0)
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1853 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,556 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: Completed 9/52 accounts. 1853 remaining in queue.
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #10/52: https://www.instagram.com/thedizzyviper/
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1853 links in queue
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/thedizzyviper/
+2025-03-26 21:12:05,557 - INFO - FOLLOWING SCRAPER: Account thedizzyviper already processed. Skipping.
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/thedizzyviper/
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1852
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1852 links
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1852 links (removed 0)
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1852 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: Completed 10/52 accounts. 1852 remaining in queue.
+2025-03-26 21:12:05,558 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #11/52: https://www.instagram.com/laclefrevival/
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1852 links in queue
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/laclefrevival/
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: Account laclefrevival already processed. Skipping.
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/laclefrevival/
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1851
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1851 links
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1851 links (removed 0)
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1851 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,559 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: Completed 11/52 accounts. 1851 remaining in queue.
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #12/52: https://www.instagram.com/byboyfantasy/
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1851 links in queue
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/byboyfantasy/
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: Account byboyfantasy already processed. Skipping.
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/byboyfantasy/
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1850
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1850 links
+2025-03-26 21:12:05,560 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1850 links (removed 0)
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1850 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: Completed 12/52 accounts. 1850 remaining in queue.
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #13/52: https://www.instagram.com/manofdutch/
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1850 links in queue
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/manofdutch/
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: Account manofdutch already processed. Skipping.
+2025-03-26 21:12:05,561 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/manofdutch/
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1849
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1849 links
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1849 links (removed 0)
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1849 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: Completed 13/52 accounts. 1849 remaining in queue.
+2025-03-26 21:12:05,562 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #14/52: https://www.instagram.com/thefineartcollective/
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1849 links in queue
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/thefineartcollective/
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: Account thefineartcollective already processed. Skipping.
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/thefineartcollective/
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1848
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1848 links
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1848 links (removed 0)
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1848 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,563 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: Completed 14/52 accounts. 1848 remaining in queue.
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #15/52: https://www.instagram.com/ccclare_/
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1848 links in queue
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: ccclare_
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1847 links
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1847 links (removed 0)
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1847 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #16/52: https://www.instagram.com/rubyyyyyying/
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1847 links in queue
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: rubyyyyyying
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1846 links
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1846 links (removed 0)
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1846 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #17/52: https://www.instagram.com/yitingzhang/
+2025-03-26 21:12:05,564 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1846 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: yitingzhang
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1845 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1845 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1845 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #18/52: https://www.instagram.com/claire.qiu_/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1845 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: claire.qiu_
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1844 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1844 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1844 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #19/52: https://www.instagram.com/jialuu__/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1844 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: jialuu__
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1843 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1843 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1843 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #20/52: https://www.instagram.com/dawn_rz_/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1843 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: dawn_rz_
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1842 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1842 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1842 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #21/52: https://www.instagram.com/archer222arc/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1842 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: archer222arc
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1841 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1841 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1841 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #22/52: https://www.instagram.com/aaannie_wang/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1841 links in queue
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: aaannie_wang
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1840 links
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1840 links (removed 0)
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1840 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #23/52: https://www.instagram.com/ivyyyl_/
+2025-03-26 21:12:05,565 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1840 links in queue
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: ivyyyl_
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1839 links
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1839 links (removed 0)
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1839 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #24/52: https://www.instagram.com/yezirong/
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1839 links in queue
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: yezirong
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1838 links
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1838 links (removed 0)
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1838 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #25/52: https://www.instagram.com/hesens05/
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1838 links in queue
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: hesens05
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1837 links
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1837 links (removed 0)
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1837 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #26/52: https://www.instagram.com/angelakkk_/
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1837 links in queue
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: angelakkk_
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1836 links
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1836 links (removed 0)
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1836 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #27/52: https://www.instagram.com/as_cool_as_cucumber_amber/
+2025-03-26 21:12:05,566 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1836 links in queue
+2025-03-26 21:12:59,410 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: as_cool_as_cucumber_amber
+2025-03-26 21:12:59,419 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1835 links
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1835 links (removed 0)
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1835 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #28/52: https://www.instagram.com/schuwii_z/
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1835 links in queue
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: schuwii_z
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1834 links
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1834 links (removed 0)
+2025-03-26 21:12:59,420 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1834 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,423 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #29/52: https://www.instagram.com/khriswu8/
+2025-03-26 21:12:59,423 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1834 links in queue
+2025-03-26 21:12:59,423 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: khriswu8
+2025-03-26 21:12:59,425 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1833 links
+2025-03-26 21:12:59,425 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1833 links (removed 0)
+2025-03-26 21:12:59,426 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1833 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,426 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #30/52: https://www.instagram.com/karena88888/
+2025-03-26 21:12:59,426 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1833 links in queue
+2025-03-26 21:12:59,434 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: karena88888
+2025-03-26 21:12:59,435 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1832 links
+2025-03-26 21:12:59,435 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1832 links (removed 0)
+2025-03-26 21:12:59,437 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1832 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,440 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #31/52: https://www.instagram.com/donsonn/
+2025-03-26 21:12:59,440 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1832 links in queue
+2025-03-26 21:12:59,440 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: donsonn
+2025-03-26 21:12:59,443 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1831 links
+2025-03-26 21:12:59,444 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1831 links (removed 0)
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1831 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #32/52: https://www.instagram.com/chenggao1999/
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1831 links in queue
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: chenggao1999
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1830 links
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1830 links (removed 0)
+2025-03-26 21:12:59,445 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1830 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #33/52: https://www.instagram.com/whitehouse/
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1830 links in queue
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: whitehouse
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1829 links
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1829 links (removed 0)
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1829 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #34/52: https://www.instagram.com/the_sstan/
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1829 links in queue
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: the_sstan
+2025-03-26 21:12:59,450 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1828 links
+2025-03-26 21:12:59,456 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1828 links (removed 0)
+2025-03-26 21:12:59,457 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1828 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #35/52: https://www.instagram.com/jeanne_andreaa/
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1828 links in queue
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: jeanne_andreaa
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1827 links
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1827 links (removed 0)
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1827 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #36/52: https://www.instagram.com/xuleqi926/
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1827 links in queue
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: xuleqi926
+2025-03-26 21:12:59,469 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1826 links
+2025-03-26 21:12:59,485 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1826 links (removed 0)
+2025-03-26 21:12:59,485 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1826 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,485 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #37/52: https://www.instagram.com/electronicartsintermix/
+2025-03-26 21:12:59,485 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1826 links in queue
+2025-03-26 21:12:59,485 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: electronicartsintermix
+2025-03-26 21:12:59,486 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1825 links
+2025-03-26 21:12:59,486 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1825 links (removed 0)
+2025-03-26 21:12:59,486 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1825 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,486 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #38/52: https://www.instagram.com/parissfch/
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1825 links in queue
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: parissfch
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1824 links
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1824 links (removed 0)
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1824 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,490 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #39/52: https://www.instagram.com/nytimestravel/
+2025-03-26 21:12:59,491 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1824 links in queue
+2025-03-26 21:12:59,491 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: nytimestravel
+2025-03-26 21:12:59,491 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1823 links
+2025-03-26 21:12:59,492 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1823 links (removed 0)
+2025-03-26 21:12:59,495 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1823 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #40/52: https://www.instagram.com/nytimes/
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1823 links in queue
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: nytimes
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1822 links
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1822 links (removed 0)
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1822 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #41/52: https://www.instagram.com/a24/
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1822 links in queue
+2025-03-26 21:12:59,497 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: a24
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1821 links
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1821 links (removed 0)
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1821 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #42/52: https://www.instagram.com/classaholic/
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1821 links in queue
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: classaholic
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1820 links
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1820 links (removed 0)
+2025-03-26 21:12:59,515 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1820 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,517 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #43/52: https://www.instagram.com/linda_linked/
+2025-03-26 21:12:59,518 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1820 links in queue
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: linda_linked
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1819 links
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1819 links (removed 0)
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1819 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #44/52: https://www.instagram.com/ysl/
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1819 links in queue
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: ysl
+2025-03-26 21:12:59,519 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1818 links
+2025-03-26 21:12:59,523 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1818 links (removed 0)
+2025-03-26 21:12:59,523 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1818 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #45/52: https://www.instagram.com/jane_chen1221/
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1818 links in queue
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: jane_chen1221
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1817 links
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1817 links (removed 0)
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1817 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #46/52: https://www.instagram.com/prophetconsulting/
+2025-03-26 21:12:59,524 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1817 links in queue
+2025-03-26 21:12:59,532 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/prophetconsulting/
+2025-03-26 21:12:59,532 - INFO - FOLLOWING SCRAPER: Account prophetconsulting already processed. Skipping.
+2025-03-26 21:12:59,532 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/prophetconsulting/
+2025-03-26 21:12:59,532 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1816
+2025-03-26 21:12:59,532 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1816 links
+2025-03-26 21:12:59,534 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1816 links (removed 0)
+2025-03-26 21:12:59,534 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1816 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,534 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: Completed 15/52 accounts. 1816 remaining in queue.
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #47/52: https://www.instagram.com/nationalgallery/
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1816 links in queue
+2025-03-26 21:12:59,535 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: nationalgallery
+2025-03-26 21:12:59,537 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1815 links
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1815 links (removed 0)
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1815 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #48/52: https://www.instagram.com/chelsea.films_/
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1815 links in queue
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: chelsea.films_
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1814 links
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1814 links (removed 0)
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1814 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,538 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #49/52: https://www.instagram.com/tinapi.x/
+2025-03-26 21:12:59,554 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1814 links in queue
+2025-03-26 21:12:59,557 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/tinapi.x/
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: Account tinapi.x already processed. Skipping.
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/tinapi.x/
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1813
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1813 links
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1813 links (removed 0)
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1813 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:59,558 - INFO - FOLLOWING SCRAPER: Added 0 new relationships to adjacency list (total: 24996)
+2025-03-26 21:12:59,559 - INFO - FOLLOWING SCRAPER: Completed 16/52 accounts. 1813 remaining in queue.
+2025-03-26 21:12:59,574 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:59,574 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #50/52: https://www.instagram.com/sonymusicsoundtracks/
+2025-03-26 21:12:59,574 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1813 links in queue
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: sonymusicsoundtracks
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1812 links
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1812 links (removed 0)
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1812 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #51/52: https://www.instagram.com/benton.down/
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1812 links in queue
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/benton.down/
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: Scraping benton.down
+2025-03-26 21:12:59,575 - INFO - FOLLOWING SCRAPER: benton.down: Followers: 15, Following: 1188
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Scraping 15 followers for benton.down...
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Scrolling page 1/10 for followers
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Added 1 new users (filtered 0 duplicates)
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Scrolling page 2/10 for followers
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Added 0 new users (filtered 1 duplicates)
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Reached the end of the list or no new content loading. Ending pagination.
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Total followers retrieved: 1 (1 new in this session)
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Retrieved 1 followers
+2025-03-26 21:12:59,597 - INFO - FOLLOWING SCRAPER: Scraping 1188 following for benton.down...
+2025-03-26 21:12:59,604 - INFO - FOLLOWING SCRAPER: Scrolling page 1/10 for following
+2025-03-26 21:12:59,604 - INFO - FOLLOWING SCRAPER: Added 10 new users (filtered 4 duplicates)
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Scrolling page 2/10 for following
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Added 0 new users (filtered 14 duplicates)
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Reached the end of the list or no new content loading. Ending pagination.
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Total following retrieved: 10 (10 new in this session)
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Retrieved 10 following
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: RATE LIMIT DETECTED: Retrieved exactly 10 following when account has 1188
+2025-03-26 21:12:59,605 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: Account benton.down was rate-limited. Will retry in a future session.
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/benton.down/
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: Link removed. Queue size now: 1811
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1811 links
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1811 links (removed 0)
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1811 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: DEBUG: Links saved
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: Added 11 new relationships to adjacency list (total: 25007)
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: Completed 17/52 accounts. 1811 remaining in queue.
+2025-03-26 21:12:59,620 - INFO - FOLLOWING SCRAPER: Waiting 5 seconds before next account...
+2025-03-26 21:12:59,632 - INFO - FOLLOWING SCRAPER: DEBUG: Processing link #52/52: https://www.instagram.com/ralphlauren/
+2025-03-26 21:12:59,633 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1811 links in queue
+2025-03-26 21:12:59,633 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: ralphlauren
+2025-03-26 21:12:59,633 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1810 links
+2025-03-26 21:12:59,634 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1810 links (removed 0)
+2025-03-26 21:12:59,634 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1810 links to instagram_data/followingLinks.txt
+2025-03-26 21:12:59,634 - INFO - FOLLOWING SCRAPER: Batch complete! Processed 17 accounts (1 were rate-limited and will be retried later).
+2025-03-26 21:12:59,636 - INFO - FOLLOWING SCRAPER: 1810 links remaining for future sessions.
+2025-03-26 21:12:59,636 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-03-26 21:13:03,769 - INFO - DEBUG: After processing - 1810 accounts in queue (removed 52)
+2025-03-26 21:13:03,771 - INFO - DEBUG: Checking for duplicates after processing
+2025-03-26 21:13:03,775 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-26 21:13:03,777 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-03-26 21:13:03,777 - INFO - Following accounts scraping session completed with result: True
+2025-03-26 21:13:03,798 - INFO - Sessions completed. Waiting 0 hours and 33 minutes before next sessions...
