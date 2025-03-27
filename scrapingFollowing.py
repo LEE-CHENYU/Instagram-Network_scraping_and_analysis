@@ -480,12 +480,13 @@ def scrape_account(account_link, all_nodes):
         
         # Check if we've hit Instagram's rate limit (exactly RATE_LIMIT_THRESHOLD followers or following)
         rate_limited = False
-        if len(followers) == RATE_LIMIT_THRESHOLD and curr_Followers > RATE_LIMIT_THRESHOLD:
-            print(f"RATE LIMIT DETECTED: Retrieved exactly {RATE_LIMIT_THRESHOLD} followers when account has {curr_Followers}")
+        # Check if much fewer followers were retrieved than expected (rate limited to fewer than 10 or even just 1)
+        if len(followers) > 0 and len(followers) <= RATE_LIMIT_THRESHOLD and curr_Followers > RATE_LIMIT_THRESHOLD * 2:
+            print(f"RATE LIMIT DETECTED: Retrieved only {len(followers)} followers when account has {curr_Followers}")
             rate_limited = True
         
-        if len(following) == RATE_LIMIT_THRESHOLD and curr_Following > RATE_LIMIT_THRESHOLD:
-            print(f"RATE LIMIT DETECTED: Retrieved exactly {RATE_LIMIT_THRESHOLD} following when account has {curr_Following}")
+        if len(following) > 0 and len(following) <= RATE_LIMIT_THRESHOLD and curr_Following > RATE_LIMIT_THRESHOLD * 2:
+            print(f"RATE LIMIT DETECTED: Retrieved only {len(following)} following when account has {curr_Following}")
             rate_limited = True
             
         # Record progress

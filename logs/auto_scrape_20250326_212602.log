@@ -1,0 +1,13 @@
+2025-03-26 21:26:02,381 - INFO - ============================================================
+2025-03-26 21:26:02,381 - INFO - Instagram Auto Scraper Starting
+2025-03-26 21:26:02,381 - INFO - ============================================================
+2025-03-26 21:26:02,381 - INFO - Auto-scraper script started
+2025-03-26 21:26:02,381 - INFO - Inspecting links file for format issues
+2025-03-26 21:26:02,382 - INFO - Links file contains 1810 lines
+2025-03-26 21:26:02,382 - INFO - First 3 links: ['https://www.instagram.com/eleganza_classica/', 'https://www.instagram.com/beholdingeye/', 'https://www.instagram.com/ficusshanghai/']
+2025-03-26 21:26:02,382 - INFO - Last 3 links: ['https://www.instagram.com/lsmartfund/', 'https://www.instagram.com/perpetual.passion/', 'https://www.instagram.com/milanrecords/']
+2025-03-26 21:26:02,383 - INFO - Performing initial duplicate check on following links
+2025-03-26 21:26:02,383 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-03-26 21:26:02,383 - INFO - Checking and removing already processed links
+2025-03-26 21:26:02,383 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-03-26 21:26:02,383 - INFO - Fetching current follower and following counts from profile...

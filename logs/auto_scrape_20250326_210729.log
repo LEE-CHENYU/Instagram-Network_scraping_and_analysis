@@ -576,3 +576,5 @@
 2025-03-26 21:13:03,777 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
 2025-03-26 21:13:03,777 - INFO - Following accounts scraping session completed with result: True
 2025-03-26 21:13:03,798 - INFO - Sessions completed. Waiting 0 hours and 33 minutes before next sessions...
+2025-03-26 21:26:00,820 - INFO - Scraper interrupted by user
+2025-03-26 21:26:00,823 - INFO - Auto-scraper script ended
