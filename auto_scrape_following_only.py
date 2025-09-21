@@ -31,7 +31,7 @@ ADJ_LIST_FILE = os.path.join(DATA_DIR, "adjList.txt")
 
 # Instagram account credentials
 USERNAME = "fretin98"
-PASSWORD = "Lcy199818su!"
+PASSWORD = "Lcy199818su"
 
 # Scraping settings
 MIN_INTERVAL_MINUTES = 20  # Minimum time between sessions

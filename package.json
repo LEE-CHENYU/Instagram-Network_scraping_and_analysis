@@ -1,0 +1,16 @@
+{
+  "name": "instagram-network_scraping_and_analysis",
+  "version": "1.0.0",
+  "description": "Python script to scrape \"Followers\" and \"Following\" lists of an Instagram account and **also the lists of all accounts in that \"Following\" list**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.55.0",
+    "playwright": "^1.55.0"
+  }
+}

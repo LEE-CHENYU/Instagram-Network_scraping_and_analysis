@@ -90,7 +90,7 @@ def update_following_links_file(my_following_links):
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Instagram Account Scraper')
     parser.add_argument('--username', default="fretin98", help='Instagram username')
-    parser.add_argument('--password', default="Lcy199818su!", help='Instagram password')
+    parser.add_argument('--password', default="Lcy199818su", help='Instagram password')
     parser.add_argument('--no-followers', action='store_true', help='Skip scraping followers')
     parser.add_argument('--no-following', action='store_true', help='Skip scraping following')
     parser.add_argument('--resume', action='store_true', help='Resume previous scraping session')
