@@ -738,9 +738,9 @@
   "alphacentauriomega": {
     "processed": true,
     "skipped": true,
-    "followers_count": 195,
-    "following_count": 2466,
-    "timestamp": 1742838604.866189
+    "followers_count": 208,
+    "following_count": 2589,
+    "timestamp": 1758490345.881003
   },
   "nasa": {
     "processed": true,
@@ -1963,7 +1963,7 @@
     "skipped": true,
     "followers_count": 5778,
     "following_count": 193,
-    "timestamp": 1758484532.818913
+    "timestamp": 1758490382.488669
   },
   "brooksengland": {
     "processed": true,
@@ -2508,8 +2508,8 @@
     "processed": true,
     "skipped": true,
     "followers_count": 226,
-    "following_count": 4264,
-    "timestamp": 1742899261.267686
+    "following_count": 4266,
+    "timestamp": 1758489661.9111612
   },
   "dessazhu": {
     "processed": true,
@@ -4861,9 +4861,9 @@
   "genevieve_goffman": {
     "processed": true,
     "skipped": true,
-    "followers_count": 6726,
-    "following_count": 2078,
-    "timestamp": 1742925141.911916
+    "followers_count": 7655,
+    "following_count": 2423,
+    "timestamp": 1758490451.028784
   },
   "survivalresearchlabs": {
     "processed": true,
@@ -5934,9 +5934,9 @@
   "linaldo922": {
     "processed": true,
     "skipped": true,
-    "followers_count": 3081,
-    "following_count": 896,
-    "timestamp": 1742945007.555506
+    "followers_count": 3100,
+    "following_count": 920,
+    "timestamp": 1758489652.6981702
   },
   "lauryn.444": {
     "processed": true,
@@ -11380,9 +11380,9 @@
   "jiaqiyang17": {
     "processed": true,
     "skipped": true,
-    "followers_count": 1391,
-    "following_count": 2034,
-    "timestamp": 1743009131.021177
+    "followers_count": 2172,
+    "following_count": 3109,
+    "timestamp": 1758489643.553393
   },
   "xav.zhang": {
     "processed": true,
@@ -11596,7 +11596,7 @@
     "skipped": true,
     "followers_count": 909,
     "following_count": 2456,
-    "timestamp": 1758484379.875486
+    "timestamp": 1758489670.828806
   },
   "opticalradiance": {
     "processed": true,
@@ -11647,9 +11647,9 @@
   "jack.gonzalez02": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2578,
-    "following_count": 2668,
-    "timestamp": 1743019874.138277
+    "followers_count": 2588,
+    "following_count": 2707,
+    "timestamp": 1758489711.453163
   },
   "phildinenis": {
     "processed": true,
@@ -11936,9 +11936,9 @@
   "redbull": {
     "processed": true,
     "skipped": true,
-    "followers_count": 26,
-    "following_count": 2082,
-    "timestamp": 1743028996.9144619
+    "followers_count": 29,
+    "following_count": 2116,
+    "timestamp": 1758490373.598282
   },
   "mitani.takuya": {
     "processed": true,
@@ -12370,8 +12370,8 @@
     "processed": true,
     "skipped": true,
     "followers_count": 1,
-    "following_count": 3214,
-    "timestamp": 1743031997.8304489
+    "following_count": 3245,
+    "timestamp": 1758489679.573051
   },
   "filmhowyalike": {
     "processed": true,
@@ -12676,9 +12676,9 @@
   "oneice": {
     "processed": true,
     "skipped": true,
-    "followers_count": 9248,
-    "following_count": 1012,
-    "timestamp": 1743034862.469124
+    "followers_count": 9299,
+    "following_count": 1059,
+    "timestamp": 1758490391.349822
   },
   "yingli_cai": {
     "processed": true,
@@ -12830,9 +12830,9 @@
   "eliasredstone": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2826,
-    "following_count": 2606,
-    "timestamp": 1743035273.6235049
+    "followers_count": 3132,
+    "following_count": 2824,
+    "timestamp": 1758489697.573441
   },
   "documentum.tv": {
     "processed": true,
@@ -12874,9 +12874,9 @@
   "archiesczz": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2655,
-    "following_count": 788,
-    "timestamp": 1743035360.373893
+    "followers_count": 2640,
+    "following_count": 783,
+    "timestamp": 1758489688.6786618
   },
   "henleyguuuuuu": {
     "processed": true,
@@ -13018,14 +13018,14 @@
     "timestamp": 1758474493.3211882
   },
   "cindyfive_": {
-    "processed": true,
-    "rate_limited": false,
+    "processed": false,
+    "rate_limited": true,
     "skipped": false,
     "followers_count": 1444,
     "following_count": 1359,
-    "followers_retrieved": 0,
-    "following_retrieved": 0,
-    "timestamp": 1758476089.334107
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1758490442.0236428
   },
   "debbieye_": {
     "processed": true,
@@ -13074,5 +13074,29 @@
     "followers_count": 8735,
     "following_count": 377,
     "timestamp": 1758484507.435888
+  },
+  "_helenz_": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 2407,
+    "following_count": 1012,
+    "timestamp": 1758490287.382784
+  },
+  "dark.future.ai": {
+    "processed": false,
+    "rate_limited": true,
+    "skipped": false,
+    "followers_count": 30,
+    "following_count": 1418,
+    "followers_retrieved": 50,
+    "following_retrieved": 10,
+    "timestamp": 1758490336.9306722
+  },
+  "thepennclub": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 4663,
+    "following_count": 636,
+    "timestamp": 1758490354.600204
   }
 }

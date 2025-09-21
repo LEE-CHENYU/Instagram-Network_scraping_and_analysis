@@ -31,3 +31,126 @@ Estimated to complete: ~197 sessions (~9.8 days)
 2025-09-21 14:19:32,843 - INFO - Saved data to instagram_data/daily_sessions.json
 2025-09-21 14:19:32,843 - INFO - Calculated batch size: 9
 2025-09-21 14:19:32,844 - INFO - Starting following scraping session with batch size 9
+2025-09-21 14:21:56,597 - INFO - SCRAPER: Loaded scraping progress: 1483 accounts processed
+2025-09-21 14:21:56,597 - INFO - SCRAPER: Will process 9 accounts in this session
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Logged in successfully!
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Rate limit statistics: 2 accounts marked as rate-limited
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Examples of rate-limited accounts: ['benton.down', 'yuukakazami0']
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Deduplicating adjacency list...
+2025-09-21 14:21:56,598 - INFO - SCRAPER: No duplicates found in adjList.txt
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Found 6161 accounts that have already been processed
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Starting batch processing of 9 accounts
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ soloslop.memes: Good candidate with 79 followers, 63 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ phillipsauction: Good candidate with 462 followers, 441 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ filmmovement: Good candidate with 17 followers, 807 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ asian_redbozicowboy: Good candidate with 63 followers, 158 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ ccpxi_8964: Good candidate with 50 followers, 120 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ ngr.ev: Good candidate with 392 followers, 306 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ cinema_nighttt: Good candidate with 431 followers, 17 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ thedizzyviper: Good candidate with 183 followers, 960 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ laclefrevival: Good candidate with 23 followers, 640 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ manofdutch: Good candidate with 40 followers, 78 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Found 12 accounts with reasonable follower/following counts
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Randomly selecting 9 accounts from 1862 available accounts
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Processing: https://www.instagram.com/jiaqiyang17/
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Account jiaqiyang17 exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Scraping jiaqiyang17
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Early detection: Account has too many followers (2172) or following (3109). Skipping detailed scraping.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Completed 1/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Processing: https://www.instagram.com/linaldo922/
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Account linaldo922 exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Scraping linaldo922
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Early detection: Account has too many followers (3100) or following (920). Skipping detailed scraping.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Completed 2/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Processing: https://www.instagram.com/superflyerone/
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Account superflyerone exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Scraping superflyerone
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Early detection: Account has too many followers (226) or following (4266). Skipping detailed scraping.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Completed 3/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Processing: https://www.instagram.com/between.mirrors/
+2025-09-21 14:21:56,598 - INFO - SCRAPER: Account between.mirrors exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Scraping between.mirrors
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Early detection: Account has too many followers (909) or following (2456). Skipping detailed scraping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 4/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Processing: https://www.instagram.com/dusttodigital/
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Account dusttodigital exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Scraping dusttodigital
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Early detection: Account has too many followers (1) or following (3245). Skipping detailed scraping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 5/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Processing: https://www.instagram.com/archiesczz/
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Account archiesczz exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Scraping archiesczz
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Early detection: Account has too many followers (2640) or following (783). Skipping detailed scraping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 6/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Processing: https://www.instagram.com/eliasredstone/
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Account eliasredstone exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Scraping eliasredstone
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Early detection: Account has too many followers (3132) or following (2824). Skipping detailed scraping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 7/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Processing: https://www.instagram.com/phillipsauction/
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Account phillipsauction already fully processed. Skipping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 8/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Processing: https://www.instagram.com/jack.gonzalez02/
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Account jack.gonzalez02 exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Scraping jack.gonzalez02
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Early detection: Account has too many followers (2588) or following (2707). Skipping detailed scraping.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Added 0 new relationships to adjacency list (total: 25025)
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Completed 9/9 accounts. 1862 remaining in queue.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Waiting 5 seconds before next account...
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Batch complete! Processed 9 accounts (0 were rate-limited and will be retried later).
+2025-09-21 14:21:56,599 - INFO - SCRAPER: 1862 links remaining for future sessions.
+2025-09-21 14:21:56,599 - INFO - SCRAPER: Browser closed. Script complete.
+2025-09-21 14:21:56,722 - INFO - Session completed successfully
+2025-09-21 14:21:56,726 - INFO - Account Categories:
+2025-09-21 14:21:56,726 - INFO -   unprocessed: 381 accounts (20.5%)
+2025-09-21 14:21:56,726 - INFO -   incomplete: 1202 accounts (64.6%)
+2025-09-21 14:21:56,726 - INFO -   rate_limited: 2 accounts (0.1%)
+2025-09-21 14:21:56,726 - INFO -   complete: 109 accounts (5.9%)
+2025-09-21 14:21:56,726 - INFO -   skipped: 141 accounts (7.6%)
+2025-09-21 14:21:56,726 - INFO -   empty: 27 accounts (1.5%)
+2025-09-21 14:21:56,727 - INFO - 
+============================================================
+2025-09-21 14:21:56,727 - INFO - PROGRESS SUMMARY
+2025-09-21 14:21:56,727 - INFO - ============================================================
+2025-09-21 14:21:56,727 - INFO - Total accounts to scrape: 1862
+2025-09-21 14:21:56,727 - INFO - ✓ Fully completed: 109 (5.9%)
+2025-09-21 14:21:56,727 - INFO - ⚠ Partially scraped: 1202 (64.6%)
+2025-09-21 14:21:56,727 - INFO - ✗ Not attempted: 381 (20.5%)
+2025-09-21 14:21:56,727 - INFO - 
+Estimated to complete: ~197 sessions (~9.8 days)
+2025-09-21 14:21:56,727 - INFO - ============================================================
+
+2025-09-21 14:21:56,727 - INFO - Waiting 23 minutes until 14:44:56
+2025-09-21 14:30:09,491 - INFO - Script interrupted by user
+2025-09-21 14:30:09,492 - INFO - Auto scraper ended

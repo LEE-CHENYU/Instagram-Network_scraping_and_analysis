@@ -145,6 +145,10 @@ def is_account_incomplete(data):
     Check if an account was incompletely scraped.
     An account is incomplete if it retrieved less than 10% of its connections.
     """
+    # If it's marked as skipped, it's not incomplete - it was intentionally skipped
+    if data.get('skipped', False):
+        return False
+
     followers_count = data.get('followers_count', 0)
     following_count = data.get('following_count', 0)
     followers_retrieved = data.get('followers_retrieved', 0)
@@ -171,6 +175,7 @@ def build_prioritized_queue(categories, max_queue_size=100):
     """
     Build a prioritized queue of accounts to scrape.
     Priority order: unprocessed > incomplete > rate_limited > empty
+    Note: Skipped accounts are NOT included as they're too large to scrape
     """
     queue = []
 
@@ -181,7 +186,7 @@ def build_prioritized_queue(categories, max_queue_size=100):
         random.shuffle(unprocessed)
         queue.extend(unprocessed[:max_queue_size])
 
-    # 2. Add incomplete accounts if room
+    # 2. Add incomplete accounts if room (but NOT skipped accounts)
     if len(queue) < max_queue_size:
         incomplete = categories['incomplete']
         if incomplete:
@@ -205,7 +210,9 @@ def build_prioritized_queue(categories, max_queue_size=100):
             remaining_slots = max_queue_size - len(queue)
             queue.extend(empty[:remaining_slots])
 
-    logging.info(f"Built queue with {len(queue)} accounts")
+    # Note: We NEVER add 'skipped' accounts to the queue as they're too large
+
+    logging.info(f"Built queue with {len(queue)} accounts (excluding skipped)")
     if queue:
         logging.info(f"Queue composition: {queue[:5]}... (showing first 5)")
 
@@ -348,27 +355,35 @@ def display_progress_summary():
     complete = len(categories['complete'])
     incomplete = len(categories['incomplete'])
     unprocessed = len(categories['unprocessed'])
+    skipped = len(categories['skipped'])
+    rate_limited = len(categories['rate_limited'])
+    empty = len(categories['empty'])
 
-    # Calculate real completion percentage
-    real_completion = (complete / max(1, total_accounts)) * 100
+    # Calculate real work that needs to be done (exclude skipped accounts)
+    workable_accounts = total_accounts - skipped
+    real_completion = (complete / max(1, workable_accounts)) * 100
 
     logging.info("\n" + "=" * 60)
     logging.info("PROGRESS SUMMARY")
     logging.info("=" * 60)
-    logging.info(f"Total accounts to scrape: {total_accounts}")
-    logging.info(f"✓ Fully completed: {complete} ({real_completion:.1f}%)")
-    logging.info(f"⚠ Partially scraped: {incomplete} ({(incomplete/max(1,total_accounts))*100:.1f}%)")
-    logging.info(f"✗ Not attempted: {unprocessed} ({(unprocessed/max(1,total_accounts))*100:.1f}%)")
+    logging.info(f"Total accounts in list: {total_accounts}")
+    logging.info(f"Accounts to actually scrape: {workable_accounts} (excluding {skipped} skipped)")
+    logging.info(f"✓ Fully completed: {complete} ({(complete/max(1,workable_accounts))*100:.1f}% of workable)")
+    logging.info(f"⚠ Partially scraped: {incomplete} ({(incomplete/max(1,workable_accounts))*100:.1f}% of workable)")
+    logging.info(f"✗ Not attempted: {unprocessed} ({(unprocessed/max(1,workable_accounts))*100:.1f}% of workable)")
+    logging.info(f"⊘ Skipped (too large): {skipped}")
+    logging.info(f"⟲ Rate limited: {rate_limited}")
+    logging.info(f"∅ Empty accounts: {empty}")
 
-    # Estimate time to completion
+    # Estimate time to completion (only count incomplete and unprocessed, not skipped)
     remaining = unprocessed + incomplete
     if remaining > 0:
-        # Assume average of 8 accounts per session, 30 minutes between sessions
-        estimated_sessions = remaining // 8
+        # Assume average of 8 accounts per session, accounting for skips
+        estimated_sessions = remaining // 6  # Reduced because many will be skipped
         estimated_days = estimated_sessions / MAX_SESSIONS_PER_DAY
         logging.info(f"\nEstimated to complete: ~{estimated_sessions} sessions (~{estimated_days:.1f} days)")
     else:
-        logging.info("\n✅ All accounts have been processed!")
+        logging.info("\n✅ All workable accounts have been processed!")
 
     logging.info("=" * 60 + "\n")
 
