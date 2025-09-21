@@ -300,9 +300,20 @@ def scrape_account(account_link, all_nodes):
         
         if was_rate_limited:
             print(f"Account {account_username} was previously rate-limited - retrieved only {followers_retrieved}/{followers_count} followers and {following_retrieved}/{following_count} following. Re-attempting scrape.")
-        elif was_processed:
-            print(f"Account {account_username} already fully processed. Skipping.")
-            return True, all_nodes
+        elif was_processed and not progress_data[account_username].get("skipped", False):
+            # Only skip if truly processed AND not skipped due to size
+            followers_retrieved = progress_data[account_username].get("followers_retrieved", 0)
+            following_retrieved = progress_data[account_username].get("following_retrieved", 0)
+            followers_count = progress_data[account_username].get("followers_count", 0)
+            following_count = progress_data[account_username].get("following_count", 0)
+
+            # Check if actually has meaningful data
+            if (followers_count <= 10 or followers_retrieved >= 10) and \
+               (following_count <= 10 or following_retrieved >= 10):
+                print(f"Account {account_username} already fully processed. Skipping.")
+                return True, all_nodes
+            else:
+                print(f"Account {account_username} marked as processed but has incomplete data ({followers_retrieved}/{followers_count} followers, {following_retrieved}/{following_count} following). Re-attempting.")
         else:
             print(f"Account {account_username} exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.")
     
