@@ -1,0 +1,1477 @@
+2025-04-02 13:33:05,102 - INFO - ============================================================
+2025-04-02 13:33:05,102 - INFO - Instagram Auto Scraper Starting
+2025-04-02 13:33:05,102 - INFO - ============================================================
+2025-04-02 13:33:05,102 - INFO - Auto-scraper script started
+2025-04-02 13:33:05,102 - INFO - Inspecting links file for format issues
+2025-04-02 13:33:05,103 - INFO - Links file contains 1862 lines
+2025-04-02 13:33:05,103 - INFO - First 3 links: ['https://www.instagram.com/soloslop.memes/', 'https://www.instagram.com/phillipsauction/', 'https://www.instagram.com/filmmovement/']
+2025-04-02 13:33:05,103 - INFO - Last 3 links: ['https://www.instagram.com/drakesguides/', 'https://www.instagram.com/ppplab/', 'https://www.instagram.com/scattoitaliano/']
+2025-04-02 13:33:05,103 - INFO - Performing initial duplicate check on following links
+2025-04-02 13:33:05,104 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:33:05,104 - INFO - Checking and removing already processed links
+2025-04-02 13:33:05,104 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:33:05,104 - INFO - Fetching current follower and following counts from profile...
+2025-04-02 13:35:12,811 - INFO - PROFILE CHECK: Login might have failed. Current URL still shows login page.
+2025-04-02 13:35:12,812 - INFO - PROFILE CHECK: Logged in as fretin98
+2025-04-02 13:35:12,812 - INFO - PROFILE CHECK: Profile Stats: {'followers': 0, 'following': 0, 'posts': 0}
+2025-04-02 13:35:12,812 - INFO - Found profile stats
+2025-04-02 13:35:12,812 - INFO - PROFILE CHECK: Followers: 0, Following: 0
+2025-04-02 13:35:12,812 - INFO - Extracted total followers: 0
+2025-04-02 13:35:12,812 - INFO - Extracted total following: 0
+2025-04-02 13:35:12,812 - INFO - PROFILE CHECK: Session completed successfully!
+2025-04-02 13:35:12,812 - INFO - PROFILE CHECK: Browser closed.
+2025-04-02 13:35:12,866 - INFO - Updating status with initial profile counts - Followers: 0, Following: 0
+2025-04-02 13:35:12,867 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:35:12,867 - INFO - Setting temporary total following count to 1862 until profile is loaded
+2025-04-02 13:35:12,867 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:35:12,867 - INFO - Setting temporary total followers count to 879 until profile is loaded
+2025-04-02 13:35:12,867 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:35:12,867 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:35:12,867 - INFO - All following accounts collected! 1862/1862
+2025-04-02 13:35:12,867 - INFO - All followers collected! 879/879
+2025-04-02 13:35:12,868 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:35:12,868 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:35:12,870 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-02 13:35:12,870 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:35:12,870 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:35:12,870 - INFO - Starting new scraping session
+2025-04-02 13:35:12,870 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:35:12,870 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 13:35:12,870 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 13:35:12,870 - INFO - Starting following accounts scraping session
+2025-04-02 13:35:12,870 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:35:12,870 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 13:35:12,871 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:35:12,872 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 13:35:12,874 - INFO - Using random batch size of 55 accounts for this session
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Will process 55 accounts in this session
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 13:37:15,252 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Starting batch processing of 55 accounts
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 13:37:15,253 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: Randomly selecting 55 accounts from 1862 available accounts
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #700/1862: https://www.instagram.com/lin.ariana23/
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: Account lin.ariana23 in progress data with rate_limited=False
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: lin.ariana23
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 13:37:15,254 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 13:37:15,311 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 13:37:15,311 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 13:37:15,311 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:37:15,311 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:37:15,311 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 13:37:15,311 - INFO - Sessions completed. Waiting 0 hours and 23 minutes before next sessions...
+2025-04-02 14:01:04,329 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 14:01:04,331 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 14:01:04,331 - INFO - Set today's natural break window to 14:00-16:00
+2025-04-02 14:01:04,333 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 14:01:04,333 - INFO - It's 14:01, taking a natural break to appear more human-like.
+2025-04-02 14:01:04,333 - INFO - Will take a 140 minute break and resume at approximately 16:21
+2025-04-02 14:01:04,333 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 16:21:04,368 - INFO - Natural break complete, resuming operations
+2025-04-02 16:21:04,371 - INFO - Starting new scraping session
+2025-04-02 16:21:04,376 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 16:21:04,377 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 16:21:04,377 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 16:21:04,377 - INFO - Starting following accounts scraping session
+2025-04-02 16:21:04,377 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 16:21:04,377 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 16:21:04,380 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 16:21:04,381 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 16:21:04,387 - INFO - Using random batch size of 55 accounts for this session
+2025-04-02 16:22:51,758 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Will process 55 accounts in this session
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 16:22:51,759 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 16:22:51,760 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: Starting batch processing of 55 accounts
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,761 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 16:22:51,762 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 16:22:51,763 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 16:22:51,764 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 16:22:51,764 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 16:22:51,764 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 16:22:51,764 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: Randomly selecting 55 accounts from 1862 available accounts
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #1539/1862: https://www.instagram.com/angelwang0225/
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: DEBUG: Account angelwang0225 in progress data with rate_limited=False
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: angelwang0225
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 16:22:51,766 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 16:22:51,838 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 16:22:51,838 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 16:22:51,839 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 16:22:51,839 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 16:22:51,839 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 16:22:51,839 - INFO - Sessions completed. Waiting 0 hours and 21 minutes before next sessions...
+2025-04-02 16:44:48,856 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 16:44:48,860 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 16:44:48,862 - INFO - Set today's natural break window to 11:00-13:00
+2025-04-02 16:44:48,865 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 16:44:48,866 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 16:44:48,866 - INFO - Starting new scraping session
+2025-04-02 16:44:48,867 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 16:44:48,867 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 16:44:48,867 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 16:44:48,867 - INFO - Starting following accounts scraping session
+2025-04-02 16:44:48,867 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 16:44:48,867 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 16:44:48,869 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 16:44:48,870 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 16:44:48,875 - INFO - Using random batch size of 40 accounts for this session
+2025-04-02 16:47:44,554 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Will process 40 accounts in this session
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Starting batch processing of 40 accounts
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 16:47:44,555 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 70 followers, 67 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 13 followers, 708 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 30 followers, 250 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 11 followers, 98 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 121 followers, 193 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 401 followers, 16 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 179 followers, 903 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 23 followers, 561 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 84 followers, 601 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 680 followers, 921 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: Randomly selecting 40 accounts from 1862 available accounts
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #1225/1862: https://www.instagram.com/hanbailyu/
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Account hanbailyu in progress data with rate_limited=False
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: hanbailyu
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 16:47:44,556 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 16:47:44,677 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 16:47:44,677 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 16:47:44,677 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 16:47:44,677 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 16:47:44,677 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 16:47:44,677 - INFO - Sessions completed. Waiting 0 hours and 28 minutes before next sessions...
+2025-04-02 17:16:02,693 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 17:16:02,694 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 17:16:02,695 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-02 17:16:02,697 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 17:16:02,697 - INFO - It's 17:16, taking a natural break to appear more human-like.
+2025-04-02 17:16:02,697 - INFO - Will take a 98 minute break and resume at approximately 18:54
+2025-04-02 17:16:02,697 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 18:54:02,609 - INFO - Natural break complete, resuming operations
+2025-04-02 18:54:02,612 - INFO - Starting new scraping session
+2025-04-02 18:54:02,617 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 18:54:02,617 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 18:54:02,618 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 18:54:02,618 - INFO - Starting following accounts scraping session
+2025-04-02 18:54:02,618 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 18:54:02,618 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 18:54:02,620 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 18:54:02,621 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 18:54:02,627 - INFO - Using random batch size of 43 accounts for this session
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Will process 43 accounts in this session
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 18:55:40,348 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 18:55:40,349 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: Starting batch processing of 43 accounts
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,350 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: Randomly selecting 43 accounts from 1862 available accounts
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #961/1862: https://www.instagram.com/tianai.jing/
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 18:55:40,351 - INFO - FOLLOWING SCRAPER: DEBUG: Account tianai.jing in progress data with rate_limited=False
+2025-04-02 18:55:40,352 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: tianai.jing
+2025-04-02 18:55:40,352 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 18:55:40,352 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 18:55:40,411 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 18:55:40,411 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 18:55:40,412 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 18:55:40,412 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 18:55:40,412 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 18:55:40,412 - INFO - Sessions completed. Waiting 0 hours and 21 minutes before next sessions...
+2025-04-02 19:17:23,534 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:17:23,537 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:17:23,541 - INFO - Set today's natural break window to 11:00-13:00
+2025-04-02 19:17:23,545 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 19:17:23,546 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 19:17:23,546 - INFO - Starting new scraping session
+2025-04-02 19:17:23,546 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:17:23,547 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 19:17:23,547 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 19:17:23,547 - INFO - Starting following accounts scraping session
+2025-04-02 19:17:23,547 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 19:17:23,547 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 19:17:23,550 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 19:17:23,550 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 19:17:23,556 - INFO - Using random batch size of 51 accounts for this session
+2025-04-02 19:19:08,333 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Will process 51 accounts in this session
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 19:19:08,334 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Starting batch processing of 51 accounts
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Randomly selecting 51 accounts from 1862 available accounts
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #151/1862: https://www.instagram.com/cynd.yz/
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Account cynd.yz in progress data with rate_limited=False
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: cynd.yz
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 19:19:08,335 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 19:19:08,426 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 19:19:08,426 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 19:19:08,426 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 19:19:08,426 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 19:19:08,426 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 19:19:08,427 - INFO - Sessions completed. Waiting 0 hours and 39 minutes before next sessions...
+2025-04-02 19:58:21,463 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:58:21,465 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:58:21,468 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-02 19:58:21,469 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 19:58:21,469 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 19:58:21,469 - INFO - Starting new scraping session
+2025-04-02 19:58:21,470 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 19:58:21,471 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 19:58:21,471 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 19:58:21,471 - INFO - Starting following accounts scraping session
+2025-04-02 19:58:21,471 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 19:58:21,471 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 19:58:21,474 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 19:58:21,474 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 19:58:21,480 - INFO - Using random batch size of 47 accounts for this session
+2025-04-02 19:58:34,424 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 19:58:34,424 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 19:58:34,424 - INFO - FOLLOWING SCRAPER: Will process 47 accounts in this session
+2025-04-02 19:58:34,502 - ERROR - Following scraping failed with return code 1
+2025-04-02 19:58:34,503 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000104ba9168 chromedriver + 6177128
+1   chromedriver                        0x0000000104ba082a chromedriver + 6141994
+2   chromedriver                        0x000000010462ae00 chromedriver + 417280
+3   chromedriver                        0x0000000104621c6b chromedriver + 380011
+4   chromedriver                        0x0000000104612208 chromedriver + 315912
+5   chromedriver                        0x0000000104613eed chromedriver + 323309
+6   chromedriver                        0x000000010461258b chromedriver + 316811
+7   chromedriver                        0x0000000104611fb3 chromedriver + 315315
+8   chromedriver                        0x0000000104611cb4 chromedriver + 314548
+9   chromedriver                        0x000000010460fb6d chromedriver + 306029
+10  chromedriver                        0x000000010461031a chromedriver + 307994
+11  chromedriver                        0x000000010462e2d9 chromedriver + 430809
+12  chromedriver                        0x00000001046ca635 chromedriver + 1070645
+13  chromedriver                        0x00000001046a26f2 chromedriver + 906994
+14  chromedriver                        0x00000001046c9a22 chromedriver + 1067554
+15  chromedriver                        0x00000001046a24c3 chromedriver + 906435
+16  chromedriver                        0x000000010466e885 chromedriver + 694405
+17  chromedriver                        0x000000010466f4f1 chromedriver + 697585
+18  chromedriver                        0x0000000104b65950 chromedriver + 5900624
+19  chromedriver                        0x0000000104b699e1 chromedriver + 5917153
+20  chromedriver                        0x0000000104b3fe14 chromedriver + 5746196
+21  chromedriver                        0x0000000104b6a40b chromedriver + 5919755
+22  chromedriver                        0x0000000104b2e574 chromedriver + 5674356
+23  chromedriver                        0x0000000104b8de88 chromedriver + 6065800
+24  chromedriver                        0x0000000104b8e050 chromedriver + 6066256
+25  chromedriver                        0x0000000104ba03f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-02 19:58:34,504 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 19:58:34,504 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 19:58:34,504 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 19:58:34,504 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 19:58:34,504 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 19:58:34,504 - INFO - Sessions completed. Waiting 0 hours and 34 minutes before next sessions...
+2025-04-02 20:33:08,546 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 20:33:08,549 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 20:33:08,551 - INFO - Set today's natural break window to 16:00-18:00
+2025-04-02 20:33:08,552 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 20:33:08,553 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 20:33:08,553 - INFO - Starting new scraping session
+2025-04-02 20:33:08,555 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 20:33:08,556 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 20:33:08,556 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 20:33:08,556 - INFO - Starting following accounts scraping session
+2025-04-02 20:33:08,556 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 20:33:08,556 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 20:33:08,559 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 20:33:08,559 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 20:33:08,565 - INFO - Using random batch size of 55 accounts for this session
+2025-04-02 20:33:14,749 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 20:33:14,749 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 20:33:14,749 - INFO - FOLLOWING SCRAPER: Will process 55 accounts in this session
+2025-04-02 20:33:14,832 - ERROR - Following scraping failed with return code 1
+2025-04-02 20:33:14,832 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x000000010543f168 chromedriver + 6177128
+1   chromedriver                        0x000000010543682a chromedriver + 6141994
+2   chromedriver                        0x0000000104ec0e00 chromedriver + 417280
+3   chromedriver                        0x0000000104eb7c6b chromedriver + 380011
+4   chromedriver                        0x0000000104ea8208 chromedriver + 315912
+5   chromedriver                        0x0000000104ea9eed chromedriver + 323309
+6   chromedriver                        0x0000000104ea858b chromedriver + 316811
+7   chromedriver                        0x0000000104ea7fb3 chromedriver + 315315
+8   chromedriver                        0x0000000104ea7cb4 chromedriver + 314548
+9   chromedriver                        0x0000000104ea5b6d chromedriver + 306029
+10  chromedriver                        0x0000000104ea631a chromedriver + 307994
+11  chromedriver                        0x0000000104ec42d9 chromedriver + 430809
+12  chromedriver                        0x0000000104f60635 chromedriver + 1070645
+13  chromedriver                        0x0000000104f386f2 chromedriver + 906994
+14  chromedriver                        0x0000000104f5fa22 chromedriver + 1067554
+15  chromedriver                        0x0000000104f384c3 chromedriver + 906435
+16  chromedriver                        0x0000000104f04885 chromedriver + 694405
+17  chromedriver                        0x0000000104f054f1 chromedriver + 697585
+18  chromedriver                        0x00000001053fb950 chromedriver + 5900624
+19  chromedriver                        0x00000001053ff9e1 chromedriver + 5917153
+20  chromedriver                        0x00000001053d5e14 chromedriver + 5746196
+21  chromedriver                        0x000000010540040b chromedriver + 5919755
+22  chromedriver                        0x00000001053c4574 chromedriver + 5674356
+23  chromedriver                        0x0000000105423e88 chromedriver + 6065800
+24  chromedriver                        0x0000000105424050 chromedriver + 6066256
+25  chromedriver                        0x00000001054363f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-02 20:33:14,832 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 20:33:14,832 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 20:33:14,833 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 20:33:14,833 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 20:33:14,833 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 20:33:14,833 - INFO - Sessions completed. Waiting 0 hours and 27 minutes before next sessions...
+2025-04-02 21:00:36,867 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:00:36,870 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:00:36,870 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-02 21:00:36,871 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 21:00:36,872 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 21:00:36,872 - INFO - Starting new scraping session
+2025-04-02 21:00:36,873 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:00:36,873 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 21:00:36,873 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 21:00:36,873 - INFO - Starting following accounts scraping session
+2025-04-02 21:00:36,873 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 21:00:36,873 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 21:00:36,876 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 21:00:36,877 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 21:00:36,882 - INFO - Using random batch size of 45 accounts for this session
+2025-04-02 21:00:47,369 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 21:00:47,370 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 21:00:47,370 - INFO - FOLLOWING SCRAPER: Will process 45 accounts in this session
+2025-04-02 21:00:47,446 - ERROR - Following scraping failed with return code 1
+2025-04-02 21:00:47,446 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000101175168 chromedriver + 6177128
+1   chromedriver                        0x000000010116c82a chromedriver + 6141994
+2   chromedriver                        0x0000000100bf6e00 chromedriver + 417280
+3   chromedriver                        0x0000000100bedc6b chromedriver + 380011
+4   chromedriver                        0x0000000100bde208 chromedriver + 315912
+5   chromedriver                        0x0000000100bdfeed chromedriver + 323309
+6   chromedriver                        0x0000000100bde58b chromedriver + 316811
+7   chromedriver                        0x0000000100bddfb3 chromedriver + 315315
+8   chromedriver                        0x0000000100bddcb4 chromedriver + 314548
+9   chromedriver                        0x0000000100bdbb6d chromedriver + 306029
+10  chromedriver                        0x0000000100bdc31a chromedriver + 307994
+11  chromedriver                        0x0000000100bfa2d9 chromedriver + 430809
+12  chromedriver                        0x0000000100c96635 chromedriver + 1070645
+13  chromedriver                        0x0000000100c6e6f2 chromedriver + 906994
+14  chromedriver                        0x0000000100c95a22 chromedriver + 1067554
+15  chromedriver                        0x0000000100c6e4c3 chromedriver + 906435
+16  chromedriver                        0x0000000100c3a885 chromedriver + 694405
+17  chromedriver                        0x0000000100c3b4f1 chromedriver + 697585
+18  chromedriver                        0x0000000101131950 chromedriver + 5900624
+19  chromedriver                        0x00000001011359e1 chromedriver + 5917153
+20  chromedriver                        0x000000010110be14 chromedriver + 5746196
+21  chromedriver                        0x000000010113640b chromedriver + 5919755
+22  chromedriver                        0x00000001010fa574 chromedriver + 5674356
+23  chromedriver                        0x0000000101159e88 chromedriver + 6065800
+24  chromedriver                        0x000000010115a050 chromedriver + 6066256
+25  chromedriver                        0x000000010116c3f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-02 21:00:47,447 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 21:00:47,447 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 21:00:47,447 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 21:00:47,447 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 21:00:47,447 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 21:00:47,447 - INFO - Sessions completed. Waiting 0 hours and 34 minutes before next sessions...
+2025-04-02 21:34:56,488 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:34:56,492 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:34:56,494 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-02 21:34:56,495 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 21:34:56,496 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 21:34:56,496 - INFO - Starting new scraping session
+2025-04-02 21:34:56,497 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 21:34:56,497 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 21:34:56,498 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 21:34:56,498 - INFO - Starting following accounts scraping session
+2025-04-02 21:34:56,498 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 21:34:56,498 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 21:34:56,502 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 21:34:56,503 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 21:34:56,508 - INFO - Using random batch size of 49 accounts for this session
+2025-04-02 21:35:02,592 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 21:35:02,592 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 21:35:02,592 - INFO - FOLLOWING SCRAPER: Will process 49 accounts in this session
+2025-04-02 21:35:02,667 - ERROR - Following scraping failed with return code 1
+2025-04-02 21:35:02,667 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000101039168 chromedriver + 6177128
+1   chromedriver                        0x000000010103082a chromedriver + 6141994
+2   chromedriver                        0x0000000100abae00 chromedriver + 417280
+3   chromedriver                        0x0000000100ab1c6b chromedriver + 380011
+4   chromedriver                        0x0000000100aa2208 chromedriver + 315912
+5   chromedriver                        0x0000000100aa3eed chromedriver + 323309
+6   chromedriver                        0x0000000100aa258b chromedriver + 316811
+7   chromedriver                        0x0000000100aa1fb3 chromedriver + 315315
+8   chromedriver                        0x0000000100aa1cb4 chromedriver + 314548
+9   chromedriver                        0x0000000100a9fb6d chromedriver + 306029
+10  chromedriver                        0x0000000100aa031a chromedriver + 307994
+11  chromedriver                        0x0000000100abe2d9 chromedriver + 430809
+12  chromedriver                        0x0000000100b5a635 chromedriver + 1070645
+13  chromedriver                        0x0000000100b326f2 chromedriver + 906994
+14  chromedriver                        0x0000000100b59a22 chromedriver + 1067554
+15  chromedriver                        0x0000000100b324c3 chromedriver + 906435
+16  chromedriver                        0x0000000100afe885 chromedriver + 694405
+17  chromedriver                        0x0000000100aff4f1 chromedriver + 697585
+18  chromedriver                        0x0000000100ff5950 chromedriver + 5900624
+19  chromedriver                        0x0000000100ff99e1 chromedriver + 5917153
+20  chromedriver                        0x0000000100fcfe14 chromedriver + 5746196
+21  chromedriver                        0x0000000100ffa40b chromedriver + 5919755
+22  chromedriver                        0x0000000100fbe574 chromedriver + 5674356
+23  chromedriver                        0x000000010101de88 chromedriver + 6065800
+24  chromedriver                        0x000000010101e050 chromedriver + 6066256
+25  chromedriver                        0x00000001010303f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-02 21:35:02,667 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 21:35:02,667 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 21:35:02,668 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 21:35:02,668 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 21:35:02,668 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 21:35:02,668 - INFO - Sessions completed. Waiting 0 hours and 26 minutes before next sessions...
+2025-04-02 22:01:29,700 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 22:01:29,704 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 22:01:29,705 - INFO - Set today's natural break window to 16:00-18:00
+2025-04-02 22:01:29,707 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 22:01:29,707 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 22:01:29,708 - INFO - Starting new scraping session
+2025-04-02 22:01:29,709 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 22:01:29,710 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 22:01:29,710 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 22:01:29,710 - INFO - Starting following accounts scraping session
+2025-04-02 22:01:29,710 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 22:01:29,710 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 22:01:29,713 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 22:01:29,714 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 22:01:29,720 - INFO - Using random batch size of 58 accounts for this session
+2025-04-02 22:01:40,182 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 22:01:40,182 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 22:01:40,182 - INFO - FOLLOWING SCRAPER: Will process 58 accounts in this session
+2025-04-02 22:01:40,254 - ERROR - Following scraping failed with return code 1
+2025-04-02 22:01:40,254 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000104b0b168 chromedriver + 6177128
+1   chromedriver                        0x0000000104b0282a chromedriver + 6141994
+2   chromedriver                        0x000000010458ce00 chromedriver + 417280
+3   chromedriver                        0x0000000104583c6b chromedriver + 380011
+4   chromedriver                        0x0000000104574208 chromedriver + 315912
+5   chromedriver                        0x0000000104575eed chromedriver + 323309
+6   chromedriver                        0x000000010457458b chromedriver + 316811
+7   chromedriver                        0x0000000104573fb3 chromedriver + 315315
+8   chromedriver                        0x0000000104573cb4 chromedriver + 314548
+9   chromedriver                        0x0000000104571b6d chromedriver + 306029
+10  chromedriver                        0x000000010457231a chromedriver + 307994
+11  chromedriver                        0x00000001045902d9 chromedriver + 430809
+12  chromedriver                        0x000000010462c635 chromedriver + 1070645
+13  chromedriver                        0x00000001046046f2 chromedriver + 906994
+14  chromedriver                        0x000000010462ba22 chromedriver + 1067554
+15  chromedriver                        0x00000001046044c3 chromedriver + 906435
+16  chromedriver                        0x00000001045d0885 chromedriver + 694405
+17  chromedriver                        0x00000001045d14f1 chromedriver + 697585
+18  chromedriver                        0x0000000104ac7950 chromedriver + 5900624
+19  chromedriver                        0x0000000104acb9e1 chromedriver + 5917153
+20  chromedriver                        0x0000000104aa1e14 chromedriver + 5746196
+21  chromedriver                        0x0000000104acc40b chromedriver + 5919755
+22  chromedriver                        0x0000000104a90574 chromedriver + 5674356
+23  chromedriver                        0x0000000104aefe88 chromedriver + 6065800
+24  chromedriver                        0x0000000104af0050 chromedriver + 6066256
+25  chromedriver                        0x0000000104b023f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-02 22:01:40,255 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 22:01:40,255 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 22:01:40,255 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 22:01:40,255 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 22:01:40,256 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 22:01:40,256 - INFO - Sessions completed. Waiting 0 hours and 22 minutes before next sessions...
+2025-04-02 22:23:50,288 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 22:23:50,290 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 22:23:50,290 - INFO - Randomly skipping this session to create a more human-like pattern
+2025-04-02 22:23:50,290 - INFO - Will check again in 57 minutes
+2025-04-02 23:20:50,015 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-02 23:40:50,000 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 23:40:50,002 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 23:40:50,004 - INFO - Set today's natural break window to 12:00-14:00
+2025-04-02 23:40:50,006 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 23:40:50,006 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 23:40:50,007 - INFO - Starting new scraping session
+2025-04-02 23:40:50,007 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 23:40:50,008 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 23:40:50,008 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 23:40:50,008 - INFO - Starting following accounts scraping session
+2025-04-02 23:40:50,008 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 23:40:50,008 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 23:40:50,010 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 23:40:50,010 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 23:40:50,016 - INFO - Using random batch size of 49 accounts for this session
+2025-04-02 23:42:41,037 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Will process 49 accounts in this session
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 23:42:41,038 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-02 23:42:41,039 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: Starting batch processing of 49 accounts
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,040 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: Randomly selecting 49 accounts from 1862 available accounts
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #1037/1862: https://www.instagram.com/www_chichi/
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Account www_chichi in progress data with rate_limited=False
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: www_chichi
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-02 23:42:41,041 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-02 23:42:41,083 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 23:42:41,083 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 23:42:41,084 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 23:42:41,084 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 23:42:41,084 - INFO - Following accounts scraping session completed with result: True
+2025-04-02 23:42:41,084 - INFO - Sessions completed. Waiting 0 hours and 37 minutes before next sessions...
+2025-04-03 00:20:11,076 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 00:20:11,079 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 00:20:11,081 - INFO - Set today's natural break window to 11:00-13:00
+2025-04-03 00:20:11,082 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 00:20:11,083 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 00:20:11,083 - INFO - Starting new scraping session
+2025-04-03 00:20:11,085 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 00:20:11,085 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-03 00:20:11,085 - INFO - Now running a session to scrape following accounts network data...
+2025-04-03 00:20:11,085 - INFO - Starting following accounts scraping session
+2025-04-03 00:20:11,085 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 00:20:11,086 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-03 00:20:11,089 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 00:20:11,091 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-03 00:20:11,097 - INFO - Using random batch size of 46 accounts for this session
+2025-04-03 00:21:46,787 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Will process 46 accounts in this session
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 00:21:46,788 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-03 00:21:46,789 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Starting batch processing of 46 accounts
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Randomly selecting 46 accounts from 1862 available accounts
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #1182/1862: https://www.instagram.com/hougong_squad/
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Account hougong_squad in progress data with rate_limited=False
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: hougong_squad
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-03 00:21:46,790 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-03 00:21:46,844 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-03 00:21:46,844 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-03 00:21:46,845 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 00:21:46,845 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 00:21:46,845 - INFO - Following accounts scraping session completed with result: True
+2025-04-03 00:21:46,846 - INFO - Sessions completed. Waiting 0 hours and 26 minutes before next sessions...
+2025-04-03 03:00:34,653 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:00:34,655 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:00:34,656 - INFO - It's 3:00, during pause hours. Waiting until morning.
+2025-04-03 03:00:34,657 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 03:20:34,679 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:20:34,683 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:20:34,683 - INFO - It's 3:20, during pause hours. Waiting until morning.
+2025-04-03 03:20:34,683 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 03:40:34,706 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:40:34,709 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 03:40:34,709 - INFO - It's 3:40, during pause hours. Waiting until morning.
+2025-04-03 03:40:34,709 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 04:00:34,723 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 04:00:34,726 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 04:00:34,727 - INFO - It's 4:00, during pause hours. Waiting until morning.
+2025-04-03 04:00:34,727 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 05:07:56,277 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 05:07:56,282 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 05:07:56,283 - INFO - Randomly skipping this session to create a more human-like pattern
+2025-04-03 05:07:56,283 - INFO - Will check again in 60 minutes
+2025-04-03 08:53:52,962 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 09:13:52,950 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:13:52,951 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:13:52,953 - INFO - Set today's natural break window to 16:00-18:00
+2025-04-03 09:13:52,955 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 09:13:52,955 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 09:13:52,955 - INFO - Starting new scraping session
+2025-04-03 09:13:52,956 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:13:52,956 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-03 09:13:52,956 - INFO - Now running a session to scrape following accounts network data...
+2025-04-03 09:13:52,956 - INFO - Starting following accounts scraping session
+2025-04-03 09:13:52,956 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 09:13:52,956 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-03 09:13:52,958 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 09:13:52,959 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-03 09:13:52,964 - INFO - Using random batch size of 46 accounts for this session
+2025-04-03 09:14:05,205 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-03 09:14:05,206 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-03 09:14:05,206 - INFO - FOLLOWING SCRAPER: Will process 46 accounts in this session
+2025-04-03 09:14:05,281 - ERROR - Following scraping failed with return code 1
+2025-04-03 09:14:05,281 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000100a90168 chromedriver + 6177128
+1   chromedriver                        0x0000000100a8782a chromedriver + 6141994
+2   chromedriver                        0x0000000100511e00 chromedriver + 417280
+3   chromedriver                        0x0000000100508c6b chromedriver + 380011
+4   chromedriver                        0x00000001004f9208 chromedriver + 315912
+5   chromedriver                        0x00000001004faeed chromedriver + 323309
+6   chromedriver                        0x00000001004f958b chromedriver + 316811
+7   chromedriver                        0x00000001004f8fb3 chromedriver + 315315
+8   chromedriver                        0x00000001004f8cb4 chromedriver + 314548
+9   chromedriver                        0x00000001004f6b6d chromedriver + 306029
+10  chromedriver                        0x00000001004f731a chromedriver + 307994
+11  chromedriver                        0x00000001005152d9 chromedriver + 430809
+12  chromedriver                        0x00000001005b1635 chromedriver + 1070645
+13  chromedriver                        0x00000001005896f2 chromedriver + 906994
+14  chromedriver                        0x00000001005b0a22 chromedriver + 1067554
+15  chromedriver                        0x00000001005894c3 chromedriver + 906435
+16  chromedriver                        0x0000000100555885 chromedriver + 694405
+17  chromedriver                        0x00000001005564f1 chromedriver + 697585
+18  chromedriver                        0x0000000100a4c950 chromedriver + 5900624
+19  chromedriver                        0x0000000100a509e1 chromedriver + 5917153
+20  chromedriver                        0x0000000100a26e14 chromedriver + 5746196
+21  chromedriver                        0x0000000100a5140b chromedriver + 5919755
+22  chromedriver                        0x0000000100a15574 chromedriver + 5674356
+23  chromedriver                        0x0000000100a74e88 chromedriver + 6065800
+24  chromedriver                        0x0000000100a75050 chromedriver + 6066256
+25  chromedriver                        0x0000000100a873f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-03 09:14:05,282 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-03 09:14:05,282 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-03 09:14:05,283 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 09:14:05,283 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 09:14:05,283 - INFO - Following accounts scraping session completed with result: False
+2025-04-03 09:14:05,283 - INFO - Sessions completed. Waiting 0 hours and 26 minutes before next sessions...
+2025-04-03 09:40:46,268 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:40:46,273 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:40:46,274 - INFO - Set today's natural break window to 13:00-15:00
+2025-04-03 09:40:46,275 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 09:40:46,276 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 09:40:46,277 - INFO - Starting new scraping session
+2025-04-03 09:40:46,278 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 09:40:46,279 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-03 09:40:46,279 - INFO - Now running a session to scrape following accounts network data...
+2025-04-03 09:40:46,279 - INFO - Starting following accounts scraping session
+2025-04-03 09:40:46,279 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 09:40:46,279 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-03 09:40:46,281 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 09:40:46,282 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-03 09:40:46,288 - INFO - Using random batch size of 59 accounts for this session
+2025-04-03 09:40:52,423 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-03 09:40:52,423 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-03 09:40:52,423 - INFO - FOLLOWING SCRAPER: Will process 59 accounts in this session
+2025-04-03 09:40:52,504 - ERROR - Following scraping failed with return code 1
+2025-04-03 09:40:52,504 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 158, in <module>
+    essentialRoutines.login_insta(driver, username, password)
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/essentialRoutines.py", line 75, in login_insta
+    driver.get("https://www.instagram.com/accounts/login")
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 454, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=135.0.7049.41)
+Stacktrace:
+0   chromedriver                        0x0000000100e7b168 chromedriver + 6177128
+1   chromedriver                        0x0000000100e7282a chromedriver + 6141994
+2   chromedriver                        0x00000001008fce00 chromedriver + 417280
+3   chromedriver                        0x00000001008f3c6b chromedriver + 380011
+4   chromedriver                        0x00000001008e4208 chromedriver + 315912
+5   chromedriver                        0x00000001008e5eed chromedriver + 323309
+6   chromedriver                        0x00000001008e458b chromedriver + 316811
+7   chromedriver                        0x00000001008e3fb3 chromedriver + 315315
+8   chromedriver                        0x00000001008e3cb4 chromedriver + 314548
+9   chromedriver                        0x00000001008e1b6d chromedriver + 306029
+10  chromedriver                        0x00000001008e231a chromedriver + 307994
+11  chromedriver                        0x00000001009002d9 chromedriver + 430809
+12  chromedriver                        0x000000010099c635 chromedriver + 1070645
+13  chromedriver                        0x00000001009746f2 chromedriver + 906994
+14  chromedriver                        0x000000010099ba22 chromedriver + 1067554
+15  chromedriver                        0x00000001009744c3 chromedriver + 906435
+16  chromedriver                        0x0000000100940885 chromedriver + 694405
+17  chromedriver                        0x00000001009414f1 chromedriver + 697585
+18  chromedriver                        0x0000000100e37950 chromedriver + 5900624
+19  chromedriver                        0x0000000100e3b9e1 chromedriver + 5917153
+20  chromedriver                        0x0000000100e11e14 chromedriver + 5746196
+21  chromedriver                        0x0000000100e3c40b chromedriver + 5919755
+22  chromedriver                        0x0000000100e00574 chromedriver + 5674356
+23  chromedriver                        0x0000000100e5fe88 chromedriver + 6065800
+24  chromedriver                        0x0000000100e60050 chromedriver + 6066256
+25  chromedriver                        0x0000000100e723f1 chromedriver + 6140913
+26  libsystem_pthread.dylib             0x00007ff810564253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff81055fbef thread_start + 15
+
+
+2025-04-03 09:40:52,505 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-03 09:40:52,505 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-03 09:40:52,505 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 09:40:52,505 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 09:40:52,505 - INFO - Following accounts scraping session completed with result: False
+2025-04-03 09:40:52,505 - INFO - Sessions completed. Waiting 0 hours and 32 minutes before next sessions...
+2025-04-03 10:13:12,485 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 10:13:12,488 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 10:13:12,488 - INFO - Randomly skipping this session to create a more human-like pattern
+2025-04-03 10:13:12,488 - INFO - Will check again in 55 minutes
+2025-04-03 11:08:12,503 - INFO - Not safe to run right now. Waiting 60 minutes before checking again
+2025-04-03 11:28:12,624 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 11:28:12,625 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 11:28:12,628 - INFO - Set today's natural break window to 11:00-13:00
+2025-04-03 11:28:12,629 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 11:28:12,629 - INFO - It's 11:28, taking a natural break to appear more human-like.
+2025-04-03 11:28:12,630 - INFO - Will take a 136 minute break and resume at approximately 13:44
+2025-04-03 11:28:12,630 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 13:44:12,641 - INFO - Natural break complete, resuming operations
+2025-04-03 13:44:12,647 - INFO - Starting new scraping session
+2025-04-03 13:44:12,652 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 13:44:12,652 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-03 13:44:12,652 - INFO - Now running a session to scrape following accounts network data...
+2025-04-03 13:44:12,652 - INFO - Starting following accounts scraping session
+2025-04-03 13:44:12,653 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 13:44:12,653 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-03 13:44:12,656 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 13:44:12,657 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-03 13:44:12,663 - INFO - Using random batch size of 42 accounts for this session
+2025-04-03 13:49:51,978 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Will process 42 accounts in this session
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 1 accounts marked as rate-limited
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down']
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-03 13:49:51,982 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: Starting batch processing of 42 accounts
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-03 13:49:51,983 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 70 followers, 67 following
+2025-04-03 13:49:51,984 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 431 followers, 433 following
+2025-04-03 13:49:51,984 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 13 followers, 708 following
+2025-04-03 13:49:51,984 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-03 13:49:51,984 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 12 followers, 99 following
+2025-04-03 13:49:51,984 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 122 followers, 195 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 401 followers, 16 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 179 followers, 903 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 84 followers, 601 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 30 followers, 58 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 681 followers, 924 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 19 followers, 891 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 191 followers, 191 following
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Randomly selecting 42 accounts from 1862 available accounts
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #1847/1862: https://www.instagram.com/yuukakazami0/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Processing: https://www.instagram.com/yuukakazami0/
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Scraping yuukakazami0
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: yuukakazami0: Followers: 1360, Following: 530
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Scraping 1360 followers for yuukakazami0...
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Scrolling page 1/10 for followers
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Added 2 new users (filtered 0 duplicates)
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Scrolling page 2/10 for followers
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Added 2 new users (filtered 0 duplicates)
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Scrolling page 3/10 for followers
+2025-04-03 13:49:51,985 - INFO - FOLLOWING SCRAPER: Added 0 new users (filtered 2 duplicates)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Reached the end of the list or no new content loading. Ending pagination.
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Total followers retrieved: 4 (4 new in this session)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Retrieved 4 followers
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Added relationship from reset to yuukakazami0
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Added relationship from emailsignup to yuukakazami0
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Added relationship from Forgot password? to yuukakazami0
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Added relationship from Sign up to yuukakazami0
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Scraping 530 following for yuukakazami0...
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Scrolling page 1/10 for following
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Added 2 new users (filtered 0 duplicates)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Scrolling page 2/10 for following
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Added 2 new users (filtered 0 duplicates)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Scrolling page 3/10 for following
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Added 0 new users (filtered 2 duplicates)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Attempted fixed-distance scroll to bypass potential UI limitations
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Reached the end of the list or no new content loading. Ending pagination.
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Total following retrieved: 4 (4 new in this session)
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Retrieved 4 following
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Added 4 following relationships for yuukakazami0
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: DEBUG: Sample following (4 of 4): reset, emailsignup, Forgot password?, Sign up
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: RATE LIMIT DETECTED: Retrieved only 4 followers when account has 1360
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: RATE LIMIT DETECTED: Retrieved only 4 following when account has 530
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Saved data to instagram_data/scraping_progress.json
+2025-04-03 13:49:51,986 - INFO - FOLLOWING SCRAPER: Account yuukakazami0 was rate-limited. Will retry in a future session.
+2025-04-03 13:49:51,987 - INFO - FOLLOWING SCRAPER: DEBUG: Removing link from queue: https://www.instagram.com/yuukakazami0/
+2025-04-03 13:49:51,987 - INFO - FOLLOWING SCRAPER: Error processing https://www.instagram.com/yuukakazami0/: list.remove(x): x not in list
+2025-04-03 13:49:51,987 - INFO - FOLLOWING SCRAPER: DEBUG: Moving failed link to end of queue: https://www.instagram.com/yuukakazami0/
+2025-04-03 13:49:51,987 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-03 13:49:51,987 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-03 13:49:52,140 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-03 13:49:52,140 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-03 13:49:52,140 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 13:49:52,140 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 13:49:52,141 - INFO - Following accounts scraping session completed with result: True
+2025-04-03 13:49:52,141 - INFO - Sessions completed. Waiting 0 hours and 36 minutes before next sessions...
+2025-04-03 14:26:48,198 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 14:26:48,201 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 14:26:48,204 - INFO - Set today's natural break window to 15:00-17:00
+2025-04-03 14:26:48,206 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 14:26:48,206 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-03 14:26:48,208 - INFO - Starting new scraping session
+2025-04-03 14:26:48,209 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-03 14:26:48,211 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-03 14:26:48,211 - INFO - Now running a session to scrape following accounts network data...
+2025-04-03 14:26:48,211 - INFO - Starting following accounts scraping session
+2025-04-03 14:26:48,211 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 14:26:48,211 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-03 14:26:48,214 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 14:26:48,215 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-03 14:26:48,221 - INFO - Using random batch size of 55 accounts for this session
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1475 accounts processed
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Will process 55 accounts in this session
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Logged in using button: //button[contains(.,'Log in')]
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Login might have failed. Current URL still shows login page.
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Rate limit statistics: 2 accounts marked as rate-limited
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Examples of rate-limited accounts: ['benton.down', 'yuukakazami0']
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: Loaded 1862 links from instagram_data/followingLinks.txt
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content (showing first 10):
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 14:28:33,177 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Loaded adjacency list from instagram_data/adjList.txt
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: adjList content (showing first 10):
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 1. blackwhite_hipner masatoshi_nakazawa
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 2. liznashiko couzuai
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 3. khriswu8 'xidan_zhang',
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 4. chenggao1999 mengchuli.0911
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 5. kkkkkiaoji lola_lijingxian
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 6. columbia trustcollaboratory
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 7. itsmeoliviaaa versace
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 8. xuleqi926 xiongjiedeng36
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 9. sewardqian fionaisme0601
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 10. hhhzzz19 luizyea
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ... and 25015 more relationships
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Deduplicating adjacency list...
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: No duplicates found in adjList.txt
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: Found 6161 already processed accounts in adjList.txt
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Found 6161 accounts that have already been processed
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Starting batch processing of 55 accounts
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Pre-checking accounts to prioritize ones with reasonable follower/following counts...
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ soloslop.memes: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ phillipsauction: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ filmmovement: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ asian_redbozicowboy: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ ccpxi_8964: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ ngr.ev: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ cinema_nighttt: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ thedizzyviper: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ laclefrevival: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ byboyfantasy: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ manofdutch: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ thefineartcollective: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ shuheisakaue: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: ✓ catsoupai: Good candidate with 0 followers, 0 following
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: Found 14 accounts with reasonable follower/following counts
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: Sanitizing and saving 1862 links
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: After sanitization: 1862 links (removed 0)
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: Successfully saved 1862 links to instagram_data/followingLinks.txt
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: DEBUG: followingLinks content after revision (showing first 10):
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 1. https://www.instagram.com/soloslop.memes/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 2. https://www.instagram.com/phillipsauction/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 3. https://www.instagram.com/filmmovement/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 4. https://www.instagram.com/asian_redbozicowboy/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 5. https://www.instagram.com/ccpxi_8964/
+2025-04-03 14:28:33,178 - INFO - FOLLOWING SCRAPER: 6. https://www.instagram.com/ngr.ev/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: 7. https://www.instagram.com/cinema_nighttt/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: 8. https://www.instagram.com/thedizzyviper/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: 9. https://www.instagram.com/laclefrevival/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: 10. https://www.instagram.com/byboyfantasy/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: ... and 1852 more links
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: Links reordered to prioritize accounts with reasonable follower/following counts
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: Randomly selecting 55 accounts from 1862 available accounts
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: DEBUG: Processing randomly selected link #643/1862: https://www.instagram.com/harryfrost/
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: DEBUG: Before processing - 1862 links in queue
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: DEBUG: Account harryfrost in progress data with rate_limited=False
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: DEBUG: Skipping already processed account: harryfrost
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: Error during batch processing: list.remove(x): x not in list
+2025-04-03 14:28:33,179 - INFO - FOLLOWING SCRAPER: Browser closed. Script complete.
+2025-04-03 14:28:33,242 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-03 14:28:33,243 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-03 14:28:33,243 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-03 14:28:33,243 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-03 14:28:33,243 - INFO - Following accounts scraping session completed with result: True
+2025-04-03 14:28:33,243 - INFO - Sessions completed. Waiting 0 hours and 32 minutes before next sessions...
+2025-04-03 14:36:10,084 - INFO - Scraper interrupted by user
+2025-04-03 14:36:10,086 - INFO - Auto-scraper script ended

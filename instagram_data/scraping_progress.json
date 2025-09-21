@@ -416,12 +416,13 @@
   },
   "accounts": {
     "processed": true,
+    "rate_limited": false,
     "skipped": false,
     "followers_count": 0,
     "following_count": 0,
     "followers_retrieved": 0,
     "following_retrieved": 0,
-    "timestamp": 1742881647.317515
+    "timestamp": 1743300402.1029792
   },
   "nytimestravel": {
     "processed": true,
@@ -12943,9 +12944,68 @@
     "rate_limited": true,
     "skipped": false,
     "followers_count": 15,
-    "following_count": 1188,
-    "followers_retrieved": 1,
+    "following_count": 1189,
+    "followers_retrieved": 12,
     "following_retrieved": 10,
-    "timestamp": 1743037974.0204952
+    "timestamp": 1743083612.068238
+  },
+  "eleganza_classica": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 8977,
+    "following_count": 241,
+    "timestamp": 1743040145.734802
+  },
+  "beholdingeye": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 257,
+    "following_count": 2522,
+    "timestamp": 1743040154.240692
+  },
+  "north_bk_community_boathouse": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 3053,
+    "following_count": 1093,
+    "timestamp": 1743040162.787798
+  },
+  "toejeksperten": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 7089,
+    "following_count": 357,
+    "timestamp": 1743040171.3391922
+  },
+  "euphoria_0920": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 12,
+    "following_count": 3017,
+    "timestamp": 1743093182.518392
+  },
+  "drakesguides": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 2313,
+    "following_count": 1,
+    "timestamp": 1743127042.501774
+  },
+  "yuukakazami0": {
+    "processed": false,
+    "rate_limited": true,
+    "skipped": false,
+    "followers_count": 1360,
+    "following_count": 530,
+    "followers_retrieved": 4,
+    "following_retrieved": 4,
+    "timestamp": 1743702591.346352
+  },
+  "deadline_help": {
+    "processed": true,
+    "skipped": true,
+    "followers_count": 208,
+    "following_count": 4200,
+    "timestamp": 1758474493.3211882
   }
 }

@@ -13,6 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import essentialRoutines
+import random
 
 #%% Constants and helper functions
 DATA_DIR = "instagram_data"
@@ -42,6 +43,19 @@ def save_data(data, file_path):
     with open(file_path, 'w') as f:
         json.dump(data, f, indent=2)
     print(f"Saved data to {file_path}")
+
+def print_rate_limit_stats():
+    """Print statistics about rate-limited accounts in the progress data"""
+    rate_limited_accounts = []
+    for username, data in progress_data.items():
+        if data.get("rate_limited", False):
+            rate_limited_accounts.append(username)
+    
+    if rate_limited_accounts:
+        print(f"Rate limit statistics: {len(rate_limited_accounts)} accounts marked as rate-limited")
+        print(f"Examples of rate-limited accounts: {rate_limited_accounts[:5]}")
+    else:
+        print("No accounts currently marked as rate-limited in progress data")
 
 def sanitize_and_save_links(links, file_path):
     """Sanitize, deduplicate and save links to a file"""
@@ -86,6 +100,13 @@ def sanitize_and_save_links(links, file_path):
             file_h.writelines(clean_links)
         if DEBUG:
             print(f"DEBUG: Successfully saved {len(clean_links)} links to {file_path}")
+            # Add debugging print for followingLinks
+            if file_path == FOLLOWING_LINKS_FILE:
+                print(f"DEBUG: followingLinks content after revision (showing first 10):")
+                for i, link in enumerate(clean_links[:10]):
+                    print(f"  {i+1}. {link.strip()}")
+                if len(clean_links) > 10:
+                    print(f"  ... and {len(clean_links) - 10} more links")
     except Exception as e:
         print(f"ERROR: Failed to save links: {e}")
     
@@ -124,7 +145,7 @@ print(f"Will process {batch_size} accounts in this session")
 
 # Set up Chrome options
 options = Options()
-PATH = "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/chromedriver"  # Chromedriver path
+PATH = "/Users/chenyusu/GitHub/Instagram-Network_scraping_and_analysis/chromedriver"  # Chromedriver path
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--no-sandbox")
 if args.headless:
@@ -145,6 +166,12 @@ def load_links_and_adj_list():
         with open(FOLLOWING_LINKS_FILE, "r") as links_file:
             links = links_file.readlines()
         print(f"Loaded {len(links)} links from {FOLLOWING_LINKS_FILE}")
+        if DEBUG:
+            print(f"DEBUG: followingLinks content (showing first 10):")
+            for i, link in enumerate(links[:10]):
+                print(f"  {i+1}. {link.strip()}")
+            if len(links) > 10:
+                print(f"  ... and {len(links) - 10} more links")
     except FileNotFoundError:
         print(f"Warning: {FOLLOWING_LINKS_FILE} not found. Starting with empty links list.")
         links = []
@@ -155,6 +182,12 @@ def load_links_and_adj_list():
             adj_list = adj_file.readlines()
         print(f"Loaded adjacency list from {ADJ_LIST_FILE}")
         all_nodes = essentialRoutines.adjList_to_dict(adj_list)
+        if DEBUG:
+            print(f"DEBUG: adjList content (showing first 10):")
+            for i, line in enumerate(adj_list[:10]):
+                print(f"  {i+1}. {line.strip()}")
+            if len(adj_list) > 10:
+                print(f"  ... and {len(adj_list) - 10} more relationships")
     except FileNotFoundError:
         print(f"Warning: {ADJ_LIST_FILE} not found. Starting with empty adjacency list.")
         all_nodes = {}
@@ -238,6 +271,16 @@ def save_relations_to_adj_list(new_relations):
             adj_file.write(f"{relation}\n")
     
     print(f"Added {new_count} new relationships to adjacency list (total: {len(existing_relations)})")
+    
+    # Add debugging print for adjList
+    if DEBUG:
+        print(f"DEBUG: adjList content after revision (showing first 10):")
+        relations_list = sorted(list(existing_relations))
+        for i, relation in enumerate(relations_list[:10]):
+            print(f"  {i+1}. {relation}")
+        if len(relations_list) > 10:
+            print(f"  ... and {len(relations_list) - 10} more relationships")
+    
     return new_count
 
 def scrape_account(account_link, all_nodes):
@@ -247,12 +290,21 @@ def scrape_account(account_link, all_nodes):
     
     # Check if we've already processed this account
     if account_username in progress_data:
-        # If it was previously rate-limited, don't skip but re-scrape
-        if progress_data[account_username].get("rate_limited", False):
-            print(f"Account {account_username} was previously rate-limited. Re-attempting scrape.")
-        else:
-            print(f"Account {account_username} already processed. Skipping.")
+        # Check rate-limited status
+        was_rate_limited = progress_data[account_username].get("rate_limited", False)
+        was_processed = progress_data[account_username].get("processed", False)
+        followers_count = progress_data[account_username].get("followers_count", 0)
+        following_count = progress_data[account_username].get("following_count", 0)
+        followers_retrieved = progress_data[account_username].get("followers_retrieved", 0)
+        following_retrieved = progress_data[account_username].get("following_retrieved", 0)
+        
+        if was_rate_limited:
+            print(f"Account {account_username} was previously rate-limited - retrieved only {followers_retrieved}/{followers_count} followers and {following_retrieved}/{following_count} following. Re-attempting scrape.")
+        elif was_processed:
+            print(f"Account {account_username} already fully processed. Skipping.")
             return True, all_nodes
+        else:
+            print(f"Account {account_username} exists in progress data but is neither rate-limited nor processed. Re-attempting scrape.")
     
     # Navigate to the account
     driver.get(account_link)
@@ -451,6 +503,8 @@ def scrape_account(account_link, all_nodes):
                             if follower not in all_nodes:
                                 all_nodes[follower] = []
                             all_nodes[follower].append(curr_username)
+                            if DEBUG:
+                                print(f"DEBUG: Added relationship from {follower} to {curr_username}")
                         else:
                             print(f"Skipping non-string follower: {follower}")
                     except Exception as e:
@@ -475,17 +529,32 @@ def scrape_account(account_link, all_nodes):
                 
                 # Add to adjacency list
                 all_nodes[curr_username] = following
+                if DEBUG:
+                    print(f"DEBUG: Added {len(following)} following relationships for {curr_username}")
+                    if following:
+                        print(f"DEBUG: Sample following ({min(5, len(following))} of {len(following)}): {', '.join(following[:5])}")
             except Exception as e:
                 print(f"Error scraping following: {e}")
         
-        # Check if we've hit Instagram's rate limit (exactly RATE_LIMIT_THRESHOLD followers or following)
+        # Check if we've hit Instagram's rate limit 
         rate_limited = False
-        # Check if much fewer followers were retrieved than expected (rate limited to fewer than 10 or even just 1)
-        if len(followers) > 0 and len(followers) <= RATE_LIMIT_THRESHOLD and curr_Followers > RATE_LIMIT_THRESHOLD * 2:
+        
+        # Case 1: Exactly 10 users retrieved (common Instagram rate limit)
+        if len(followers) == 10 and curr_Followers > 10:
+            print(f"RATE LIMIT DETECTED: Retrieved exactly 10 followers when account has {curr_Followers}")
+            rate_limited = True
+            
+        # Case 2: Fewer than 10 but greater than 0 users retrieved (stricter rate limit)
+        elif len(followers) > 0 and len(followers) < 10 and curr_Followers > RATE_LIMIT_THRESHOLD * 2:
             print(f"RATE LIMIT DETECTED: Retrieved only {len(followers)} followers when account has {curr_Followers}")
             rate_limited = True
         
-        if len(following) > 0 and len(following) <= RATE_LIMIT_THRESHOLD and curr_Following > RATE_LIMIT_THRESHOLD * 2:
+        # Same checks for following
+        if len(following) == 10 and curr_Following > 10:
+            print(f"RATE LIMIT DETECTED: Retrieved exactly 10 following when account has {curr_Following}")
+            rate_limited = True
+            
+        elif len(following) > 0 and len(following) < 10 and curr_Following > RATE_LIMIT_THRESHOLD * 2:
             print(f"RATE LIMIT DETECTED: Retrieved only {len(following)} following when account has {curr_Following}")
             rate_limited = True
             
@@ -510,6 +579,9 @@ def scrape_account(account_link, all_nodes):
 
 #%% Main scraping loop
 try:
+    # First, print rate limit statistics on startup
+    print_rate_limit_stats()
+    
     links, all_nodes = load_links_and_adj_list()
     
     # Deduplicate adjacency list at startup
@@ -647,27 +719,58 @@ try:
             
             print("Links reordered to prioritize accounts with reasonable follower/following counts")
 
-        for i in range(min(batch_size, len(links))):
-            if i >= len(links):
+        # Process batch_size random accounts from the links list
+        remaining_accounts = batch_size
+        available_links = links.copy()  # Make a copy to avoid modifying the original while iterating
+        
+        print(f"Randomly selecting {batch_size} accounts from {len(links)} available accounts")
+        
+        while remaining_accounts > 0 and available_links:
+            # Randomly select an index
+            if not available_links:
                 break
                 
-            current_link = links[0].strip()  # Get the first link
+            idx = random.randint(0, len(available_links) - 1)
+            current_link = available_links[idx].strip()
             
-            try:
+            if DEBUG:
+                print(f"DEBUG: Processing randomly selected link #{idx+1}/{len(available_links)}: {current_link}")
+                print(f"DEBUG: Before processing - {len(links)} links in queue")
+            
+            # Extract username to check if already processed
+            account_username = current_link.rstrip('/').split('/')[-1].strip()
+            
+            # First check if this account was previously processed but rate-limited
+            if account_username in progress_data:
+                rate_limited_status = progress_data[account_username].get("rate_limited", False)
                 if DEBUG:
-                    print(f"DEBUG: Processing link #{i+1}/{batch_size}: {current_link}")
-                    print(f"DEBUG: Before processing - {len(links)} links in queue")
+                    print(f"DEBUG: Account {account_username} in progress data with rate_limited={rate_limited_status}")
                 
-                # Extract username to check if already processed
-                account_username = current_link.rstrip('/').split('/')[-1].strip()
-                if account_username in processed_accounts:
+                if not rate_limited_status and account_username in processed_accounts:
                     if DEBUG:
                         print(f"DEBUG: Skipping already processed account: {account_username}")
-                    # Remove from queue since it's already processed
-                    removed_link = links.pop(0)
+                    # Remove from queue since it's already processed and not rate-limited
+                    # Remove the processed link from both lists
+                    if current_link in available_links:
+                        available_links.remove(current_link)
+                    if current_link in links:
+                        links.remove(current_link)
                     sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
                     continue
-                
+                elif rate_limited_status:
+                    print(f"Account {account_username} was previously rate-limited. Will re-attempt scraping.")
+            elif account_username in processed_accounts:
+                if DEBUG:
+                    print(f"DEBUG: Skipping already processed account: {account_username}")
+                # Remove from queue since it's already processed
+                if current_link in available_links:
+                    available_links.remove(current_link)
+                if current_link in links:
+                    links.remove(current_link)
+                sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
+                continue
+            
+            try:
                 success, all_nodes = scrape_account(current_link, all_nodes)
                 if success:
                     processed_count += 1
@@ -680,11 +783,15 @@ try:
                         # Add to processed accounts set only if not rate-limited
                         processed_accounts.add(account_username)
                     
-                # Remove the processed link
+                # Remove the processed link from both lists
                 if DEBUG:
                     print(f"DEBUG: Removing link from queue: {current_link}")
-                    
-                removed_link = links.pop(0)
+
+                if current_link in available_links:
+                    available_links.remove(current_link)
+                if current_link in links:
+                    links.remove(current_link)
+                
                 if DEBUG:
                     print(f"DEBUG: Link removed. Queue size now: {len(links)}")
                 
@@ -696,13 +803,12 @@ try:
                     print(f"DEBUG: Moving failed link to end of queue: {current_link}")
                 
                 # Move to the end of the list to try again later
-                # Check if the link still exists in list before appending
-                if links and links[0].strip() == current_link:
-                    links.append(links.pop(0))
-                    if DEBUG:
-                        print(f"DEBUG: Link moved to end. Queue size: {len(links)}")
-                else:
-                    print(f"WARNING: Failed link {current_link} not found at position 0, might have been removed already")
+                # Remove from available_links but keep in the main links list
+                if current_link in available_links:
+                    available_links.remove(current_link)
+                
+                if DEBUG:
+                    print(f"DEBUG: Link moved to end. Queue size: {len(links)}")
             
             # Save updated links and adjacency list after each account
             sanitize_and_save_links(links, FOLLOWING_LINKS_FILE)
@@ -721,6 +827,7 @@ try:
             # Save relations with deduplication
             save_relations_to_adj_list(new_relations)
             
+            remaining_accounts -= 1
             print(f"Completed {processed_count}/{batch_size} accounts. {len(links)} remaining in queue.")
             print(f"Waiting 5 seconds before next account...")
             time.sleep(5)

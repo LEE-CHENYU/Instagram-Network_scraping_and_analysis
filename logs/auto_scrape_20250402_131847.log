@@ -1,0 +1,128 @@
+2025-04-02 13:18:47,626 - INFO - ============================================================
+2025-04-02 13:18:47,626 - INFO - Instagram Auto Scraper Starting
+2025-04-02 13:18:47,626 - INFO - ============================================================
+2025-04-02 13:18:47,626 - INFO - Auto-scraper script started
+2025-04-02 13:18:47,626 - INFO - Inspecting links file for format issues
+2025-04-02 13:18:47,627 - INFO - Links file contains 1862 lines
+2025-04-02 13:18:47,628 - INFO - First 3 links: ['https://www.instagram.com/soloslop.memes/', 'https://www.instagram.com/phillipsauction/', 'https://www.instagram.com/filmmovement/']
+2025-04-02 13:18:47,628 - INFO - Last 3 links: ['https://www.instagram.com/drakesguides/', 'https://www.instagram.com/ppplab/', 'https://www.instagram.com/scattoitaliano/']
+2025-04-02 13:18:47,628 - INFO - Performing initial duplicate check on following links
+2025-04-02 13:18:47,628 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:18:47,628 - INFO - Checking and removing already processed links
+2025-04-02 13:18:47,628 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:18:47,628 - INFO - Fetching current follower and following counts from profile...
+2025-04-02 13:18:53,327 - ERROR - Profile check failed with return code 1
+2025-04-02 13:18:53,327 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapeMyAccount.py", line 119, in <module>
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 135.0.7049.41 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x0000000103062bac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010305b20c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x0000000102bc1afc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102bf9bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102bf8d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000102bf4c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x0000000102bf0dec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000102c35efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000102c35770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102bfcba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x000000010302b664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x000000010302e978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x0000000103010d04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x000000010302f220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x0000000103001cec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x000000010304b8d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x000000010304ba5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x000000010305ae80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000018d3482e4 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018d3430fc thread_start + 8
+
+
+2025-04-02 13:18:53,328 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:18:53,328 - INFO - All following accounts collected! 1862/1862
+2025-04-02 13:18:53,328 - INFO - All followers collected! 879/879
+2025-04-02 13:18:53,329 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:18:53,329 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:18:53,331 - INFO - Set today's natural break window to 16:00-18:00
+2025-04-02 13:18:53,331 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:18:53,331 - INFO - Saved data to instagram_data/auto_scrape_status.json
+2025-04-02 13:18:53,331 - INFO - Starting new scraping session
+2025-04-02 13:18:53,332 - INFO - Current counts in status file - Followers: 879, Following: 1862
+2025-04-02 13:18:53,332 - INFO - Already collected all following accounts (1862/1862) and followers (879/879). Skipping main scraping session.
+2025-04-02 13:18:53,332 - INFO - Now running a session to scrape following accounts network data...
+2025-04-02 13:18:53,332 - INFO - Starting following accounts scraping session
+2025-04-02 13:18:53,332 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:18:53,332 - INFO - DEBUG: Checking for duplicates before processing
+2025-04-02 13:18:53,333 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:18:53,333 - INFO - DEBUG: Before processing - 1862 accounts in queue
+2025-04-02 13:18:53,341 - INFO - Using random batch size of 48 accounts for this session
+2025-04-02 13:18:53,777 - INFO - FOLLOWING SCRAPER: DEBUG MODE ENABLED
+2025-04-02 13:18:53,777 - INFO - FOLLOWING SCRAPER: Loaded scraping progress: 1474 accounts processed
+2025-04-02 13:18:53,777 - INFO - FOLLOWING SCRAPER: Will process 48 accounts in this session
+2025-04-02 13:18:53,792 - ERROR - Following scraping failed with return code 1
+2025-04-02 13:18:53,792 - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/chenyusu/Documents/GitHub/Instagram-Network_scraping_and_analysis/scrapingFollowing.py", line 155, in <module>
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/Users/chenyusu/.pyenv/versions/3.11.8/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 133
+Current browser version is 135.0.7049.41 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010276ebac cxxbridge1$str$ptr + 2724820
+1   chromedriver                        0x000000010276720c cxxbridge1$str$ptr + 2693684
+2   chromedriver                        0x00000001022cdafc cxxbridge1$string$len + 93348
+3   chromedriver                        0x0000000102305bfc cxxbridge1$string$len + 322980
+4   chromedriver                        0x0000000102304d84 cxxbridge1$string$len + 319276
+5   chromedriver                        0x0000000102300c80 cxxbridge1$string$len + 302632
+6   chromedriver                        0x00000001022fcdec cxxbridge1$string$len + 286612
+7   chromedriver                        0x0000000102341efc cxxbridge1$string$len + 569508
+8   chromedriver                        0x0000000102341770 cxxbridge1$string$len + 567576
+9   chromedriver                        0x0000000102308ba0 cxxbridge1$string$len + 335176
+10  chromedriver                        0x0000000102737664 cxxbridge1$str$ptr + 2498188
+11  chromedriver                        0x000000010273a978 cxxbridge1$str$ptr + 2511264
+12  chromedriver                        0x000000010271cd04 cxxbridge1$str$ptr + 2389292
+13  chromedriver                        0x000000010273b220 cxxbridge1$str$ptr + 2513480
+14  chromedriver                        0x000000010270dcec cxxbridge1$str$ptr + 2327828
+15  chromedriver                        0x00000001027578d4 cxxbridge1$str$ptr + 2629884
+16  chromedriver                        0x0000000102757a5c cxxbridge1$str$ptr + 2630276
+17  chromedriver                        0x0000000102766e80 cxxbridge1$str$ptr + 2692776
+18  libsystem_pthread.dylib             0x000000018d3482e4 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018d3430fc thread_start + 8
+
+
+2025-04-02 13:18:53,792 - ERROR - DEBUG: ISSUE DETECTED - Queue size didn't decrease. Before: 1862, After: 1862, Diff: 0
+2025-04-02 13:18:53,793 - INFO - DEBUG: Checking for duplicates after processing
+2025-04-02 13:18:53,793 - INFO - No duplicate links found in instagram_data/followingLinks.txt
+2025-04-02 13:18:53,793 - INFO - remove_processed_links function is disabled to allow re-scraping of potential rate-limited accounts
+2025-04-02 13:18:53,793 - INFO - Following accounts scraping session completed with result: False
+2025-04-02 13:18:53,793 - INFO - Sessions completed. Waiting 0 hours and 35 minutes before next sessions...
+2025-04-02 13:33:04,161 - INFO - Scraper interrupted by user
+2025-04-02 13:33:04,164 - INFO - Auto-scraper script ended

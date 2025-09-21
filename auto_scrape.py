@@ -734,6 +734,13 @@ def debug_check_duplicates():
             save_links_with_lock(unique_links, FOLLOWING_LINKS_FILE)
             
             logging.info(f"Fixed duplicate links. Removed {len(normalized_links) - len(unique_links)} duplicates.")
+            
+            # Debug output for followingLinks content
+            logging.info(f"DEBUG: followingLinks content after deduplication (showing first 10):")
+            for i, link in enumerate(unique_links[:10]):
+                logging.info(f"  {i+1}. {link}")
+            if len(unique_links) > 10:
+                logging.info(f"  ... and {len(unique_links) - 10} more links")
         else:
             logging.info(f"No duplicate links found in {FOLLOWING_LINKS_FILE}")
     except Exception as e:
@@ -793,9 +800,36 @@ def debug_inspect_links_file():
         if has_issues:
             logging.info(f"Fixed {len(links) - len(fixed_links)} formatting issues in links file")
             save_links_with_lock(fixed_links, FOLLOWING_LINKS_FILE)
+            
+            # Debug output for followingLinks content after fixing issues
+            logging.info(f"DEBUG: followingLinks content after fixing format issues (showing first 10):")
+            for i, link in enumerate(fixed_links[:10]):
+                logging.info(f"  {i+1}. {link}")
+            if len(fixed_links) > 10:
+                logging.info(f"  ... and {len(fixed_links) - 10} more links")
         
     except Exception as e:
         logging.error(f"Error inspecting links file: {e}")
+
+def save_links_with_lock(links, file_path):
+    """Save links with file locking to prevent race conditions"""
+    try:
+        with open(file_path, "w") as file_h:
+            fcntl.flock(file_h, fcntl.LOCK_EX)  # Exclusive lock
+            for link in links:
+                file_h.write(f"{link}\n")
+            fcntl.flock(file_h, fcntl.LOCK_UN)  # Release lock
+        logging.info(f"Saved {len(links)} links to {file_path} with lock")
+        
+        # Debug output for followingLinks content
+        if file_path == FOLLOWING_LINKS_FILE:
+            logging.info(f"DEBUG: followingLinks content after saving (showing first 10):")
+            for i, link in enumerate(links[:10]):
+                logging.info(f"  {i+1}. {link}")
+            if len(links) > 10:
+                logging.info(f"  ... and {len(links) - 10} more links")
+    except Exception as e:
+        logging.error(f"Error saving links with lock: {e}")
 
 def remove_processed_links():
     """
@@ -822,12 +856,20 @@ def remove_processed_links():
         # Get processed accounts from adjList.txt (first item in each line)
         processed_accounts = set()
         with open(os.path.join(DATA_DIR, "adjList.txt"), "r") as adj_file:
-            for line in adj_file:
+            adj_list = adj_file.readlines()
+            for line in adj_list:
                 parts = line.strip().split()
                 if len(parts) >= 1:
                     processed_accounts.add(parts[0])
         
         logging.info(f"Found {len(processed_accounts)} processed accounts in adjList.txt")
+        
+        # Debug output for adjList content
+        logging.info(f"DEBUG: adjList content (showing first 10):")
+        for i, line in enumerate(adj_list[:10]):
+            logging.info(f"  {i+1}. {line.strip()}")
+        if len(adj_list) > 10:
+            logging.info(f"  ... and {len(adj_list) - 10} more relationships")
         
         # Read links from followingLinks.txt
         with open(FOLLOWING_LINKS_FILE, "r") as f:
@@ -859,24 +901,19 @@ def remove_processed_links():
             logging.info(f"Removed {initial_count - len(filtered_links)} already processed links from followingLinks.txt")
             if len(removed_links) > 0:
                 logging.info(f"Examples of removed accounts: {removed_links[:5]}")
+            
+            # Debug output for followingLinks content after filtering
+            logging.info(f"DEBUG: followingLinks content after filtering (showing first 10):")
+            for i, link in enumerate(filtered_links[:10]):
+                logging.info(f"  {i+1}. {link}")
+            if len(filtered_links) > 10:
+                logging.info(f"  ... and {len(filtered_links) - 10} more links")
         else:
             logging.info("No processed links found in followingLinks.txt")
         
     except Exception as e:
         logging.error(f"Error removing processed links: {e}")
         logging.error(traceback.format_exc())
-
-def save_links_with_lock(links, file_path):
-    """Save links with file locking to prevent race conditions"""
-    try:
-        with open(file_path, "w") as file_h:
-            fcntl.flock(file_h, fcntl.LOCK_EX)  # Exclusive lock
-            for link in links:
-                file_h.write(f"{link}\n")
-            fcntl.flock(file_h, fcntl.LOCK_UN)  # Release lock
-        logging.info(f"Saved {len(links)} links to {file_path} with lock")
-    except Exception as e:
-        logging.error(f"Error saving links with lock: {e}")
 
 def main():
     # Set up logging
