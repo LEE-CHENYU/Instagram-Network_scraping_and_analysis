@@ -430,20 +430,20 @@
   "nytimestravel": {
     "processed": true,
     "skipped": false,
-    "followers_count": 1,
+    "followers_count": 1755241,
     "following_count": 459,
-    "followers_retrieved": 50,
-    "following_retrieved": 10,
-    "timestamp": 1742833322.257728
+    "followers_retrieved": 0,
+    "following_retrieved": 459,
+    "timestamp": 1759263120.579524
   },
   "nytimes": {
     "processed": true,
     "skipped": false,
-    "followers_count": 18,
-    "following_count": 618,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833372.049361
+    "followers_count": 19502189,
+    "following_count": 622,
+    "followers_retrieved": 0,
+    "following_retrieved": 622,
+    "timestamp": 1759263139.26645
   },
   "milanrecords": {
     "processed": true,
@@ -455,29 +455,29 @@
   "a24": {
     "processed": true,
     "skipped": false,
-    "followers_count": 2,
-    "following_count": 323,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833429.526865
+    "followers_count": 3314485,
+    "following_count": 338,
+    "followers_retrieved": 0,
+    "following_retrieved": 338,
+    "timestamp": 1759263209.1193888
   },
   "classaholic": {
     "processed": true,
     "skipped": false,
-    "followers_count": 42,
-    "following_count": 71,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833478.663775
+    "followers_count": 41087,
+    "following_count": 70,
+    "followers_retrieved": 0,
+    "following_retrieved": 70,
+    "timestamp": 1759263220.151396
   },
   "linda_linked": {
     "processed": true,
     "skipped": false,
-    "followers_count": 169,
-    "following_count": 138,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833527.848362
+    "followers_count": 168,
+    "following_count": 136,
+    "followers_retrieved": 0,
+    "following_retrieved": 135,
+    "timestamp": 1759263230.9704661
   },
   "ysl": {
     "processed": true,
@@ -491,11 +491,11 @@
   "jane_chen1221": {
     "processed": true,
     "skipped": false,
-    "followers_count": 337,
-    "following_count": 279,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833625.910964
+    "followers_count": 369,
+    "following_count": 307,
+    "followers_retrieved": 0,
+    "following_retrieved": 305,
+    "timestamp": 1759263243.4282281
   },
   "prophetconsulting": {
     "processed": true,
@@ -510,11 +510,11 @@
   "nationalgallery": {
     "processed": true,
     "skipped": false,
-    "followers_count": 2,
-    "following_count": 221,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833683.153731
+    "followers_count": 2333992,
+    "following_count": 230,
+    "followers_retrieved": 0,
+    "following_retrieved": 230,
+    "timestamp": 1759263256.57601
   },
   "chelsea.films_": {
     "processed": true,
@@ -1776,9 +1776,9 @@
   "eli.allegory": {
     "processed": true,
     "skipped": true,
-    "followers_count": 5882,
-    "following_count": 742,
-    "timestamp": 1742867418.4261749
+    "followers_count": 5664,
+    "following_count": 853,
+    "timestamp": 1759261773.9684532
   },
   "lily.y.shen": {
     "processed": true,
@@ -12669,9 +12669,9 @@
   "fyi1017": {
     "processed": true,
     "skipped": true,
-    "followers_count": 1293,
-    "following_count": 2088,
-    "timestamp": 1758480866.131742
+    "followers_count": 1296,
+    "following_count": 2090,
+    "timestamp": 1759261788.027997
   },
   "oneice": {
     "processed": true,
