@@ -519,11 +519,11 @@
   "chelsea.films_": {
     "processed": true,
     "skipped": false,
-    "followers_count": 145,
+    "followers_count": 148,
     "following_count": 56,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742833731.6547751
+    "followers_retrieved": 0,
+    "following_retrieved": 56,
+    "timestamp": 1759263267.787786
   },
   "tinapi.x": {
     "processed": true,
@@ -535,11 +535,11 @@
   "sonymusicsoundtracks": {
     "processed": true,
     "skipped": false,
-    "followers_count": 67,
-    "following_count": 857,
-    "followers_retrieved": 49,
-    "following_retrieved": 10,
-    "timestamp": 1742837607.06511
+    "followers_count": 92811,
+    "following_count": 986,
+    "followers_retrieved": 0,
+    "following_retrieved": 986,
+    "timestamp": 1759263289.8777752
   },
   "ralphlauren": {
     "processed": true,
@@ -553,74 +553,75 @@
   "ficusshanghai": {
     "processed": true,
     "skipped": false,
-    "followers_count": 15,
-    "following_count": 13,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837704.053004
+    "followers_count": 15604,
+    "following_count": 35,
+    "followers_retrieved": 0,
+    "following_retrieved": 35,
+    "timestamp": 1759263330.330656
   },
   "astaguru": {
     "processed": true,
     "skipped": false,
-    "followers_count": 67,
-    "following_count": 67,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837752.74547
+    "followers_count": 101059,
+    "following_count": 69,
+    "followers_retrieved": 0,
+    "following_retrieved": 69,
+    "timestamp": 1759263340.855932
   },
   "tom.xrvp": {
     "processed": true,
     "skipped": false,
-    "followers_count": 469,
-    "following_count": 963,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837801.1663702
+    "followers_count": 0,
+    "following_count": 0,
+    "followers_retrieved": 0,
+    "following_retrieved": 0,
+    "timestamp": 1759263359.661398,
+    "error": "User not found"
   },
   "ziyi.violetgo": {
     "processed": true,
     "skipped": false,
-    "followers_count": 138,
-    "following_count": 175,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837850.507349
+    "followers_count": 141,
+    "following_count": 176,
+    "followers_retrieved": 0,
+    "following_retrieved": 176,
+    "timestamp": 1759263370.7922828
   },
   "ascotchang": {
     "processed": true,
     "skipped": false,
-    "followers_count": 28,
-    "following_count": 804,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837899.595605
+    "followers_count": 34360,
+    "following_count": 829,
+    "followers_retrieved": 0,
+    "following_retrieved": 829,
+    "timestamp": 1759263392.004392
   },
   "thedecorumbkk": {
     "processed": true,
     "skipped": false,
-    "followers_count": 94,
-    "following_count": 754,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837947.861687
+    "followers_count": 113432,
+    "following_count": 803,
+    "followers_retrieved": 0,
+    "following_retrieved": 803,
+    "timestamp": 1759263411.513791
   },
   "amashanov": {
     "processed": true,
     "skipped": false,
-    "followers_count": 54,
-    "following_count": 704,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742837996.371774
+    "followers_count": 56395,
+    "following_count": 720,
+    "followers_retrieved": 0,
+    "following_retrieved": 720,
+    "timestamp": 1759263432.667092
   },
   "havseenthmaituni": {
     "processed": true,
     "skipped": false,
-    "followers_count": 160,
-    "following_count": 176,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838045.108135
+    "followers_count": 165,
+    "following_count": 187,
+    "followers_retrieved": 0,
+    "following_retrieved": 185,
+    "timestamp": 1759263443.098321
   },
   "cwpcolumbia": {
     "processed": true,
@@ -634,11 +635,11 @@
   "weai_columbia": {
     "processed": true,
     "skipped": false,
-    "followers_count": 479,
-    "following_count": 52,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838142.4277859
+    "followers_count": 587,
+    "following_count": 69,
+    "followers_retrieved": 0,
+    "following_retrieved": 69,
+    "timestamp": 1759263453.282392
   },
   "aprilisover": {
     "processed": true,
@@ -12949,14 +12950,13 @@
     "timestamp": 1743035665.954885
   },
   "benton.down": {
-    "processed": false,
-    "rate_limited": true,
+    "processed": true,
     "skipped": false,
-    "followers_count": 15,
-    "following_count": 1189,
-    "followers_retrieved": 12,
-    "following_retrieved": 10,
-    "timestamp": 1743083612.068238
+    "followers_count": 15410,
+    "following_count": 1231,
+    "followers_retrieved": 0,
+    "following_retrieved": 1230,
+    "timestamp": 1759263319.389545
   },
   "eleganza_classica": {
     "processed": true,
