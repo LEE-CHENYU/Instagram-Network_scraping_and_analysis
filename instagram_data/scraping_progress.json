@@ -644,38 +644,38 @@
   "aprilisover": {
     "processed": true,
     "skipped": false,
-    "followers_count": 343,
-    "following_count": 286,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838190.941677
+    "followers_count": 346,
+    "following_count": 317,
+    "followers_retrieved": 0,
+    "following_retrieved": 316,
+    "timestamp": 1759263760.564967
   },
   "retrowaviest": {
     "processed": true,
     "skipped": false,
-    "followers_count": 291,
-    "following_count": 405,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838239.2883031
+    "followers_count": 344011,
+    "following_count": 454,
+    "followers_retrieved": 0,
+    "following_retrieved": 454,
+    "timestamp": 1759263780.718148
   },
   "zeiss_microscopy": {
     "processed": true,
     "skipped": false,
-    "followers_count": 59,
-    "following_count": 51,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838287.894737
+    "followers_count": 67949,
+    "following_count": 53,
+    "followers_retrieved": 0,
+    "following_retrieved": 53,
+    "timestamp": 1759263830.27641
   },
   "fashionarchive.magazine": {
     "processed": true,
     "skipped": false,
-    "followers_count": 103,
-    "following_count": 1176,
-    "followers_retrieved": 10,
-    "following_retrieved": 10,
-    "timestamp": 1742838336.542728
+    "followers_count": 105003,
+    "following_count": 1289,
+    "followers_retrieved": 0,
+    "following_retrieved": 1289,
+    "timestamp": 1759263861.135871
   },
   "thisislandscape": {
     "processed": true,
@@ -13083,14 +13083,13 @@
     "timestamp": 1758490287.382784
   },
   "dark.future.ai": {
-    "processed": false,
-    "rate_limited": true,
+    "processed": true,
     "skipped": false,
-    "followers_count": 30,
-    "following_count": 1418,
-    "followers_retrieved": 50,
-    "following_retrieved": 10,
-    "timestamp": 1758490336.9306722
+    "followers_count": 30202,
+    "following_count": 1421,
+    "followers_retrieved": 0,
+    "following_retrieved": 1421,
+    "timestamp": 1759263813.864126
   },
   "thepennclub": {
     "processed": true,

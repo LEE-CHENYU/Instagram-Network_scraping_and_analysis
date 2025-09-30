@@ -26,9 +26,9 @@ MIN_SCRAPE_RATIO = 0.1
 MAX_ACCOUNT_SIZE = 2000
 
 # Rate limiting (be conservative to avoid bans)
-DELAY_BETWEEN_ACCOUNTS = 5  # seconds between accounts
-DELAY_AFTER_ERROR = 30  # seconds after error
-MAX_ACCOUNTS_PER_SESSION = 50  # Process max 50 accounts per run
+DELAY_BETWEEN_ACCOUNTS = 10  # seconds between accounts (increased from 5)
+DELAY_AFTER_ERROR = 60  # seconds after error (increased from 30)
+MAX_ACCOUNTS_PER_SESSION = 25  # Process max 25 accounts per run (reduced from 50)
 
 def setup_logging():
     """Set up logging configuration"""
@@ -183,20 +183,8 @@ def scrape_account(cl, username, progress_data):
             with open(adj_list_file, 'a') as f:
                 f.write(f"{username} {' '.join(following_usernames)}\n")
 
-            # Add new accounts to followingLinks.txt if not already there
-            existing_links = set(load_following_links())
-            new_links = []
-            for following_user in following_usernames:
-                link = f"https://www.instagram.com/{following_user}/"
-                if link not in existing_links:
-                    new_links.append(link)
-                    existing_links.add(link)
-
-            if new_links:
-                with open(FOLLOWING_LINKS_FILE, 'a') as f:
-                    for link in new_links:
-                        f.write(link + '\n')
-                logging.info(f"Added {len(new_links)} new accounts to queue")
+            # NOTE: We don't add discovered accounts to the queue
+            # Only scrape the original following list, not following's following
 
         except PleaseWaitFewMinutes as e:
             logging.warning(f"Rate limit hit for {username}: {e}")
