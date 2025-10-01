@@ -262,6 +262,14 @@ def main():
         logging.info("✅ Login successful!")
     except Exception as e:
         logging.error(f"❌ Login failed: {e}")
+        logging.error("⚠️  Login blocked - waiting 1-2 hours before next attempt to avoid triggering more protections")
+
+        # Wait 1.5 hours (90 minutes) before allowing next attempt
+        wait_time = 90 * 60  # 90 minutes in seconds
+        logging.info(f"⏳ Sleeping for {wait_time/3600:.1f} hours...")
+        time.sleep(wait_time)
+
+        logging.info("⏰ Wait period complete. Script will exit - restart manually to try again.")
         return
 
     # Process accounts
