@@ -1,0 +1,29 @@
+2025-09-30 17:07:55,512 - INFO - ============================================================
+2025-09-30 17:07:55,512 - INFO - Instagram Scraper with Instagrapi Starting
+2025-09-30 17:07:55,512 - INFO - ============================================================
+2025-09-30 17:07:55,512 - INFO - Loading existing data...
+2025-09-30 17:07:55,513 - INFO - Loaded 1406 accounts from queue
+2025-09-30 17:07:55,514 - INFO - 
+Account Categories:
+2025-09-30 17:07:55,514 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-09-30 17:07:55,514 - INFO -   incomplete: 42 accounts (3.0%)
+2025-09-30 17:07:55,514 - INFO -   rate_limited: 1077 accounts (76.6%)
+2025-09-30 17:07:55,514 - INFO -   complete: 149 accounts (10.6%)
+2025-09-30 17:07:55,514 - INFO -   skipped: 97 accounts (6.9%)
+2025-09-30 17:07:55,514 - INFO -   empty: 41 accounts (2.9%)
+2025-09-30 17:07:55,514 - INFO - 
+Total accounts to process: 1119
+2025-09-30 17:07:55,514 - INFO - Will process up to 25 accounts this session
+2025-09-30 17:07:55,514 - INFO - 
+Logging in as fretin98...
+2025-09-30 17:07:55,514 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-09-30 17:07:56,066 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/launcher/sync/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 17:07:56,506 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-09-30 17:08:01,776 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/accounts/login/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 17:08:02,787 - INFO - https://i.instagram.com/api/v1/feed/reels_tray/
+2025-09-30 17:08:03,106 - INFO - fretin98 [400] POST https://i.instagram.com/api/v1/feed/reels_tray/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 17:08:04,119 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 17:08:04,409 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 17:08:21,028 - INFO - https://i.instagram.com/api/v1/feed/reels_tray/
+2025-09-30 17:08:21,191 - INFO - fretin98 [400] POST https://i.instagram.com/api/v1/feed/reels_tray/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 17:08:21,192 - ERROR - ❌ Login failed: challenge_required

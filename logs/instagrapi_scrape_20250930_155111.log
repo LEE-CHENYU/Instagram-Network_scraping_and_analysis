@@ -1,0 +1,733 @@
+2025-09-30 15:51:11,952 - INFO - ============================================================
+2025-09-30 15:51:11,953 - INFO - Instagram Scraper with Instagrapi Starting
+2025-09-30 15:51:11,953 - INFO - ============================================================
+2025-09-30 15:51:11,953 - INFO - Loading existing data...
+2025-09-30 15:51:11,955 - INFO - Loaded 1406 accounts from queue
+2025-09-30 15:51:11,955 - INFO - 
+Account Categories:
+2025-09-30 15:51:11,955 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-09-30 15:51:11,955 - INFO -   incomplete: 41 accounts (2.9%)
+2025-09-30 15:51:11,955 - INFO -   rate_limited: 1087 accounts (77.3%)
+2025-09-30 15:51:11,955 - INFO -   complete: 140 accounts (10.0%)
+2025-09-30 15:51:11,955 - INFO -   skipped: 97 accounts (6.9%)
+2025-09-30 15:51:11,955 - INFO -   empty: 41 accounts (2.9%)
+2025-09-30 15:51:11,955 - INFO - 
+Total accounts to process: 1128
+2025-09-30 15:51:11,955 - INFO - Will process up to 25 accounts this session
+2025-09-30 15:51:11,955 - INFO - 
+Logging in as fretin98...
+2025-09-30 15:51:11,956 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-09-30 15:51:12,567 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/launcher/sync/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:12,945 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-09-30 15:51:18,051 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/accounts/login/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:19,061 - INFO - https://i.instagram.com/api/v1/feed/reels_tray/
+2025-09-30 15:51:19,254 - INFO - fretin98 [400] POST https://i.instagram.com/api/v1/feed/reels_tray/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:20,261 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:51:20,609 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:21,616 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:51:22,904 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:23,907 - INFO - https://i.instagram.com/api/v1/feed/reels_tray/
+2025-09-30 15:51:24,800 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/feed/reels_tray/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:25,802 - INFO - https://i.instagram.com/api/v1/feed/timeline/
+2025-09-30 15:51:28,092 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/feed/timeline/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:28,094 - INFO - ✅ Login successful!
+2025-09-30 15:51:28,094 - INFO - 
+[1/25] Processing beatrice.d
+2025-09-30 15:51:28,094 - INFO - 
+============================================================
+2025-09-30 15:51:28,094 - INFO - Processing account: beatrice.d
+2025-09-30 15:51:28,094 - INFO - ============================================================
+2025-09-30 15:51:28,094 - INFO - Fetching user info for beatrice.d...
+2025-09-30 15:51:30,031 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=beatrice.d
+2025-09-30 15:51:30,032 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:51:31,037 - INFO - https://i.instagram.com/api/v1/users/beatrice.d/usernameinfo/
+2025-09-30 15:51:31,642 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/beatrice.d/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:31,646 - INFO - Account stats: 17 followers, 18 following
+2025-09-30 15:51:31,646 - INFO - Fetching following list for beatrice.d...
+2025-09-30 15:51:32,656 - INFO - https://i.instagram.com/api/v1/friendships/1401245382/following/
+2025-09-30 15:51:33,288 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1401245382/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:33,289 - INFO - ✅ Successfully retrieved 18 following accounts
+2025-09-30 15:51:33,310 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:51:33,310 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:51:43,321 - INFO - 
+[2/25] Processing beautypapersmag
+2025-09-30 15:51:43,322 - INFO - 
+============================================================
+2025-09-30 15:51:43,322 - INFO - Processing account: beautypapersmag
+2025-09-30 15:51:43,322 - INFO - ============================================================
+2025-09-30 15:51:43,322 - INFO - Fetching user info for beautypapersmag...
+2025-09-30 15:51:45,765 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=beautypapersmag
+2025-09-30 15:51:45,769 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:51:46,779 - INFO - https://i.instagram.com/api/v1/users/beautypapersmag/usernameinfo/
+2025-09-30 15:51:47,232 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/beautypapersmag/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:47,233 - INFO - Account stats: 196,909 followers, 1,306 following
+2025-09-30 15:51:47,233 - INFO - Fetching following list for beautypapersmag...
+2025-09-30 15:51:48,243 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:51:49,592 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:50,609 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:51:52,474 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFCUUtwMV9BS2NkYTJkdzZwT3lHLVRwUURBLWJyZzQzRlpLSGRnWHVjT1FVWDFQVXpJYXF0Mi1WVERoWmM5M2tLNnU0emZ5T1hMYThWSWRJbElFU043Qg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:53,490 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:51:54,410 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFEenYwcXdiZVpmejRxUmhteTcwdTFtc182RUxtV2ZLN0JrRl9VZ1gwSnl0QXJ2b3JtY3d5b1ByMGdqcTFaekp2S2dRLVRRM25KSjFmQ09FbXYyWWZOcw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:55,428 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:51:56,661 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFBNkNMMjFNUUxVZndrc0dxUUZHeGVSdXpWRndTN18tT194Z1RKUHRBM3FNMUhxSDNWVWN5cXZHa1dpaUhuR0R4YVdRYk5CdG9zWWhxX1VneDR3VU9tZw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:57,667 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:51:58,718 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFBMld3dnM2TFAwazBReUt5WDQ1UDBMSnRCYXRCX3NYTHVDX0hxT3BNM1Nab19zRWxuVms5V1phNEVjMEhLS0xpU1A5dVdCcDZUZzJfYTdHVEZlMXhwQw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:51:59,736 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:52:00,681 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFDZ2FBalB2SEtlbFFBd05mUWhiREdqRjZLY0dQdGxqSV82RFhZbmtRVFJUdFVhNy1FalhvN0JoRmVaLTZhdnJSanBNN0lBOTVLMDN3b29kNnRfdUFBUw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:01,698 - INFO - https://i.instagram.com/api/v1/friendships/1725088779/following/
+2025-09-30 15:52:02,699 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1725088779/following/?max_id=QVFEYTQ4MlZZalJHUVdMN1p2UHNfOFl2LWtWV0dZSnNPSUxTY0ZKQzNJUm1zcE4wdnloT3BrcmtPVHJ5TXFoM29lRnhVajhicDAyMnFuMGJHdVpGMXh4RA%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:02,703 - INFO - ✅ Successfully retrieved 1306 following accounts
+2025-09-30 15:52:02,721 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:52:02,721 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:52:12,732 - INFO - 
+[3/25] Processing bella_wu0528
+2025-09-30 15:52:12,732 - INFO - 
+============================================================
+2025-09-30 15:52:12,733 - INFO - Processing account: bella_wu0528
+2025-09-30 15:52:12,733 - INFO - ============================================================
+2025-09-30 15:52:12,733 - INFO - Fetching user info for bella_wu0528...
+2025-09-30 15:52:14,005 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bella_wu0528
+2025-09-30 15:52:14,005 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:52:15,016 - INFO - https://i.instagram.com/api/v1/users/bella_wu0528/usernameinfo/
+2025-09-30 15:52:15,703 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/bella_wu0528/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:15,704 - INFO - Account stats: 759 followers, 593 following
+2025-09-30 15:52:15,705 - INFO - Fetching following list for bella_wu0528...
+2025-09-30 15:52:16,708 - INFO - https://i.instagram.com/api/v1/friendships/3219864696/following/
+2025-09-30 15:52:18,058 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/3219864696/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:19,070 - INFO - https://i.instagram.com/api/v1/friendships/3219864696/following/
+2025-09-30 15:52:26,368 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/3219864696/following/?max_id=QVFDR1BNVUVUNDhxZmVyeWRwb182a3pFV1VuUEx1enlPZDVvRFNBSUt0cGlfVjMtX3B4aFQwNG5EalFYQ0Fjc2lPZV8xVnpBMHJ2cG9jbEhxSGk0NHM0Rg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:27,381 - INFO - https://i.instagram.com/api/v1/friendships/3219864696/following/
+2025-09-30 15:52:29,435 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/3219864696/following/?max_id=QVFEbEFDX24xdFpNOEplendYV3RMTlpyN1dMZUU3TnBOSEJUcU9RdnhTbVFtNmxUMG1vYzVfUDQxRXl3d0Nua25YVklCWDlhc1FOTXdIQ3VCaS1kMl8tVQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:29,443 - INFO - ✅ Successfully retrieved 593 following accounts
+2025-09-30 15:52:29,460 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:52:29,461 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:52:39,471 - INFO - 
+[4/25] Processing bellolllu
+2025-09-30 15:52:39,472 - INFO - 
+============================================================
+2025-09-30 15:52:39,472 - INFO - Processing account: bellolllu
+2025-09-30 15:52:39,472 - INFO - ============================================================
+2025-09-30 15:52:39,472 - INFO - Fetching user info for bellolllu...
+2025-09-30 15:52:40,895 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bellolllu
+2025-09-30 15:52:40,896 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:52:41,907 - INFO - https://i.instagram.com/api/v1/users/bellolllu/usernameinfo/
+2025-09-30 15:52:42,661 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/bellolllu/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:42,661 - INFO - Account stats: 105 followers, 175 following
+2025-09-30 15:52:42,661 - INFO - Fetching following list for bellolllu...
+2025-09-30 15:52:43,669 - INFO - https://i.instagram.com/api/v1/friendships/4774022181/following/
+2025-09-30 15:52:45,534 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/4774022181/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:45,542 - INFO - ✅ Successfully retrieved 175 following accounts
+2025-09-30 15:52:45,560 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:52:45,560 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:52:55,570 - INFO - 
+[5/25] Processing benjamin.click
+2025-09-30 15:52:55,571 - INFO - 
+============================================================
+2025-09-30 15:52:55,571 - INFO - Processing account: benjamin.click
+2025-09-30 15:52:55,571 - INFO - ============================================================
+2025-09-30 15:52:55,572 - INFO - Fetching user info for benjamin.click...
+2025-09-30 15:52:57,073 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=benjamin.click
+2025-09-30 15:52:57,074 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:52:58,081 - INFO - https://i.instagram.com/api/v1/users/benjamin.click/usernameinfo/
+2025-09-30 15:52:58,506 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/benjamin.click/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:52:58,506 - INFO - Account stats: 229 followers, 448 following
+2025-09-30 15:52:58,507 - INFO - Fetching following list for benjamin.click...
+2025-09-30 15:52:59,514 - INFO - https://i.instagram.com/api/v1/friendships/4149421171/following/
+2025-09-30 15:53:01,943 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/4149421171/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:02,956 - INFO - https://i.instagram.com/api/v1/friendships/4149421171/following/
+2025-09-30 15:53:05,054 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/4149421171/following/?max_id=QVFBbXVzRGVteWc1NGkza0xCQVNoeGkyMjRTTWQtV3M3aFpVRk9IQ3FMalNtdUREM2xrWlpNZnVYbGptdXRkOVV2TkVhZWtBcnRRdDBnU3NJRjhreXVrZQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:06,063 - INFO - https://i.instagram.com/api/v1/friendships/4149421171/following/
+2025-09-30 15:53:07,517 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/4149421171/following/?max_id=QVFDdzQ3RjNDWmJ0N0U5VjY2UjJxeDVFRkEyVFNBQlFxQXk4Qm9faloxZll0WWFzbU5CTGw1aldzMzFUTnlBbS1IcUU4UVl3bl9raUlpWm5kNmNpNkUtNA%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:07,518 - INFO - ✅ Successfully retrieved 448 following accounts
+2025-09-30 15:53:07,536 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:53:07,536 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:53:17,546 - INFO - 
+[6/25] Processing benoit_p_officiel
+2025-09-30 15:53:17,546 - INFO - 
+============================================================
+2025-09-30 15:53:17,547 - INFO - Processing account: benoit_p_officiel
+2025-09-30 15:53:17,547 - INFO - ============================================================
+2025-09-30 15:53:17,547 - INFO - Fetching user info for benoit_p_officiel...
+2025-09-30 15:53:20,177 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=benoit_p_officiel
+2025-09-30 15:53:20,179 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:53:21,182 - INFO - https://i.instagram.com/api/v1/users/benoit_p_officiel/usernameinfo/
+2025-09-30 15:53:21,595 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/benoit_p_officiel/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:21,596 - INFO - Account stats: 10,714 followers, 130 following
+2025-09-30 15:53:21,596 - INFO - Fetching following list for benoit_p_officiel...
+2025-09-30 15:53:22,598 - INFO - https://i.instagram.com/api/v1/friendships/13096027890/following/
+2025-09-30 15:53:23,597 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/13096027890/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:23,600 - INFO - ✅ Successfully retrieved 130 following accounts
+2025-09-30 15:53:23,617 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:53:23,618 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:53:33,628 - INFO - 
+[7/25] Processing benrich__
+2025-09-30 15:53:33,628 - INFO - 
+============================================================
+2025-09-30 15:53:33,628 - INFO - Processing account: benrich__
+2025-09-30 15:53:33,628 - INFO - ============================================================
+2025-09-30 15:53:33,628 - INFO - Fetching user info for benrich__...
+2025-09-30 15:53:35,910 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=benrich__
+2025-09-30 15:53:35,913 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:53:36,914 - INFO - https://i.instagram.com/api/v1/users/benrich__/usernameinfo/
+2025-09-30 15:53:37,366 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/benrich__/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:37,366 - INFO - Account stats: 171,428 followers, 1,530 following
+2025-09-30 15:53:37,367 - INFO - Fetching following list for benrich__...
+2025-09-30 15:53:38,374 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:40,597 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:41,612 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:43,052 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFCY3NiUDFjTU96ZnUtS0Nfc25RMHZEaG9rUzFhbFRKSlNNWHQ2elp1WGYzU3IxS3F0Rk9OMDJtTWdLOG9IY0pZQkdmSThyRE9hNjVBYm90YW9zdzFyRQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:44,066 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:45,358 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFBT1RyZVEzZ3lUcGtBeHIyb0Zucml5TDlLR3Y0ZzBZaENWdTUxZ2JHa0tZdU1meDNYaGFSUXZBY1JSTTFYXzBSdWJVTFhqQkFqWWozSk14a1lsZGdLcg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:46,365 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:47,658 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFEdUZSdzk3NEwzWnJ2TGNnSTZCR01zX1VIT2Q0WV9CMGhHY1JEUFI5S1B6WmhPU0pGQUt6TjFSVTd4YUxUNXB4cXdKbW9fbUxPM3p1cTZoNDlvYWZFeA%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:48,665 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:50,016 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFBVmd5NXpmSTZPZ2Y4eDN0azdPRFRzajVoMXF3bGIzeFJZcUVZN1NhNnRiS1FBS3FqLXFlbzViR0FEX2lRcFFvOW03SWxhVjlvU0p3NHNoeGJfZlEwaw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:51,022 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:52,324 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFBQkplMnV3MXdpT08ybm8wakFtSWluTGhTTlp1cGU2UlA3dDAwY1o0OFhmazh4RjZVdjAtNTlxSmdUaUdIenNEbUttTFF2UHpMS3ZxUnFFc2JpeGpVUQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:53,332 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:54,626 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFDQ1AtUzZMTzYwdkxETUpzLVh5cU1EUkQtREpWRkZLYkRxaDU3UFRDMnM2aS1LZ2plbEdTUUZuaGx3VUItOUNHVDctRDNMdEc0SU5acW9DNk45Y3Y3Tg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:55,632 - INFO - https://i.instagram.com/api/v1/friendships/462854196/following/
+2025-09-30 15:53:57,089 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/462854196/following/?max_id=QVFCaHBoWHItOUJOdEE2WXpWS3pDS2tBTnNmRlhFZlp0TFhaYk9idUhuWEoxNWZrVGhqdk5ST0lvT3lNRkJCSjUtd2dRTkV2ZUdfWjJlNUFoV05Td3ozUw%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:53:57,093 - INFO - ✅ Successfully retrieved 1530 following accounts
+2025-09-30 15:53:57,109 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:53:57,110 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:54:07,120 - INFO - 
+[8/25] Processing bernard.rudden
+2025-09-30 15:54:07,120 - INFO - 
+============================================================
+2025-09-30 15:54:07,120 - INFO - Processing account: bernard.rudden
+2025-09-30 15:54:07,120 - INFO - ============================================================
+2025-09-30 15:54:07,120 - INFO - Fetching user info for bernard.rudden...
+2025-09-30 15:54:08,757 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bernard.rudden
+2025-09-30 15:54:08,759 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:54:09,770 - INFO - https://i.instagram.com/api/v1/users/bernard.rudden/usernameinfo/
+2025-09-30 15:54:10,298 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/bernard.rudden/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:10,299 - INFO - Account stats: 40,241 followers, 271 following
+2025-09-30 15:54:10,299 - INFO - Fetching following list for bernard.rudden...
+2025-09-30 15:54:11,305 - INFO - https://i.instagram.com/api/v1/friendships/1537412967/following/
+2025-09-30 15:54:12,850 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1537412967/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:13,862 - INFO - https://i.instagram.com/api/v1/friendships/1537412967/following/
+2025-09-30 15:54:14,846 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/1537412967/following/?max_id=QVFBbUdpZEFVaW9RZ2FaRUk3U2ZuUlNPRnF4MVFQSWUwNklqMkk3dVBGUDEwZnBZemMxVFRZdmhPMy1PandDeHM3X3EyZUd4WjUzOTd4cWE2SDJUVWtCTg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:14,847 - INFO - ✅ Successfully retrieved 271 following accounts
+2025-09-30 15:54:14,853 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:54:14,853 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:54:24,858 - INFO - 
+[9/25] Processing bernatdeclaravall
+2025-09-30 15:54:24,858 - INFO - 
+============================================================
+2025-09-30 15:54:24,858 - INFO - Processing account: bernatdeclaravall
+2025-09-30 15:54:24,858 - INFO - ============================================================
+2025-09-30 15:54:24,858 - INFO - Fetching user info for bernatdeclaravall...
+2025-09-30 15:54:26,774 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bernatdeclaravall
+2025-09-30 15:54:26,778 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:54:27,784 - INFO - https://i.instagram.com/api/v1/users/bernatdeclaravall/usernameinfo/
+2025-09-30 15:54:28,312 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/bernatdeclaravall/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:28,313 - INFO - Account stats: 164,348 followers, 314 following
+2025-09-30 15:54:28,313 - INFO - Fetching following list for bernatdeclaravall...
+2025-09-30 15:54:29,321 - INFO - https://i.instagram.com/api/v1/friendships/8664252495/following/
+2025-09-30 15:54:30,876 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/8664252495/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:31,890 - INFO - https://i.instagram.com/api/v1/friendships/8664252495/following/
+2025-09-30 15:54:32,985 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/8664252495/following/?max_id=QVFEZUNtVlFhdVNrZEI4Y29adjh0MkxxWVY1Q19BdjdEQnMxOUd3U2c5VERlWTNWZ1VWLUx3UXVxYkdlSkNOblZKNmpaUE5KajYxRFZOa0owLU1QZV9yZQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:32,986 - INFO - ✅ Successfully retrieved 314 following accounts
+2025-09-30 15:54:32,993 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:54:32,993 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:54:43,003 - INFO - 
+[10/25] Processing bigdanieltao
+2025-09-30 15:54:43,004 - INFO - 
+============================================================
+2025-09-30 15:54:43,004 - INFO - Processing account: bigdanieltao
+2025-09-30 15:54:43,004 - INFO - ============================================================
+2025-09-30 15:54:43,004 - INFO - Fetching user info for bigdanieltao...
+2025-09-30 15:54:44,249 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bigdanieltao
+2025-09-30 15:54:44,249 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:54:45,256 - INFO - https://i.instagram.com/api/v1/users/bigdanieltao/usernameinfo/
+2025-09-30 15:54:45,806 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/users/bigdanieltao/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:45,806 - INFO - Account stats: 678 followers, 925 following
+2025-09-30 15:54:45,806 - INFO - Fetching following list for bigdanieltao...
+2025-09-30 15:54:46,816 - INFO - https://i.instagram.com/api/v1/friendships/2442687445/following/
+2025-09-30 15:54:48,349 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/2442687445/following/?max_id=&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:49,362 - INFO - https://i.instagram.com/api/v1/friendships/2442687445/following/
+2025-09-30 15:54:50,897 - INFO - fretin98 [200] GET https://i.instagram.com/api/v1/friendships/2442687445/following/?max_id=QVFCeWEyLWdVSVNncU1qb19GOEpoYkI0WVJXRFZuV2wyQlRkd3Yzd3VyWTFNeVFYMVI0WnRkblViTXh4TktmdVBfdG5ZYURja0NySzRiN2JDbDU5dkdJVQ%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:51,909 - INFO - https://i.instagram.com/api/v1/friendships/2442687445/following/
+2025-09-30 15:54:52,051 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/friendships/2442687445/following/?max_id=QVFBaFd2d2VreVA3ZHg3SGFuOHJ4cmtBcHFRcnVaeEprWkN2cEtoWXdVckNKU2x2cm1ZU1RXSG1wWVE5ajhheVRkWHlVcE1jT1ZUTUxGUmR6SVNJSHJhUg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:54:53,054 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:54:53,326 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:09,912 - INFO - https://i.instagram.com/api/v1/friendships/2442687445/following/
+2025-09-30 15:55:10,056 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/friendships/2442687445/following/?max_id=QVFBaFd2d2VreVA3ZHg3SGFuOHJ4cmtBcHFRcnVaeEprWkN2cEtoWXdVckNKU2x2cm1ZU1RXSG1wWVE5ajhheVRkWHlVcE1jT1ZUTUxGUmR6SVNJSHJhUg%3D%3D&count=200&rank_token=1073026362_de89fbe8-a027-4a1f-a12d-7c930693067a&search_surface=follow_list_page&query=&enable_groups=true (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:10,057 - ERROR - Error getting following for bigdanieltao: challenge_required
+2025-09-30 15:55:10,074 - INFO - Saved data to instagram_data/scraping_progress.json
+2025-09-30 15:55:10,074 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:55:20,075 - INFO - 
+[11/25] Processing biye_hi
+2025-09-30 15:55:20,075 - INFO - 
+============================================================
+2025-09-30 15:55:20,075 - INFO - Processing account: biye_hi
+2025-09-30 15:55:20,075 - INFO - ============================================================
+2025-09-30 15:55:20,076 - INFO - Fetching user info for biye_hi...
+2025-09-30 15:55:21,527 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=biye_hi
+2025-09-30 15:55:21,528 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:55:22,529 - INFO - https://i.instagram.com/api/v1/users/biye_hi/usernameinfo/
+2025-09-30 15:55:22,707 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/biye_hi/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:23,709 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:55:23,859 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:40,480 - INFO - https://i.instagram.com/api/v1/users/biye_hi/usernameinfo/
+2025-09-30 15:55:40,621 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/biye_hi/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:40,621 - ERROR - Unexpected error processing biye_hi: challenge_required
+2025-09-30 15:55:40,627 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:55:50,628 - INFO - 
+[12/25] Processing bjmiao501
+2025-09-30 15:55:50,628 - INFO - 
+============================================================
+2025-09-30 15:55:50,628 - INFO - Processing account: bjmiao501
+2025-09-30 15:55:50,628 - INFO - ============================================================
+2025-09-30 15:55:50,628 - INFO - Fetching user info for bjmiao501...
+2025-09-30 15:55:52,038 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bjmiao501
+2025-09-30 15:55:52,039 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:55:53,044 - INFO - https://i.instagram.com/api/v1/users/bjmiao501/usernameinfo/
+2025-09-30 15:55:53,414 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bjmiao501/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:55:54,421 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:55:54,608 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:11,100 - INFO - https://i.instagram.com/api/v1/users/bjmiao501/usernameinfo/
+2025-09-30 15:56:11,234 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bjmiao501/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:11,235 - ERROR - Unexpected error processing bjmiao501: challenge_required
+2025-09-30 15:56:11,235 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:56:21,255 - INFO - 
+[13/25] Processing blackerhund_wong
+2025-09-30 15:56:21,255 - INFO - 
+============================================================
+2025-09-30 15:56:21,255 - INFO - Processing account: blackerhund_wong
+2025-09-30 15:56:21,255 - INFO - ============================================================
+2025-09-30 15:56:21,255 - INFO - Fetching user info for blackerhund_wong...
+2025-09-30 15:56:22,921 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=blackerhund_wong
+2025-09-30 15:56:22,923 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:56:23,926 - INFO - https://i.instagram.com/api/v1/users/blackerhund_wong/usernameinfo/
+2025-09-30 15:56:24,104 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blackerhund_wong/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:25,109 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:56:25,296 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:42,171 - INFO - https://i.instagram.com/api/v1/users/blackerhund_wong/usernameinfo/
+2025-09-30 15:56:42,692 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blackerhund_wong/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:42,693 - ERROR - Unexpected error processing blackerhund_wong: challenge_required
+2025-09-30 15:56:42,695 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:56:52,703 - INFO - 
+[14/25] Processing blesmeir
+2025-09-30 15:56:52,703 - INFO - 
+============================================================
+2025-09-30 15:56:52,703 - INFO - Processing account: blesmeir
+2025-09-30 15:56:52,703 - INFO - ============================================================
+2025-09-30 15:56:52,703 - INFO - Fetching user info for blesmeir...
+2025-09-30 15:56:53,919 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=blesmeir
+2025-09-30 15:56:53,920 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:56:54,928 - INFO - https://i.instagram.com/api/v1/users/blesmeir/usernameinfo/
+2025-09-30 15:56:55,150 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blesmeir/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:56:56,151 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:56:56,305 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:12,834 - INFO - https://i.instagram.com/api/v1/users/blesmeir/usernameinfo/
+2025-09-30 15:57:13,029 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blesmeir/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:13,029 - ERROR - Unexpected error processing blesmeir: challenge_required
+2025-09-30 15:57:13,032 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:57:23,034 - INFO - 
+[15/25] Processing blkbcan
+2025-09-30 15:57:23,035 - INFO - 
+============================================================
+2025-09-30 15:57:23,035 - INFO - Processing account: blkbcan
+2025-09-30 15:57:23,035 - INFO - ============================================================
+2025-09-30 15:57:23,035 - INFO - Fetching user info for blkbcan...
+2025-09-30 15:57:25,211 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=blkbcan
+2025-09-30 15:57:25,216 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:57:26,218 - INFO - https://i.instagram.com/api/v1/users/blkbcan/usernameinfo/
+2025-09-30 15:57:26,408 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blkbcan/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:27,414 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:57:27,766 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:44,261 - INFO - https://i.instagram.com/api/v1/users/blkbcan/usernameinfo/
+2025-09-30 15:57:44,399 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blkbcan/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:44,399 - ERROR - Unexpected error processing blkbcan: challenge_required
+2025-09-30 15:57:44,401 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:57:54,411 - INFO - 
+[16/25] Processing blockchaincolumbia
+2025-09-30 15:57:54,412 - INFO - 
+============================================================
+2025-09-30 15:57:54,412 - INFO - Processing account: blockchaincolumbia
+2025-09-30 15:57:54,412 - INFO - ============================================================
+2025-09-30 15:57:54,412 - INFO - Fetching user info for blockchaincolumbia...
+2025-09-30 15:57:56,340 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=blockchaincolumbia
+2025-09-30 15:57:56,342 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:57:57,351 - INFO - https://i.instagram.com/api/v1/users/blockchaincolumbia/usernameinfo/
+2025-09-30 15:57:57,531 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blockchaincolumbia/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:57:58,542 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:57:58,689 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:58:15,315 - INFO - https://i.instagram.com/api/v1/users/blockchaincolumbia/usernameinfo/
+2025-09-30 15:58:15,533 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/blockchaincolumbia/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:58:15,533 - ERROR - Unexpected error processing blockchaincolumbia: challenge_required
+2025-09-30 15:58:15,535 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:58:25,540 - INFO - 
+[17/25] Processing bluelug
+2025-09-30 15:58:25,541 - INFO - 
+============================================================
+2025-09-30 15:58:25,541 - INFO - Processing account: bluelug
+2025-09-30 15:58:25,541 - INFO - ============================================================
+2025-09-30 15:58:25,541 - INFO - Fetching user info for bluelug...
+2025-09-30 15:58:28,228 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bluelug
+2025-09-30 15:58:28,235 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:58:29,246 - INFO - https://i.instagram.com/api/v1/users/bluelug/usernameinfo/
+2025-09-30 15:58:29,395 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bluelug/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:58:30,405 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:58:30,599 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:58:47,109 - INFO - https://i.instagram.com/api/v1/users/bluelug/usernameinfo/
+2025-09-30 15:58:47,262 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bluelug/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:58:47,262 - ERROR - Unexpected error processing bluelug: challenge_required
+2025-09-30 15:58:47,266 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:58:57,276 - INFO - 
+[18/25] Processing bobby_1030
+2025-09-30 15:58:57,277 - INFO - 
+============================================================
+2025-09-30 15:58:57,277 - INFO - Processing account: bobby_1030
+2025-09-30 15:58:57,277 - INFO - ============================================================
+2025-09-30 15:58:57,277 - INFO - Fetching user info for bobby_1030...
+2025-09-30 15:58:58,701 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bobby_1030
+2025-09-30 15:58:58,703 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:58:59,713 - INFO - https://i.instagram.com/api/v1/users/bobby_1030/usernameinfo/
+2025-09-30 15:58:59,852 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bobby_1030/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:00,857 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:59:01,016 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:17,511 - INFO - https://i.instagram.com/api/v1/users/bobby_1030/usernameinfo/
+2025-09-30 15:59:17,646 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bobby_1030/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:17,646 - ERROR - Unexpected error processing bobby_1030: challenge_required
+2025-09-30 15:59:17,649 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:59:27,658 - INFO - 
+[19/25] Processing boediegel
+2025-09-30 15:59:27,659 - INFO - 
+============================================================
+2025-09-30 15:59:27,659 - INFO - Processing account: boediegel
+2025-09-30 15:59:27,659 - INFO - ============================================================
+2025-09-30 15:59:27,659 - INFO - Fetching user info for boediegel...
+2025-09-30 15:59:29,220 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=boediegel
+2025-09-30 15:59:29,222 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 15:59:30,233 - INFO - https://i.instagram.com/api/v1/users/boediegel/usernameinfo/
+2025-09-30 15:59:30,512 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boediegel/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:31,514 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 15:59:31,675 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:48,373 - INFO - https://i.instagram.com/api/v1/users/boediegel/usernameinfo/
+2025-09-30 15:59:48,520 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boediegel/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 15:59:48,521 - ERROR - Unexpected error processing boediegel: challenge_required
+2025-09-30 15:59:48,523 - INFO - Waiting 10 seconds before next account...
+2025-09-30 15:59:58,525 - INFO - 
+[20/25] Processing boli_hataii
+2025-09-30 15:59:58,526 - INFO - 
+============================================================
+2025-09-30 15:59:58,526 - INFO - Processing account: boli_hataii
+2025-09-30 15:59:58,526 - INFO - ============================================================
+2025-09-30 15:59:58,526 - INFO - Fetching user info for boli_hataii...
+2025-09-30 16:00:00,551 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=boli_hataii
+2025-09-30 16:00:00,552 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:00:01,563 - INFO - https://i.instagram.com/api/v1/users/boli_hataii/usernameinfo/
+2025-09-30 16:00:01,709 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boli_hataii/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:02,717 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:00:02,869 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:19,380 - INFO - https://i.instagram.com/api/v1/users/boli_hataii/usernameinfo/
+2025-09-30 16:00:19,529 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boli_hataii/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:19,529 - ERROR - Unexpected error processing boli_hataii: challenge_required
+2025-09-30 16:00:19,531 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:00:29,531 - INFO - 
+[21/25] Processing bombmag
+2025-09-30 16:00:29,533 - INFO - 
+============================================================
+2025-09-30 16:00:29,533 - INFO - Processing account: bombmag
+2025-09-30 16:00:29,533 - INFO - ============================================================
+2025-09-30 16:00:29,533 - INFO - Fetching user info for bombmag...
+2025-09-30 16:00:31,996 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bombmag
+2025-09-30 16:00:31,999 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:00:33,004 - INFO - https://i.instagram.com/api/v1/users/bombmag/usernameinfo/
+2025-09-30 16:00:33,155 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bombmag/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:34,161 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:00:34,317 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:50,814 - INFO - https://i.instagram.com/api/v1/users/bombmag/usernameinfo/
+2025-09-30 16:00:51,257 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bombmag/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:00:51,258 - ERROR - Unexpected error processing bombmag: challenge_required
+2025-09-30 16:00:51,260 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:01:01,263 - INFO - 
+[22/25] Processing boram____y
+2025-09-30 16:01:01,263 - INFO - 
+============================================================
+2025-09-30 16:01:01,263 - INFO - Processing account: boram____y
+2025-09-30 16:01:01,263 - INFO - ============================================================
+2025-09-30 16:01:01,264 - INFO - Fetching user info for boram____y...
+2025-09-30 16:01:03,020 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=boram____y
+2025-09-30 16:01:03,023 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:01:04,025 - INFO - https://i.instagram.com/api/v1/users/boram____y/usernameinfo/
+2025-09-30 16:01:04,349 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boram____y/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:05,353 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:01:05,577 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:22,155 - INFO - https://i.instagram.com/api/v1/users/boram____y/usernameinfo/
+2025-09-30 16:01:22,300 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/boram____y/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:22,300 - ERROR - Unexpected error processing boram____y: challenge_required
+2025-09-30 16:01:22,302 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:01:32,311 - INFO - 
+[23/25] Processing braxxlii
+2025-09-30 16:01:32,311 - INFO - 
+============================================================
+2025-09-30 16:01:32,312 - INFO - Processing account: braxxlii
+2025-09-30 16:01:32,312 - INFO - ============================================================
+2025-09-30 16:01:32,312 - INFO - Fetching user info for braxxlii...
+2025-09-30 16:01:34,353 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=braxxlii
+2025-09-30 16:01:34,354 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:01:35,365 - INFO - https://i.instagram.com/api/v1/users/braxxlii/usernameinfo/
+2025-09-30 16:01:35,512 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/braxxlii/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:36,519 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:01:36,679 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:53,188 - INFO - https://i.instagram.com/api/v1/users/braxxlii/usernameinfo/
+2025-09-30 16:01:53,333 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/braxxlii/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:01:53,333 - ERROR - Unexpected error processing braxxlii: challenge_required
+2025-09-30 16:01:53,336 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:02:03,340 - INFO - 
+[24/25] Processing bread_610
+2025-09-30 16:02:03,341 - INFO - 
+============================================================
+2025-09-30 16:02:03,341 - INFO - Processing account: bread_610
+2025-09-30 16:02:03,341 - INFO - ============================================================
+2025-09-30 16:02:03,341 - INFO - Fetching user info for bread_610...
+2025-09-30 16:02:04,707 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=bread_610
+2025-09-30 16:02:04,708 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:02:05,709 - INFO - https://i.instagram.com/api/v1/users/bread_610/usernameinfo/
+2025-09-30 16:02:06,305 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bread_610/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:07,310 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:02:07,467 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:24,137 - INFO - https://i.instagram.com/api/v1/users/bread_610/usernameinfo/
+2025-09-30 16:02:24,388 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/bread_610/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:24,388 - ERROR - Unexpected error processing bread_610: challenge_required
+2025-09-30 16:02:24,389 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:02:34,399 - INFO - 
+[25/25] Processing brightart_amur
+2025-09-30 16:02:34,400 - INFO - 
+============================================================
+2025-09-30 16:02:34,400 - INFO - Processing account: brightart_amur
+2025-09-30 16:02:34,400 - INFO - ============================================================
+2025-09-30 16:02:34,400 - INFO - Fetching user info for brightart_amur...
+2025-09-30 16:02:36,824 - INFO - [None] [200] GET https://www.instagram.com/api/v1/users/web_profile_info/?username=brightart_amur
+2025-09-30 16:02:36,825 - ERROR - extract_user_gql() got an unexpected keyword argument 'update_headers'
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 203, in user_info_by_username
+    user = self.user_info_by_username_gql(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/lib/python3.11/site-packages/instagrapi/mixins/user.py", line 155, in user_info_by_username_gql
+    data = extract_user_gql(json.loads(self.public_request(f'https://www.instagram.com/api/v1/users/web_profile_info/?username={username}', headers=temporary_public_headers))['data']['user'], update_headers=update_headers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: extract_user_gql() got an unexpected keyword argument 'update_headers'
+2025-09-30 16:02:37,826 - INFO - https://i.instagram.com/api/v1/users/brightart_amur/usernameinfo/
+2025-09-30 16:02:38,669 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/brightart_amur/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:39,671 - INFO - https://i.instagram.com/api/v1/challenge/
+2025-09-30 16:02:39,860 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/challenge/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:56,462 - INFO - https://i.instagram.com/api/v1/users/brightart_amur/usernameinfo/
+2025-09-30 16:02:56,701 - INFO - fretin98 [400] GET https://i.instagram.com/api/v1/users/brightart_amur/usernameinfo/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 16:02:56,704 - ERROR - Unexpected error processing brightart_amur: challenge_required
+2025-09-30 16:02:56,707 - INFO - Waiting 10 seconds before next account...
+2025-09-30 16:03:06,711 - INFO - Saved data to instagram_data/daily_sessions.json
+2025-09-30 16:03:06,711 - INFO - 
+============================================================
+2025-09-30 16:03:06,711 - INFO - SCRAPING SESSION COMPLETE
+2025-09-30 16:03:06,711 - INFO - ============================================================
+2025-09-30 16:03:06,711 - INFO - Processed: 25 accounts
+2025-09-30 16:03:06,711 - INFO - Successful: 24 accounts
+2025-09-30 16:03:06,711 - INFO - Errors: 1 accounts
+2025-09-30 16:03:06,711 - INFO - Remaining in queue: 1103
+2025-09-30 16:03:06,712 - INFO - 
+Updated Account Status:
+2025-09-30 16:03:06,712 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-09-30 16:03:06,712 - INFO -   incomplete: 42 accounts (3.0%)
+2025-09-30 16:03:06,712 - INFO -   rate_limited: 1077 accounts (76.6%)
+2025-09-30 16:03:06,712 - INFO -   complete: 149 accounts (10.6%)
+2025-09-30 16:03:06,712 - INFO -   skipped: 97 accounts (6.9%)
+2025-09-30 16:03:06,712 - INFO -   empty: 41 accounts (2.9%)
+2025-09-30 16:03:06,712 - INFO - 
+============================================================

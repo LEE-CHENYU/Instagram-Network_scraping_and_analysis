@@ -1,0 +1,23 @@
+2025-09-30 19:12:19,672 - INFO - ============================================================
+2025-09-30 19:12:19,672 - INFO - Instagram Scraper with Instagrapi Starting
+2025-09-30 19:12:19,672 - INFO - ============================================================
+2025-09-30 19:12:19,672 - INFO - Loading existing data...
+2025-09-30 19:12:19,674 - INFO - Loaded 1406 accounts from queue
+2025-09-30 19:12:19,674 - INFO - 
+Account Categories:
+2025-09-30 19:12:19,674 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-09-30 19:12:19,674 - INFO -   incomplete: 42 accounts (3.0%)
+2025-09-30 19:12:19,674 - INFO -   rate_limited: 1077 accounts (76.6%)
+2025-09-30 19:12:19,674 - INFO -   complete: 149 accounts (10.6%)
+2025-09-30 19:12:19,674 - INFO -   skipped: 97 accounts (6.9%)
+2025-09-30 19:12:19,674 - INFO -   empty: 41 accounts (2.9%)
+2025-09-30 19:12:19,674 - INFO - 
+Total accounts to process: 1119
+2025-09-30 19:12:19,674 - INFO - Will process up to 25 accounts this session
+2025-09-30 19:12:19,674 - INFO - 
+Logging in as fretin98...
+2025-09-30 19:12:19,674 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-09-30 19:12:20,292 - INFO - fretin98 [200] POST https://i.instagram.com/api/v1/launcher/sync/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 19:12:20,728 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-09-30 19:12:24,314 - INFO - fretin98 [400] POST https://i.instagram.com/api/v1/accounts/login/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-09-30 19:12:24,314 - ERROR - ❌ Login failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
