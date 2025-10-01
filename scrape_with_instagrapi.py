@@ -8,6 +8,7 @@ import os
 import time
 import logging
 import datetime
+import random
 from instagrapi import Client
 from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, UserNotFound
 
@@ -25,10 +26,11 @@ PASSWORD = "Lcy199818su"
 MIN_SCRAPE_RATIO = 0.1
 MAX_ACCOUNT_SIZE = 2000
 
-# Rate limiting (be conservative to avoid bans)
-DELAY_BETWEEN_ACCOUNTS = 10  # seconds between accounts (increased from 5)
-DELAY_AFTER_ERROR = 60  # seconds after error (increased from 30)
-MAX_ACCOUNTS_PER_SESSION = 25  # Process max 25 accounts per run (reduced from 50)
+# Rate limiting (mimic human behavior to avoid bans)
+MIN_DELAY_BETWEEN_ACCOUNTS = 15  # Minimum seconds between accounts
+MAX_DELAY_BETWEEN_ACCOUNTS = 45  # Maximum seconds between accounts (randomized)
+DELAY_AFTER_ERROR = 120  # 2 minutes after error
+MAX_ACCOUNTS_PER_SESSION = 10  # Process max 10 accounts per run (very conservative)
 
 def setup_logging():
     """Set up logging configuration"""
@@ -291,14 +293,16 @@ def main():
 
             processed_count += 1
 
-            # Rate limiting delay
+            # Human-like randomized delay between accounts
             if i < len(queue) - 1:  # Don't delay after last account
-                logging.info(f"Waiting {DELAY_BETWEEN_ACCOUNTS} seconds before next account...")
-                time.sleep(DELAY_BETWEEN_ACCOUNTS)
+                delay = random.uniform(MIN_DELAY_BETWEEN_ACCOUNTS, MAX_DELAY_BETWEEN_ACCOUNTS)
+                logging.info(f"⏳ Waiting {delay:.1f} seconds before next account (human-like behavior)...")
+                time.sleep(delay)
 
         except Exception as e:
             logging.error(f"Failed to process {username}: {e}")
             error_count += 1
+            logging.info(f"⏳ Waiting {DELAY_AFTER_ERROR} seconds after error...")
             time.sleep(DELAY_AFTER_ERROR)
 
     # Update daily sessions

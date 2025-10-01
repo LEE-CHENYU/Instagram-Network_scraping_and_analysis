@@ -15,10 +15,10 @@ DATA_DIR = "instagram_data"
 PROGRESS_FILE = os.path.join(DATA_DIR, "scraping_progress.json")
 FOLLOWING_LINKS_FILE = os.path.join(DATA_DIR, "followingLinks.txt")
 
-# Scraping parameters
-ACCOUNTS_PER_SESSION = 25  # How many accounts to process per session (reduced from 50)
-DELAY_BETWEEN_SESSIONS = 300  # Seconds to wait between sessions (5 minutes, increased from 60)
-MAX_SESSIONS = 250  # Maximum number of sessions to run (increased to accommodate smaller batches)
+# Scraping parameters (very conservative to mimic human behavior)
+ACCOUNTS_PER_SESSION = 10  # How many accounts to process per session (very conservative)
+DELAY_BETWEEN_SESSIONS = 600  # Seconds to wait between sessions (10 minutes)
+MAX_SESSIONS = 250  # Maximum number of sessions to run
 
 # Quality thresholds (same as original script)
 MIN_SCRAPE_RATIO = 0.1
