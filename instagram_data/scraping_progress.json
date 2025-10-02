@@ -2121,9 +2121,9 @@
   "260samplesale": {
     "processed": true,
     "skipped": true,
-    "followers_count": 542,
-    "following_count": 3313,
-    "timestamp": 1742874304.106518
+    "followers_count": 567,
+    "following_count": 3504,
+    "timestamp": 1759431289.130134
   },
   "drakesdiary": {
     "processed": true,
@@ -9973,12 +9973,13 @@
   },
   "linjing7804": {
     "processed": true,
+    "rate_limited": false,
     "skipped": false,
-    "followers_count": 34,
+    "followers_count": 35,
     "following_count": 0,
-    "followers_retrieved": 0,
+    "followers_retrieved": 12,
     "following_retrieved": 0,
-    "timestamp": 1742993571.572062
+    "timestamp": 1759433166.8029902
   },
   "jian_fan": {
     "processed": true,
@@ -10153,13 +10154,14 @@
     "timestamp": 1758481049.103837
   },
   "mneme_liu": {
-    "processed": true,
+    "processed": false,
+    "rate_limited": true,
     "skipped": false,
     "followers_count": 92,
-    "following_count": 93,
-    "followers_retrieved": 0,
-    "following_retrieved": 0,
-    "timestamp": 1742997892.5234408
+    "following_count": 95,
+    "followers_retrieved": 10,
+    "following_retrieved": 10,
+    "timestamp": 1759433227.0547142
   },
   "yintianzhan": {
     "processed": true,
@@ -11632,9 +11634,9 @@
   "markmaggiori": {
     "processed": true,
     "skipped": true,
-    "followers_count": 766,
-    "following_count": 2750,
-    "timestamp": 1743019848.05305
+    "followers_count": 845,
+    "following_count": 2880,
+    "timestamp": 1759431334.068567
   },
   "folesdog": {
     "processed": true,
@@ -11780,9 +11782,9 @@
   "rohdeandschwarz": {
     "processed": true,
     "skipped": true,
-    "followers_count": 6847,
-    "following_count": 239,
-    "timestamp": 1743020375.396424
+    "followers_count": 8086,
+    "following_count": 222,
+    "timestamp": 1759431314.2206888
   },
   "kam_nawbar": {
     "processed": true,
@@ -12775,9 +12777,9 @@
   "ohthattimdavis": {
     "processed": true,
     "skipped": true,
-    "followers_count": 12,
-    "following_count": 2438,
-    "timestamp": 1743035103.287477
+    "followers_count": 13,
+    "following_count": 2622,
+    "timestamp": 1759431304.661887
   },
   "la.martin_": {
     "processed": true,
@@ -12814,9 +12816,9 @@
   "wolffdee": {
     "processed": true,
     "skipped": true,
-    "followers_count": 3650,
-    "following_count": 774,
-    "timestamp": 1743035213.7520902
+    "followers_count": 3705,
+    "following_count": 772,
+    "timestamp": 1759431344.313142
   },
   "wboling": {
     "processed": true,
@@ -12851,9 +12853,9 @@
   "chloejuno": {
     "processed": true,
     "skipped": true,
-    "followers_count": 4326,
-    "following_count": 2211,
-    "timestamp": 1743035291.417671
+    "followers_count": 4485,
+    "following_count": 2411,
+    "timestamp": 1759433175.665199
   },
   "neildavees": {
     "processed": true,
@@ -12977,9 +12979,9 @@
   "beholdingeye": {
     "processed": true,
     "skipped": true,
-    "followers_count": 257,
-    "following_count": 2522,
-    "timestamp": 1743040154.240692
+    "followers_count": 253,
+    "following_count": 2686,
+    "timestamp": 1759431324.3180768
   },
   "north_bk_community_boathouse": {
     "processed": true,
@@ -12998,9 +13000,9 @@
   "euphoria_0920": {
     "processed": true,
     "skipped": true,
-    "followers_count": 12,
-    "following_count": 3017,
-    "timestamp": 1743093182.518392
+    "followers_count": 10,
+    "following_count": 3377,
+    "timestamp": 1759433136.321304
   },
   "drakesguides": {
     "processed": true,

@@ -407,3 +407,5 @@ Estimated to complete: ~192 sessions (~9.6 days)
 
 2025-10-02 11:38:30,240 - INFO - Waiting 28 minutes until 12:06:30
 2025-10-02 11:48:30,269 - INFO - 18 minutes remaining until next session
+2025-10-02 11:54:09,352 - INFO - Script interrupted by user
+2025-10-02 11:54:09,353 - INFO - Auto scraper ended

@@ -281,13 +281,12 @@ def run_following_scraping_session(batch_size):
     logging.info(f"Starting following scraping session with batch size {batch_size}")
 
     try:
-        # Build command
+        # Build command - using Instagrapi API instead of Selenium
         command = [
-            "python3", "scrapingFollowing.py",
+            "python3", "scrape_with_instagrapi.py",
             "--username", USERNAME,
             "--password", PASSWORD,
-            "--batch-size", str(batch_size),
-            "--headless"
+            "--batch-size", str(batch_size)
         ]
 
         # Execute the command
