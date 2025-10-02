@@ -1,0 +1,37 @@
+2025-10-02 12:41:21,843 - INFO - ============================================================
+2025-10-02 12:41:21,843 - INFO - Instagram Following Accounts Auto Scraper Starting
+2025-10-02 12:41:21,843 - INFO - ============================================================
+2025-10-02 12:41:21,843 - INFO - Starting Instagram Following Accounts Auto Scraper
+2025-10-02 12:41:21,847 - INFO - Account Categories:
+2025-10-02 12:41:21,847 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-10-02 12:41:21,848 - INFO -   incomplete: 1151 accounts (81.9%)
+2025-10-02 12:41:21,848 - INFO -   rate_limited: 2 accounts (0.1%)
+2025-10-02 12:41:21,848 - INFO -   complete: 122 accounts (8.7%)
+2025-10-02 12:41:21,848 - INFO -   skipped: 96 accounts (6.8%)
+2025-10-02 12:41:21,848 - INFO -   empty: 35 accounts (2.5%)
+2025-10-02 12:41:21,848 - INFO - 
+============================================================
+2025-10-02 12:41:21,848 - INFO - PROGRESS SUMMARY
+2025-10-02 12:41:21,848 - INFO - ============================================================
+2025-10-02 12:41:21,848 - INFO - Total accounts in list: 1406
+2025-10-02 12:41:21,848 - INFO - Accounts to actually scrape: 1310 (excluding 96 skipped)
+2025-10-02 12:41:21,848 - INFO - ✓ Fully completed: 122 (9.3% of workable)
+2025-10-02 12:41:21,848 - INFO - ⚠ Partially scraped: 1151 (87.9% of workable)
+2025-10-02 12:41:21,848 - INFO - ✗ Not attempted: 0 (0.0% of workable)
+2025-10-02 12:41:21,848 - INFO - ⊘ Skipped (too large): 96
+2025-10-02 12:41:21,848 - INFO - ⟲ Rate limited: 2
+2025-10-02 12:41:21,848 - INFO - ∅ Empty accounts: 35
+2025-10-02 12:41:21,848 - INFO - 
+Estimated to complete: ~191 sessions (~9.6 days)
+2025-10-02 12:41:21,848 - INFO - ============================================================
+
+2025-10-02 12:41:21,851 - INFO - Account Categories:
+2025-10-02 12:41:21,851 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-10-02 12:41:21,851 - INFO -   incomplete: 1151 accounts (81.9%)
+2025-10-02 12:41:21,851 - INFO -   rate_limited: 2 accounts (0.1%)
+2025-10-02 12:41:21,851 - INFO -   complete: 122 accounts (8.7%)
+2025-10-02 12:41:21,851 - INFO -   skipped: 96 accounts (6.8%)
+2025-10-02 12:41:21,851 - INFO -   empty: 35 accounts (2.5%)
+2025-10-02 12:41:21,851 - INFO - Saved data to instagram_data/daily_sessions.json
+2025-10-02 12:41:21,851 - INFO - Calculated batch size: 6
+2025-10-02 12:41:21,851 - INFO - Starting following scraping session with batch size 6

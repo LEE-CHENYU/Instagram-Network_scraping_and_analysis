@@ -35,3 +35,5 @@ Estimated to complete: ~191 sessions (~9.6 days)
 2025-10-02 12:32:25,218 - INFO - Saved data to instagram_data/daily_sessions.json
 2025-10-02 12:32:25,218 - INFO - Calculated batch size: 5
 2025-10-02 12:32:25,218 - INFO - Starting following scraping session with batch size 5
+2025-10-02 12:41:20,384 - INFO - Script interrupted by user
+2025-10-02 12:41:20,385 - INFO - Auto scraper ended
