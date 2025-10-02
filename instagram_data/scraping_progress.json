@@ -1078,9 +1078,9 @@
   "filmnoircinema": {
     "processed": true,
     "skipped": true,
-    "followers_count": 7977,
-    "following_count": 115,
-    "timestamp": 1742850895.689974
+    "followers_count": 8313,
+    "following_count": 116,
+    "timestamp": 1759426368.09479
   },
   "llittlemi": {
     "processed": true,
@@ -1575,12 +1575,13 @@
   },
   "yang.serre": {
     "processed": true,
+    "rate_limited": false,
     "skipped": false,
-    "followers_count": 242,
-    "following_count": 450,
+    "followers_count": 252,
+    "following_count": 473,
     "followers_retrieved": 0,
     "following_retrieved": 0,
-    "timestamp": 1742865503.0921001
+    "timestamp": 1759430304.9539368
   },
   "applejiani": {
     "processed": true,
@@ -4135,9 +4136,9 @@
   "alexanderklingspor": {
     "processed": true,
     "skipped": true,
-    "followers_count": 7661,
-    "following_count": 2456,
-    "timestamp": 1742917843.954466
+    "followers_count": 7662,
+    "following_count": 2552,
+    "timestamp": 1759430140.382563
   },
   "ranna_liu": {
     "processed": true,
@@ -5995,9 +5996,9 @@
   "rabbit86_": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2245,
-    "following_count": 813,
-    "timestamp": 1742945228.1799722
+    "followers_count": 2222,
+    "following_count": 919,
+    "timestamp": 1759430131.3547368
   },
   "66ari_": {
     "processed": true,
@@ -10273,9 +10274,9 @@
   "tbh_tizzy": {
     "processed": true,
     "skipped": true,
-    "followers_count": 1147,
-    "following_count": 6673,
-    "timestamp": 1742998613.226419
+    "followers_count": 1204,
+    "following_count": 6772,
+    "timestamp": 1759426377.943167
   },
   "vonnieccc": {
     "processed": true,
@@ -11841,9 +11842,9 @@
   "cameron_hammond": {
     "processed": true,
     "skipped": true,
-    "followers_count": 565,
-    "following_count": 2070,
-    "timestamp": 1743020546.002541
+    "followers_count": 561,
+    "following_count": 2121,
+    "timestamp": 1759426358.997615
   },
   "amirzandartist": {
     "processed": true,
@@ -12157,9 +12158,9 @@
   "columbiabartending": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2801,
-    "following_count": 1013,
-    "timestamp": 1743029796.240122
+    "followers_count": 2932,
+    "following_count": 1014,
+    "timestamp": 1759426402.005038
   },
   "columbiacce": {
     "processed": true,
@@ -12358,9 +12359,9 @@
   "chirlyasy": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2641,
-    "following_count": 2349,
-    "timestamp": 1743031946.987838
+    "followers_count": 2629,
+    "following_count": 2401,
+    "timestamp": 1759430121.6481621
   },
   "boram____y": {
     "processed": true,
@@ -12431,9 +12432,9 @@
   "evianwenn": {
     "processed": true,
     "skipped": true,
-    "followers_count": 2900,
-    "following_count": 1935,
-    "timestamp": 1743032193.858997
+    "followers_count": 2985,
+    "following_count": 2040,
+    "timestamp": 1759426344.12856
   },
   "muchenn___": {
     "processed": true,
@@ -12584,9 +12585,9 @@
   "tianxi_w": {
     "processed": true,
     "skipped": true,
-    "followers_count": 3946,
-    "following_count": 870,
-    "timestamp": 1743034522.004915
+    "followers_count": 4118,
+    "following_count": 886,
+    "timestamp": 1759426392.1433039
   },
   "minghan_art": {
     "processed": true,
@@ -12609,9 +12610,9 @@
   "stray.shots": {
     "processed": true,
     "skipped": true,
-    "followers_count": 4034,
-    "following_count": 1811,
-    "timestamp": 1743034615.86173
+    "followers_count": 3963,
+    "following_count": 1794,
+    "timestamp": 1759430160.350135
   },
   "c.m.thomas_": {
     "processed": true,
@@ -12721,9 +12722,9 @@
   "nickz9828": {
     "processed": true,
     "skipped": true,
-    "followers_count": 1066,
-    "following_count": 2303,
-    "timestamp": 1743034973.981614
+    "followers_count": 1081,
+    "following_count": 2418,
+    "timestamp": 1759430949.852235
   },
   "flakphoto": {
     "processed": true,
@@ -12751,9 +12752,9 @@
   "sen0camera0": {
     "processed": true,
     "skipped": true,
-    "followers_count": 4131,
-    "following_count": 1060,
-    "timestamp": 1743035042.8885272
+    "followers_count": 5191,
+    "following_count": 1196,
+    "timestamp": 1759430149.232573
   },
   "oni.pong": {
     "processed": true,
@@ -12790,9 +12791,9 @@
   "giancarla.coppola": {
     "processed": true,
     "skipped": true,
-    "followers_count": 146,
-    "following_count": 2379,
-    "timestamp": 1743035154.203315
+    "followers_count": 148,
+    "following_count": 2428,
+    "timestamp": 1759427828.8895428
   },
   "ladieshomemovies": {
     "processed": true,
@@ -12964,11 +12965,14 @@
     "timestamp": 1759263319.389545
   },
   "eleganza_classica": {
-    "processed": true,
-    "skipped": true,
-    "followers_count": 8977,
-    "following_count": 241,
-    "timestamp": 1743040145.734802
+    "processed": false,
+    "rate_limited": true,
+    "skipped": false,
+    "followers_count": 13,
+    "following_count": 418,
+    "followers_retrieved": 48,
+    "following_retrieved": 10,
+    "timestamp": 1759430217.6521778
   },
   "beholdingeye": {
     "processed": true,
@@ -12987,9 +12991,9 @@
   "toejeksperten": {
     "processed": true,
     "skipped": true,
-    "followers_count": 7089,
-    "following_count": 357,
-    "timestamp": 1743040171.3391922
+    "followers_count": 8290,
+    "following_count": 602,
+    "timestamp": 1759427852.782183
   },
   "euphoria_0920": {
     "processed": true,

@@ -30,8 +30,8 @@ FOLLOWING_LINKS_FILE = os.path.join(DATA_DIR, "followingLinks.txt")
 ADJ_LIST_FILE = os.path.join(DATA_DIR, "adjList.txt")
 
 # Instagram account credentials
-USERNAME = "fretin98"
-PASSWORD = "Lcy199818su"
+USERNAME = "cheneyli7"
+PASSWORD = "Lcy199818"
 
 # Scraping settings
 MIN_INTERVAL_MINUTES = 20  # Minimum time between sessions

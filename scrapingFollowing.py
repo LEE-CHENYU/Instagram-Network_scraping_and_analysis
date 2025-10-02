@@ -632,15 +632,15 @@ try:
         print(f"Starting batch processing of {min(batch_size, len(links))} accounts")
         processed_count = 0
         rate_limited_count = 0
-        
+
+        # Initialize candidate lists
+        good_candidates = []
+        bad_candidates = []
+
         # First, prioritize accounts by checking if they are suitable for processing
         if batch_size > 1 and len(links) > batch_size:
             print("Pre-checking accounts to prioritize ones with reasonable follower/following counts...")
-            
-            # Track accounts that are good candidates (have reasonable counts)
-            good_candidates = []
-            bad_candidates = []
-            
+
             # Use lower limits for prioritization
             pre_check_follower_limit = 1000  # Lower than the main limit for prioritization
             pre_check_following_limit = 1000
