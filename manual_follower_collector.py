@@ -225,8 +225,8 @@ def create_control_window(driver, username):
 def main():
     # Parse arguments
     parser = argparse.ArgumentParser(description='Manual Instagram Follower Collector')
-    parser.add_argument('--username', default="fretin98", help='Instagram username')
-    parser.add_argument('--password', default="Lcy199818su!", help='Instagram password')
+    parser.add_argument('--username', default="cheneyli7", help='Instagram username')
+    parser.add_argument('--password', default="Lcy199818", help='Instagram password')
     parser.add_argument('--headless', action='store_true', help='Run in headless mode (not recommended for manual scrolling)')
     args = parser.parse_args()
     

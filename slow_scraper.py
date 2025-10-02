@@ -25,8 +25,8 @@ def run_single_account():
     # Run scraping for just 1 account
     command = [
         "python3", "scrapingFollowing.py",
-        "--username", "fretin98",
-        "--password", "Lcy199818su",
+        "--username", "cheneyli7",
+        "--password", "Lcy199818",
         "--batch-size", "1",  # Only 1 account at a time
         "--headless"
     ]

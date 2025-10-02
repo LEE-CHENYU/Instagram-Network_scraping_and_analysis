@@ -84,8 +84,8 @@ FOLLOWING_LINKS_FILE = os.path.join(DATA_DIR, "followingLinks.txt")
 PROGRESS_FILE = os.path.join(DATA_DIR, "scraping_progress.json")
 
 # Instagram account credentials
-USERNAME = "fretin98"  # Replace with your username if different
-PASSWORD = "Lcy199818su"  # Replace with your password if different
+USERNAME = "cheneyli7"  # Replace with your username if different
+PASSWORD = "Lcy199818"  # Replace with your password if different
 
 # Settings for safe scraping
 MIN_INTERVAL_MINUTES = 15  # Minimum time between sessions (was 20)

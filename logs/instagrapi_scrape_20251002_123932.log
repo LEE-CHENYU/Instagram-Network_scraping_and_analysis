@@ -1,0 +1,21 @@
+2025-10-02 12:39:32,163 - INFO - ============================================================
+2025-10-02 12:39:32,164 - INFO - Instagram Scraper with Instagrapi Starting
+2025-10-02 12:39:32,164 - INFO - ============================================================
+2025-10-02 12:39:32,164 - INFO - Loading existing data...
+2025-10-02 12:39:32,166 - INFO - Loaded 1406 accounts from queue
+2025-10-02 12:39:32,167 - INFO - 
+Account Categories:
+2025-10-02 12:39:32,167 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-10-02 12:39:32,167 - INFO -   incomplete: 41 accounts (2.9%)
+2025-10-02 12:39:32,167 - INFO -   rate_limited: 1079 accounts (76.7%)
+2025-10-02 12:39:32,167 - INFO -   complete: 149 accounts (10.6%)
+2025-10-02 12:39:32,167 - INFO -   skipped: 96 accounts (6.8%)
+2025-10-02 12:39:32,167 - INFO -   empty: 41 accounts (2.9%)
+2025-10-02 12:39:32,167 - INFO - 
+Total accounts to process: 1120
+2025-10-02 12:39:32,167 - INFO - Will process up to 10 accounts this session
+2025-10-02 12:39:32,167 - INFO - 
+Logging in as cheneyli7...
+2025-10-02 12:39:32,167 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-10-02 12:39:32,708 - INFO - cheneyli7 [200] POST https://i.instagram.com/api/v1/launcher/sync/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-10-02 12:39:33,052 - INFO - https://i.instagram.com/api/v1/accounts/login/
