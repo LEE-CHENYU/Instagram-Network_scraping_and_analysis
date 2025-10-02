@@ -1,0 +1,27 @@
+2025-10-02 12:35:04,120 - INFO - ============================================================
+2025-10-02 12:35:04,120 - INFO - Instagram Scraper with Instagrapi Starting
+2025-10-02 12:35:04,120 - INFO - ============================================================
+2025-10-02 12:35:04,120 - INFO - Loading existing data...
+2025-10-02 12:35:04,124 - INFO - Loaded 1406 accounts from queue
+2025-10-02 12:35:04,124 - INFO - 
+Account Categories:
+2025-10-02 12:35:04,124 - INFO -   unprocessed: 0 accounts (0.0%)
+2025-10-02 12:35:04,124 - INFO -   incomplete: 41 accounts (2.9%)
+2025-10-02 12:35:04,124 - INFO -   rate_limited: 1079 accounts (76.7%)
+2025-10-02 12:35:04,124 - INFO -   complete: 149 accounts (10.6%)
+2025-10-02 12:35:04,124 - INFO -   skipped: 96 accounts (6.8%)
+2025-10-02 12:35:04,124 - INFO -   empty: 41 accounts (2.9%)
+2025-10-02 12:35:04,124 - INFO - 
+Total accounts to process: 1120
+2025-10-02 12:35:04,124 - INFO - Will process up to 10 accounts this session
+2025-10-02 12:35:04,124 - INFO - 
+Logging in as cheneyli7...
+2025-10-02 12:35:04,125 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-10-02 12:35:04,736 - INFO - cheneyli7 [200] POST https://i.instagram.com/api/v1/launcher/sync/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-10-02 12:35:05,073 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-10-02 12:35:07,628 - INFO - cheneyli7 [400] POST https://i.instagram.com/api/v1/accounts/login/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-10-02 12:35:08,630 - INFO - https://i.instagram.com/api/v1/auth_platform/?apc=AdngkiOy9DgxYCAbJoz8THVuJ-V4aKy91N4LBztuZC-jga6uqlaJDJ5CewBhE8NQ4bu2gX5d-KvI9-YIrLEGp5LILdSPMoS7QPOHiaQw5VcVosEF1RHvplKIU2GFjEbgrA2CP6aWw88U9g-xkQ5lt03ebAGOXaOSTxqfGb_iNkOHxYT9hVWu6xA_UgpbP8CnA1ks-GfeAQW2ns2gRf_nB-3dDKQjZrFQe1oy7iR88kVcPcZ1Epg9dYOgIzkfSLvr8PTMYFwGCnQsAhSuEPrvBu62X9JTdOXY8u5EfPXZppdnNKS7quiFzVF6YiLRLTMYF1eR7I3bWWbF6FXmtyqijqx4hA1giFIiwVxT2z6pzIC2_v7Y1ry7_a36gjO2au0VS8o4ljPAzaVx4b4pvX8_DGMX9COi2U_Y
+2025-10-02 12:35:08,789 - INFO - cheneyli7 [404] GET https://i.instagram.com/api/v1/auth_platform/?apc=AdngkiOy9DgxYCAbJoz8THVuJ-V4aKy91N4LBztuZC-jga6uqlaJDJ5CewBhE8NQ4bu2gX5d-KvI9-YIrLEGp5LILdSPMoS7QPOHiaQw5VcVosEF1RHvplKIU2GFjEbgrA2CP6aWw88U9g-xkQ5lt03ebAGOXaOSTxqfGb_iNkOHxYT9hVWu6xA_UgpbP8CnA1ks-GfeAQW2ns2gRf_nB-3dDKQjZrFQe1oy7iR88kVcPcZ1Epg9dYOgIzkfSLvr8PTMYFwGCnQsAhSuEPrvBu62X9JTdOXY8u5EfPXZppdnNKS7quiFzVF6YiLRLTMYF1eR7I3bWWbF6FXmtyqijqx4hA1giFIiwVxT2z6pzIC2_v7Y1ry7_a36gjO2au0VS8o4ljPAzaVx4b4pvX8_DGMX9COi2U_Y (269.0.0.18.75, OnePlus 6T Dev)
+2025-10-02 12:35:08,789 - ERROR - ❌ Login failed: Expecting value: line 1 column 1 (char 0)
+2025-10-02 12:35:08,789 - ERROR - ⚠️  Login blocked - waiting 1-2 hours before next attempt to avoid triggering more protections
+2025-10-02 12:35:08,789 - INFO - ⏳ Sleeping for 1.5 hours...

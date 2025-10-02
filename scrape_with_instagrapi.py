@@ -19,8 +19,8 @@ FOLLOWING_LINKS_FILE = os.path.join(DATA_DIR, "followingLinks.txt")
 DAILY_SESSIONS_FILE = os.path.join(DATA_DIR, "daily_sessions.json")
 
 # Login credentials
-USERNAME = "fretin98"
-PASSWORD = "Lcy199818su"
+USERNAME = "cheneyli7"
+PASSWORD = "Lcy199818"
 
 # Quality thresholds (same as original script)
 MIN_SCRAPE_RATIO = 0.1
